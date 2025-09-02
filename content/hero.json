@@ -1,0 +1,353 @@
+{
+  "kicker": "NanoColloids & Magnetism Lab (Mag N’Col Lab)",
+  "title": "We design nanomaterials with defined shapes and compositions through advanced colloidal synthesis",
+  "intro": "<p>We exploit the surface chemistry and magnetism of nanomaterials to control their colloidal stability and assembly behavior. We investigate magnetization and magnetic heat losses of magnetic nanoparticles dispersed in different media under alternating magnetic fields.</p>\n<p>This website showcases the research developed within the framework of the Ramón y Cajal project, which focuses on creating scalable, high-performance magnetic nanostructures for biomedical applications. It has been funded by the Spanish Ministry of Science and Innovation through the Ramón y Cajal 2021 program (RYC2021‐032448‐I).</p>",
+  "heroImage": "./media/bg.webp",
+  "heroAlt": "NanoColloids",
+  "gallery": [
+    {
+      "src": "./media/hero/1e-A1_0010.webp",
+      "alt": "1e A1 0010"
+    },
+    {
+      "src": "./media/hero/1e-A1_0010-800.webp",
+      "alt": "1e A1 0010 800"
+    },
+    {
+      "src": "./media/hero/1e-A1_0010-1200.webp",
+      "alt": "1e A1 0010 1200"
+    },
+    {
+      "src": "./media/hero/2a Heptaldeyde_0007.webp",
+      "alt": "2a Heptaldeyde 0007"
+    },
+    {
+      "src": "./media/hero/2a Heptaldeyde_0007-800.webp",
+      "alt": "2a Heptaldeyde 0007 800"
+    },
+    {
+      "src": "./media/hero/2a Heptaldeyde_0007-1200.webp",
+      "alt": "2a Heptaldeyde 0007 1200"
+    },
+    {
+      "src": "./media/hero/2b-A3-60min_0006.webp",
+      "alt": "2b A3 60min 0006"
+    },
+    {
+      "src": "./media/hero/2b-A3-60min_0006-800.webp",
+      "alt": "2b A3 60min 0006 800"
+    },
+    {
+      "src": "./media/hero/2b-A3-60min_0006-1200.webp",
+      "alt": "2b A3 60min 0006 1200"
+    },
+    {
+      "src": "./media/hero/3a-dodecylamine_0010.webp",
+      "alt": "3a dodecylamine 0010"
+    },
+    {
+      "src": "./media/hero/3a-dodecylamine_0010-800.webp",
+      "alt": "3a dodecylamine 0010 800"
+    },
+    {
+      "src": "./media/hero/3a-dodecylamine_0010-1200.webp",
+      "alt": "3a dodecylamine 0010 1200"
+    },
+    {
+      "src": "./media/hero/3a-HGR141_0005.webp",
+      "alt": "3a HGR141 0005"
+    },
+    {
+      "src": "./media/hero/3a-HGR141_0005-800.webp",
+      "alt": "3a HGR141 0005 800"
+    },
+    {
+      "src": "./media/hero/3a-HGR141_0005-1200.webp",
+      "alt": "3a HGR141 0005 1200"
+    },
+    {
+      "src": "./media/hero/3b-B0-230-time0_0014.webp",
+      "alt": "3b B0 230 time0 0014"
+    },
+    {
+      "src": "./media/hero/3b-B0-230-time0_0014-800.webp",
+      "alt": "3b B0 230 time0 0014 800"
+    },
+    {
+      "src": "./media/hero/3b-B0-230-time0_0014-1200.webp",
+      "alt": "3b B0 230 time0 0014 1200"
+    },
+    {
+      "src": "./media/hero/3b-B0-230-time0_0015.webp",
+      "alt": "3b B0 230 time0 0015"
+    },
+    {
+      "src": "./media/hero/3b-B0-230-time0_0015-800.webp",
+      "alt": "3b B0 230 time0 0015 800"
+    },
+    {
+      "src": "./media/hero/3b-B0-230-time0_0015-1200.webp",
+      "alt": "3b B0 230 time0 0015 1200"
+    },
+    {
+      "src": "./media/hero/4a-180degrees_0005.webp",
+      "alt": "4a 180degrees 0005"
+    },
+    {
+      "src": "./media/hero/4a-180degrees_0005-800.webp",
+      "alt": "4a 180degrees 0005 800"
+    },
+    {
+      "src": "./media/hero/4a-180degrees_0005-1200.webp",
+      "alt": "4a 180degrees 0005 1200"
+    },
+    {
+      "src": "./media/hero/5a-Au-FeO-overnightMAG_0006.webp",
+      "alt": "5a Au FeO overnightMAG 0006"
+    },
+    {
+      "src": "./media/hero/5a-Au-FeO-overnightMAG_0006-800.webp",
+      "alt": "5a Au FeO overnightMAG 0006 800"
+    },
+    {
+      "src": "./media/hero/5a-Au-FeO-overnightMAG_0006-1200.webp",
+      "alt": "5a Au FeO overnightMAG 0006 1200"
+    },
+    {
+      "src": "./media/hero/7C-HGR6-MR8-6h_0004.webp",
+      "alt": "7C HGR6 MR8 6h 0004"
+    },
+    {
+      "src": "./media/hero/7C-HGR6-MR8-6h_0004-800.webp",
+      "alt": "7C HGR6 MR8 6h 0004 800"
+    },
+    {
+      "src": "./media/hero/7C-HGR6-MR8-6h_0004-1200.webp",
+      "alt": "7C HGR6 MR8 6h 0004 1200"
+    },
+    {
+      "src": "./media/hero/7C-HGR6-MR8-6h_0005.webp",
+      "alt": "7C HGR6 MR8 6h 0005"
+    },
+    {
+      "src": "./media/hero/7C-HGR6-MR8-6h_0005-800.webp",
+      "alt": "7C HGR6 MR8 6h 0005 800"
+    },
+    {
+      "src": "./media/hero/7C-HGR6-MR8-6h_0005-1200.webp",
+      "alt": "7C HGR6 MR8 6h 0005 1200"
+    },
+    {
+      "src": "./media/hero/9-srg-1-40k.webp",
+      "alt": "9 srg 1 40k"
+    },
+    {
+      "src": "./media/hero/9-srg-1-40k-800.webp",
+      "alt": "9 srg 1 40k 800"
+    },
+    {
+      "src": "./media/hero/9c-HGR97-OLA-verdad_0006.webp",
+      "alt": "9c HGR97 OLA verdad 0006"
+    },
+    {
+      "src": "./media/hero/9c-HGR97-OLA-verdad_0006-800.webp",
+      "alt": "9c HGR97 OLA verdad 0006 800"
+    },
+    {
+      "src": "./media/hero/9c-HGR97-OLA-verdad_0006-1200.webp",
+      "alt": "9c HGR97 OLA verdad 0006 1200"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0004.webp",
+      "alt": "9e HGR 134 giacomo 0004"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0004-800.webp",
+      "alt": "9e HGR 134 giacomo 0004 800"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0004-1200.webp",
+      "alt": "9e HGR 134 giacomo 0004 1200"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0008.webp",
+      "alt": "9e HGR 134 giacomo 0008"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0008-800.webp",
+      "alt": "9e HGR 134 giacomo 0008 800"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0008-1200.webp",
+      "alt": "9e HGR 134 giacomo 0008 1200"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0014.webp",
+      "alt": "9e HGR 134 giacomo 0014"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0014-800.webp",
+      "alt": "9e HGR 134 giacomo 0014 800"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0014-1200.webp",
+      "alt": "9e HGR 134 giacomo 0014 1200"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0027.webp",
+      "alt": "9e HGR 134 giacomo 0027"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0027-800.webp",
+      "alt": "9e HGR 134 giacomo 0027 800"
+    },
+    {
+      "src": "./media/hero/9e-HGR-134-giacomo_0027-1200.webp",
+      "alt": "9e HGR 134 giacomo 0027 1200"
+    },
+    {
+      "src": "./media/hero/9e-HGR99-C12-verdad_0003.webp",
+      "alt": "9e HGR99 C12 verdad 0003"
+    },
+    {
+      "src": "./media/hero/9e-HGR99-C12-verdad_0003-800.webp",
+      "alt": "9e HGR99 C12 verdad 0003 800"
+    },
+    {
+      "src": "./media/hero/9e-HGR99-C12-verdad_0003-1200.webp",
+      "alt": "9e HGR99 C12 verdad 0003 1200"
+    },
+    {
+      "src": "./media/hero/CAPS-20nm-diluted_0008.webp",
+      "alt": "CAPS 20nm diluted 0008"
+    },
+    {
+      "src": "./media/hero/CAPS-20nm-diluted_0008-800.webp",
+      "alt": "CAPS 20nm diluted 0008 800"
+    },
+    {
+      "src": "./media/hero/CAPS-20nm-diluted_0008-1200.webp",
+      "alt": "CAPS 20nm diluted 0008 1200"
+    },
+    {
+      "src": "./media/hero/Fer NC3 Marco_5000X_0004.webp",
+      "alt": "Fer NC3 Marco 5000X 0004"
+    },
+    {
+      "src": "./media/hero/Fer NC3 Marco_5000X_0004-800.webp",
+      "alt": "Fer NC3 Marco 5000X 0004 800"
+    },
+    {
+      "src": "./media/hero/Fer NC3 Marco_5000X_0004-1200.webp",
+      "alt": "Fer NC3 Marco 5000X 0004 1200"
+    },
+    {
+      "src": "./media/hero/Giacomo MNC3 NCs - 4d_0009.webp",
+      "alt": "Giacomo MNC3 NCs 4d 0009"
+    },
+    {
+      "src": "./media/hero/Giacomo MNC3 NCs - 4d_0009-800.webp",
+      "alt": "Giacomo MNC3 NCs 4d 0009 800"
+    },
+    {
+      "src": "./media/hero/Giacomo MNC3 NCs - 4d_0009-1200.webp",
+      "alt": "Giacomo MNC3 NCs 4d 0009 1200"
+    },
+    {
+      "src": "./media/hero/hero.webp",
+      "alt": "Hero"
+    },
+    {
+      "src": "./media/hero/hero-800.webp",
+      "alt": "Hero 800"
+    },
+    {
+      "src": "./media/hero/hero-1600.webp",
+      "alt": "Hero 1600"
+    },
+    {
+      "src": "./media/hero/HGR-1-NOMAG-MW2_0003.webp",
+      "alt": "HGR 1 NOMAG MW2 0003"
+    },
+    {
+      "src": "./media/hero/HGR-1-NOMAG-MW2_0003-800.webp",
+      "alt": "HGR 1 NOMAG MW2 0003 800"
+    },
+    {
+      "src": "./media/hero/HGR-1-NOMAG-MW2_0003-1200.webp",
+      "alt": "HGR 1 NOMAG MW2 0003 1200"
+    },
+    {
+      "src": "./media/hero/HGR-12-ND_0013.webp",
+      "alt": "HGR 12 ND 0013"
+    },
+    {
+      "src": "./media/hero/HGR-12-ND_0013-800.webp",
+      "alt": "HGR 12 ND 0013 800"
+    },
+    {
+      "src": "./media/hero/HGR-12-ND_0013-1200.webp",
+      "alt": "HGR 12 ND 0013 1200"
+    },
+    {
+      "src": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007.webp",
+      "alt": "HGR 48WA1 reproduci autrocalvenuevo 0007"
+    },
+    {
+      "src": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007-800.webp",
+      "alt": "HGR 48WA1 reproduci autrocalvenuevo 0007 800"
+    },
+    {
+      "src": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007-1200.webp",
+      "alt": "HGR 48WA1 reproduci autrocalvenuevo 0007 1200"
+    },
+    {
+      "src": "./media/hero/HGR-73_0002.webp",
+      "alt": "HGR 73 0002"
+    },
+    {
+      "src": "./media/hero/HGR-73_0002-800.webp",
+      "alt": "HGR 73 0002 800"
+    },
+    {
+      "src": "./media/hero/HGR-73_0002-1200.webp",
+      "alt": "HGR 73 0002 1200"
+    },
+    {
+      "src": "./media/hero/HGR39-nobenz_0003.webp",
+      "alt": "HGR39 nobenz 0003"
+    },
+    {
+      "src": "./media/hero/HGR39-nobenz_0003-800.webp",
+      "alt": "HGR39 nobenz 0003 800"
+    },
+    {
+      "src": "./media/hero/HGR39-nobenz_0003-1200.webp",
+      "alt": "HGR39 nobenz 0003 1200"
+    },
+    {
+      "src": "./media/hero/Walls-3-HGR-48_MAG_0005.webp",
+      "alt": "Walls 3 HGR 48 MAG 0005"
+    },
+    {
+      "src": "./media/hero/Walls-3-HGR-48_MAG_0005-800.webp",
+      "alt": "Walls 3 HGR 48 MAG 0005 800"
+    },
+    {
+      "src": "./media/hero/Walls-3-HGR-48_MAG_0005-1200.webp",
+      "alt": "Walls 3 HGR 48 MAG 0005 1200"
+    },
+    {
+      "src": "./media/hero/Walls-3-HGR-48_MAG_0011.webp",
+      "alt": "Walls 3 HGR 48 MAG 0011"
+    },
+    {
+      "src": "./media/hero/Walls-3-HGR-48_MAG_0011-800.webp",
+      "alt": "Walls 3 HGR 48 MAG 0011 800"
+    },
+    {
+      "src": "./media/hero/Walls-3-HGR-48_MAG_0011-1200.webp",
+      "alt": "Walls 3 HGR 48 MAG 0011 1200"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "kicker": "People behind the science",
+  "title": "Team",
+  "intro": "Researchers and collaborators.",
+  "items": [
+    {
+      "name": "Dr. Helena Gavilán Rubio",
+      "role": "Principal Investigator",
+      "affiliation": "UCM",
+      "email": "",
+      "photo": "./media/team/Helena.webp",
+      "alt": "Dr. Helena Gavilán Rubio",
+      "bioLink": "#about"
+    },
+    {
+      "name": "Fernando Martín Garrido",
+      "role": "PhD Student",
+      "affiliation": "",
+      "email": "",
+      "photo": "./media/team/Fernando.webp",
+      "alt": "Fernando Martín Garrido",
+      "bio": "Fernando obtained his Master’s degree in chemical technology from the Complutense University of Madrid under the supervision of Prof. José Osio Barcina and Prof. María José Mancheño. His investigations focus on the design of metal oxide nanocrystals with magnetic and plasmonic properties through the use of wet-chemical routes and pulsed laser irradiation."
+    },
+    {
+      "name": "M. Herrera Serrano",
+      "role": "MSc Student",
+      "affiliation": "",
+      "email": "",
+      "photo": "./media/team/Marco.webp",
+      "alt": "M. Herrera Serrano",
+      "bio": "M. Herrera-Serrano is a Master’s student in Materials Chemistry for Future Technologies with a strong background in nanomaterials synthesis and characterization. He completed his Bachelor’s thesis under the supervision of Prof. Dr. Helena Gavilán. His current Master’s research centers on the colloidal synthesis of magnetic nanoparticles for biomedical applications and the development of magnetic field-directed assembly methods"
+    },
+    {
+      "name": "Alma Treceño de Martín",
+      "role": "MSc Student",
+      "affiliation": "",
+      "email": "",
+      "photo": "./media/team/Alma.webp",
+      "alt": "Alma Treceño de Martín",
+      "bio": "Alma Treceño de Martín is a Master’s student in Materials Chemistry for Future Technologies. Her work involves the development of hybrid multifunctional nanomaterials for biomedical applications and the evaluation of the magnetic properties and heat dissipation of these systems under alternating magnetic fields using inductive magnetometry."
+    },
+    {
+      "name": "J. Marco Cuenca Juberías",
+      "role": "Research Staff (PLI contract)",
+      "affiliation": "UCM",
+      "email": "",
+      "photo": "",
+      "alt": "J. Marco Cuenca Juberías",
+      "bio": "J. Marco Cuenca Juberías holds a Master’s degree in Science and Chemical Technologies under the supervision of Prof. Andrés Guerrero Martínez at the Complutense University of Madrid (UCM). He joined the group as a research staff member under a Scientific-Technical Activities (PLI) contract, contributing to several research lines. His work focused on optimizing scalable synthesis protocols for magnetic nanoparticles, and he contributed to the development of hybrid magnetic nanomaterials and explored template-free fabrication methods for reconfigurable magnetic superstructures."
+    },
+    {
+      "name": "Zhu Peng Shen Lin",
+      "role": "Visiting PhD Student (UC3M, Spain)",
+      "affiliation": "",
+      "email": "",
+      "photo": "./media/team/Zhu.webp",
+      "alt": "Zhu Peng Shen Lin",
+      "bio": "Zhu Peng Shen Lin is a visiting Ph.D. candidate in Materials Science and Engineering (UC3M, Spain) with expertise in electrochemistry and nanomaterials. His research focuses on the design and application of advanced materials, including polymer nanofibers, MXenes, magnetic nanoparticles, and their integration into energy storage devices such as supercapacitors."
+    },
+    {
+      "name": "Pauline Rooms",
+      "role": "PhD Student (Ghent University, Belgium) — STSM (NexMPI)",
+      "affiliation": "",
+      "email": "",
+      "photo": "./media/team/Pauline.webp",
+      "alt": "Pauline Rooms",
+      "bio": "Pauline Rooms is a Ph.D. researcher in Chemistry focused on the synthesis and characterization of magnetic nanoparticles (MNPs) for hyperthermia applications. During a Short-Term Scientific Mission (STSM) within the NexMPI COST Action, she studied magnetic nanoflowers to evaluate their suitability for combined magnetic particle imaging (MPI) and magnetic particle hyperthermia (MPH), linking structural properties to magnetization behavior."
+    }
+    ]
+  }

@@ -1,0 +1,63 @@
+{
+  "kicker": "Selected by impact",
+  "title": "Selected Publications",
+  "intro": "Representative selection. Full list available on ORCID.",
+  "items": [
+    {
+      "year": "2025",
+      "title": "Magnetic nanosheets: from iron oxide nanocubes to polydopamine embedded 2D clusters and their multi-purpose properties",
+      "authors": "Mandriota, G.; Avugadda, S. K.; Sadeghi, E.; Silvestri, N.; Marotta, R.; Gavilán, H.; …; Pellegrino, T.",
+      "venue": "Nanoscale Horizons",
+      "doi": "https://doi.org/10.1039/D4NH00566J"
+    },
+    {
+      "year": "2023",
+      "title": "Scale up approach for the preparation of magnetic ferrite nanocubes…",
+      "authors": "Gavilán, H. et al.",
+      "venue": "Nature Protocols, 18, 783–809",
+      "doi": "https://doi.org/10.1038/s41596-022-00779-3"
+    },
+    {
+      "year": "2021",
+      "title": "How size, shape and assembly of magnetic nanoparticles give rise to different hyperthermia scenarios.",
+      "authors": "Gavilán, H.; Simeonidis, K.; et al.",
+      "venue": "Nanoscale, 13, 15631–15646",
+      "doi": "https://doi.org/10.1039/D1NR03484G"
+    },
+    {
+      "year": "2021",
+      "title": "Magnetic nanoparticles and clusters for magnetic hyperthermia…",
+      "authors": "Gavilán, H.; Avugadda, S. K.; Pellegrino, T.",
+      "venue": "Chemical Society Reviews, 50, 11614–11667",
+      "doi": "https://doi.org/10.1039/d1cs00427a"
+    },
+    {
+      "year": "2019",
+      "title": "Design strategies for shape-controlled magnetic iron oxide nanoparticles.",
+      "authors": "Roca, A. G.; Gutierrez, L.; Gavilán, H.; et al.",
+      "venue": "Advanced Drug Delivery Reviews, 138, 68–104",
+      "doi": "https://doi.org/10.1016/j.addr.2018.12.008"
+    },
+    {
+      "year": "2017",
+      "title": "Formation mechanism of maghemite nanoflowers…",
+      "authors": "Gavilán, H. et al.",
+      "venue": "ACS Omega, 2(10), 7172–7184",
+      "doi": "https://doi.org/10.1021/acsomega.7b00975"
+    },
+    {
+      "year": "2017",
+      "title": "Colloidal Flower‐Shaped Iron Oxide Nanoparticles: Synthesis Strategies and Coatings.",
+      "authors": "Gavilán, H.; Kowalski, A.; Heinke, D.; Sugunan, A.; Sommertune, J.; Varón, M.; …; Morales, M. P.",
+      "venue": "Particle & Particle Systems Characterization, 34(7), 1700094",
+      "doi": "https://doi.org/10.1002/ppsc.201700094"
+    },
+    {
+      "year": "2017",
+      "title": "How shape and internal structure affect the magnetic properties of anisometric magnetite nanoparticles.",
+      "authors": "Gavilán, H.; Posth, O.; Bogart, L. K.; Steinhoff, U.; Gutiérrez, L.; Morales, M. P.",
+      "venue": "Acta Materialia, 125, 416–424",
+      "doi": "https://doi.org/10.1016/j.actamat.2016.12.016"
+    }
+  ]
+}

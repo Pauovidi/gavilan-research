@@ -1,0 +1,47 @@
+{
+  "kicker": "What we’re building",
+  "title": "Projects",
+  "intro": "Ongoing and completed projects.",
+  "items": [
+    {
+      "title": "DREAM-Nano",
+      "summaryHtml": "</strong>Una Europa 2024 Seed Funding call - SF2405_DREAM-Nano “Designing Responsive Advanced Materials for Nanomedicines” (PI: H. Gavilán) 2025. 18k€. (Check Project website <a href=\"https://www.ucd.ie/physics/research/dream-nano/\">HERE!</a>)</p>",
+      "summary": "Una Europa 2024 Seed Funding call - SF2405_DREAM-Nano “Designing Responsive Advanced Materials for Nanomedicines” (PI: H. Gavilán) 2025. 18k€.",
+      "year": "2024",
+      "link": "https://www.ucd.ie/physics/research/dream-nano/",
+      "area": "",
+      "image": "./media/projects/dream-nano-1024.webp",
+      "alt": "DREAM-Nano"
+    },
+    {
+      "title": "AMULET",
+      "summaryHtml": "</strong>Proyectos Generación de Conocimiento 2023 PID2023-150760NA-I00 “Development of Multifunctional Ordered Heterostructures in Viscous Media for Enhanced Hyperthermia” (PI1: H. Gavilán). 2024-2027. 125k€<strong> </strong></p>",
+      "summary": "Proyectos Generación de Conocimiento 2023 PID2023-150760NA-I00 “Development of Multifunctional Ordered Heterostructures in Viscous Media for Enhanced Hyperthermia” (PI1: H. Gavilán). 2024-2027. 125k€",
+      "year": "2023",
+      "link": "",
+      "area": "",
+      "image": "./media/hero/07-07_20000X_0007-800.webp",
+      "alt": "AMULET"
+    },
+    {
+      "title": "NexMPI",
+      "summaryHtml": "Cost Action CA23132. </strong>“Magnetic Particle Imaging for next-generation theranostics and medical research”. (MC member/Leader of a WG). 2024-2028. 520k€. (Check Project website <a href=\"https://nexmpi.eu/\">HERE!</a>) </p>",
+      "summary": "Cost Action CA23132. “Magnetic Particle Imaging for next-generation theranostics and medical research”. (MC member/Leader of a WG). 2024-2028. 520k€.",
+      "year": "2024-2028",
+      "link": "https://nexmpi.eu/",
+      "area": "",
+      "image": "./media/hero/07-07_20000X_0007.webp",
+      "alt": "NexMPI"
+    },
+    {
+      "title": "AniMAG",
+      "summaryHtml": "</strong>Exploring the Potential of Anisometric Porous Magnetic Nanoparticles for Magnetic Hyperthermia. (PI: H. Gavilán, facility project). 2023. 4000 €.<strong>  </strong></p>",
+      "summary": "Exploring the Potential of Anisometric Porous Magnetic Nanoparticles for Magnetic Hyperthermia. (PI: H. Gavilán, facility project). 2023. 4000 €.",
+      "year": "2023",
+      "link": "",
+      "area": "",
+      "image": "./media/hero/1e-A1_0010-1200.webp",
+      "alt": "AniMAG"
+    }
+  ]
+}

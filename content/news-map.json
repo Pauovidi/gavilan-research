@@ -1,0 +1,12 @@
+{
+  "kicker": "Latest from the lab",
+  "title": "News",
+  "intro": "Our latest updates and milestones.",
+  "items": [
+    { "date": "2026-07-01", "image": "fernando-stsm.webp", "link": "" },
+    { "date": "2025-09-01", "image": "DISEÑO-Roll up.webp", "link": "" },
+    { "date": "2025-06-01", "image": "pauline-stsm.webp", "link": "" },
+    { "date": "2025-02-01", "image": "dream-nano_brainstorming-meeting2.jpg-scaled.webp", "link": "" },
+    { "date": "2025-01-01", "image": "dream-nano.webp", "link": "" }
+  ]
+}

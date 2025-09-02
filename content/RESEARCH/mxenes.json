@@ -1,0 +1,23 @@
+{
+  "title": "Emerging Lines: MXenes & Multifunctional Nanoparticles",
+  "year": 2025,
+  "descriptionHtml": "<section><h3>Multifunctional nanoparticles</h3><p>We develop colloidal nanoparticles that combine distinct chemical domains and functionalities, enabling targeted interactions and responsive behaviour across biomedical and energy contexts. On the fundamental side we map new structure\u2013property relationships that arise from compositional patterning and interfacial control.</p></section><hr><section><h3>Magnetic superstructures</h3><p>Template-free routes are explored to create reconfigurable architectures that reorganize under applied fields. By coupling dipolar interactions with particle morphology and surface chemistry we generate ordered states that can be written/erased, opening pathways to adaptive magnetic materials.</p></section>",
+  "images": [
+    {
+      "src": "media/research/mxenes/1.webp"
+    },
+    {
+      "src": "media/research/mxenes/2.webp"
+    }
+  ],
+  "papers": [
+    {
+      "label": "Emerging Lines MXenes \u2014 Paper",
+      "href": "media/research/mxenes/Paper-1.0-Figura-8-paper.pdf"
+    }
+  ],
+  "related": [
+    "shape-tuning",
+    "superstructures"
+  ]
+}

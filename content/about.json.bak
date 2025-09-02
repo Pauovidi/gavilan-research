@@ -1,0 +1,9 @@
+{
+  "kicker": "Profile",
+  "title": "Dr. H. Gavilán",
+  "body": "<p>Researcher focused on nanocolloids and magnetism…</p>",
+  "photo": "./media/about/profile.webp",
+  "photoAlt": "Dr. H. Gavilán in the lab",
+  "pdf": "./media/about/cv.pdf",
+  "pdfLabel": "View CV (PDF)"
+}

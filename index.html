@@ -1,0 +1,2189 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gavilan Research — NanoColloids & Magnetism Lab</title>
+  <meta name="description" content="NanoColloids & Magnetism Lab — research, projects, publications, news and team." />
+  <meta name="theme-color" content="#2aa1b6" />
+  <link rel="preload" as="image" href="./media/bg.webp">
+  <link rel="preload" as="image" href="./media/Logo-grupo.webp">
+  <link rel="preload" as="image" href="./media/home/QUIMICAS_COLOR_SOLO.webp">
+  <style>
+    :root{
+      --brand:#2aa1b6; --brand-700:#1b6f80; --brand-100:#6fc5d6;
+      --bg:#F7FAFC; --surface:#fff; --ink:#0A1320; --muted:#41556F; --line: transparent;
+      --font:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+      --base:16px; --radius:8px; --container:1200px;
+      --space-1:.5rem; --space-2:.75rem; --space-3:1rem; --space-4:1.5rem; --space-5:2rem; --space-6:3rem;
+      --dur:500ms; --bez:cubic-bezier(.2,.7,.2,1); --elev:0 2px 14px rgba(12,20,33,.06);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--base)/1.6 var(--font)}
+    img,svg,video{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:3px}
+    ::selection{background:#dff2f6;color:#051015}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* Fondo fijo con velo suave */
+    .site-bg{position:fixed;inset:0;z-index:-1;background:#f2f6fb url('./media/bg.webp') center/cover no-repeat;box-shadow:inset 0 0 0 100vmax rgba(255,255,255,.78);pointer-events:none}
+
+    .container{max-width:var(--container);margin-inline:auto;padding-inline:1rem}
+    .section{padding-block:var(--space-6)}
+
+    /* ===== HEADER (blur) ===== */
+    header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);transition:background var(--dur) var(--bez)}
+    header.site.scrolled{background:rgba(255,255,255,.84)}
+    header .container{padding-block:.65rem;position:relative;min-height:72px}
+    .nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.75rem}
+    .brand{display:flex;align-items:center;padding-block:.25rem}
+    .brand-logo{height:78px;width:auto;object-fit:contain}
+    .navlinks{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;justify-content:flex-start}
+    .navlinks a{padding:.25rem .45rem;border-radius:.5rem;font-weight:600;font-size:.95rem}
+    .navlinks a[aria-current="page"],.navlinks a:hover{background:rgba(0,0,0,.06)}
+    .brand-right{display:flex;align-items:center;justify-content:end;padding-block:.25rem}
+    .brand-right img{height:52px;width:auto;object-fit:contain}
+    .menu-btn{display:none;background:none;border:0;color:inherit;font-size:1rem}
+    @media (max-width:860px){.menu-btn{display:inline-flex}.nav{grid-template-columns:auto 1fr auto}.navlinks{display:none}}
+
+    /* Type & grid */
+    .eyebrow{letter-spacing:.10em;text-transform:uppercase;font-weight:800;font-size:.78rem;color:var(--brand)}
+    .h1{font-size:clamp(2rem,3vw,2.3rem) !important;line-height:1.0;margin:0 0 .6rem 0;font-weight:850}
+    .h2{font-size:clamp(1.6rem,2.8vw,2.2rem);line-height:1.2;margin:0 0 .6rem 0;font-weight:800}
+    .h3{font-size:1.25rem;margin:.2rem 0 .3rem 0;font-weight:750}
+    .muted{color:#41556F}
+    .grid{display:grid;gap:var(--space-3)}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:1024px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:680px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:var(--space-3);box-shadow:var(--elev);transition:transform var(--dur) var(--bez),box-shadow var(--dur) var(--bez)}
+    .card:hover{transform:translateY(-3px)}
+    .meta{font-size:.92rem;color:#41556F}
+
+    /* Botones */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.55rem .9rem;border-radius:999px;border:0;cursor:pointer;font-weight:700;font-size:.95rem;line-height:1;min-height:40px;text-decoration:none}
+    .btn-primary{background:var(--brand-700);color:#fff}
+    .btn-primary:hover{background:#000;color:#fff}
+
+    /* Util imagen 3:2 (cards, news, projects) */
+    .media-32{aspect-ratio:3/2;border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line)}
+    .media-32>img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* ===== HERO ===== */
+    .hero{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);background:transparent;padding-block:clamp(.6rem, 2.5vw, 1.25rem);min-height:clamp(420px,58vh,680px)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--space-5);max-width:var(--container);margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem);align-items:center}
+    @media (max-width:980px){.hero-grid{grid-template-columns:1fr}}
+    .hero-right{max-width:700px;margin-inline:auto;align-self:center}
+    .carousel{position:relative}
+    .track{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;border:1px solid var(--line);border-radius:var(--radius);background:#fff;aspect-ratio:3/2;max-height:540px;box-shadow:0 8px 28px rgba(12,20,33,.08);-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-width:none;-ms-overflow-style:none}
+    .track::-webkit-scrollbar{width:0;height:0;display:none}
+    @media (max-width:680px){.track{max-height:40vh}}
+    .slide{flex:0 0 100%;width:100%;scroll-snap-align:start;position:relative}
+    .slide img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 380ms var(--bez)}
+    .slide img.is-loaded{opacity:1}
+    .ctrl{position:absolute;top:50%;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:0;cursor:pointer;background:rgba(255,255,255,.85);backdrop-filter:saturate(150%) blur(8px);box-shadow:0 6px 24px rgba(0,0,0,.14);z-index:2}
+    .prev{left:10px}.next{right:10px}
+    .ctrl svg{width:22px;height:22px}
+    .ctrl:active{transform:translateY(-50%) scale(.98)}
+    .gallery-actions{display:flex;justify-content:center;margin-top:1.8rem}
+
+    /* ===== ABOUT ===== */
+    .about-grid{align-items:start}
+    @media (min-width:980px){.about-grid{grid-template-columns:1fr 1fr}}
+    #about_figure{margin:0;place-self:start;display:inline-block;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+    #about_figure img{display:block;width:clamp(260px,36vw,420px);height:auto}
+
+    /* ===== TEAM ===== */
+    #team_list .person{display:flex;gap:1rem;align-items:center}
+    #team_list .person img{width:88px;height:88px;border-radius:999px;border:1px solid var(--line);object-fit:cover}
+
+    /* ===== NEWS ===== */
+    #news_list time{font-size:.9rem;color:#41556F}
+
+    /* ===== Footer ===== */
+    footer{border-top:1px solid var(--line)}
+    footer .logos{display:grid;gap:1rem;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;padding-block:1rem}
+    footer .logos img{height:44px;width:auto;object-fit:contain}
+    footer .logos a:nth-child(1) img{height:66px}
+    footer .logos a:nth-child(2) img{height:57px}
+
+    /* Back to top */
+    .totop{position:fixed;right:20px;bottom:20px;z-index:60;border:0;border-radius:999px;padding:.65rem;background:rgba(255,255,255,.75);-webkit-backdrop-filter:saturate(160%) blur(10px);backdrop-filter:saturate(160%) blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.12);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity var(--dur) var(--bez),transform var(--dur) var(--bez),visibility var(--dur) var(--bez)}
+    .totop svg{display:block;width:20px;height:20px}
+    .totop.show{opacity:1;visibility:visible;transform:none}
+
+    /* Modal menú móvil */
+    .menu-modal{position:fixed;inset:0;z-index:80;display:none;background:rgba(255,255,255,.96);-webkit-backdrop-filter:saturate(140%) blur(10px);backdrop-filter:saturate(140%) blur(10px)}
+    .menu-modal.open{display:block}
+    .menu-modal .inner{max-width:min(92vw,520px);margin:8vh auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.12);padding:1rem}
+    .menu-modal header{display:flex;justify-content:space-between;align-items:center;padding:.25rem .25rem .5rem .25rem;border-bottom:1px solid var(--line)}
+    .menu-modal nav{display:grid;gap:.35rem;padding:1rem .5rem}
+    .menu-modal a{padding:.6rem .8rem;border-radius:.75rem;font-weight:700}
+    .menu-modal a:hover{background:#f3f6fb}
+
+    /* Scroll reveal + stagger */
+    .reveal{opacity:0;transform:translateY(6px);transition:opacity 420ms var(--bez),transform 420ms var(--bez);transition-delay:var(--d,0ms)}
+    .reveal.is-inview{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.reveal{transition:none!important}}
+
+    /* Alinear columnas del About por arriba */
+.about-grid { align-items: start; }
+
+/* La figura ya forzaba alineación arriba, lo dejamos explícito */
+#about_figure { align-self: start; }
+
+/* Reducir la imagen un 30% (de clamp(260px,36vw,420px) a aprox 182px,25vw,294px) */
+#about_figure img { width: clamp(182px, 25vw, 294px); }
+
+/* Ajustes específicos About */
+#about .about-grid{
+  grid-template-columns: minmax(0, 420px) minmax(0, 560px);
+  column-gap: clamp(12px, 2vw, 20px);
+  justify-content: center;   /* centrar horizontal */
+  align-items: start;        /* alinear arriba */
+}
+#about_figure{ align-self: start; }
+
+/* Header “dark” al scroll */
+header.site.dark {
+  background: #0a0a0a !important;
+  color: #fff;
+}
+header.site.dark a { color:#fff; }
+header.site.dark .navlinks a[aria-current="page"], 
+header.site.dark .navlinks a:hover { background: rgba(255,255,255,.12); }
+
+/* === ABOUT: mover el marco (figure) a la derecha/abajo === */
+
+/* Ajusta estos valores donde quieras (en #about, o en un scope superior) */
+#about{
+  --about-col: 300px;    /* ancho de la columna de la imagen */
+  --about-gap: 3rem;     /* separación entre imagen y texto */
+
+  /* DESPLAZAMIENTO del marco: +X => derecha, +Y => abajo */
+  --about-shift-x: 20px;
+  --about-shift-y: 20px;
+}
+
+/* Disposición en 2 columnas: [imagen | texto] */
+#about > .stack{
+  display: grid;
+  grid-template-columns: var(--about-col) 1fr;
+  gap: var(--about-gap);
+  align-items: start;
+}
+
+/* Desplazamiento del marco (afecta al flujo: el texto respeta la posición) */
+#about_figure{
+  margin-left: var(--about-shift-x);
+  margin-top:  var(--about-shift-y);
+}
+
+/* (Opcional) Estilo básico del retrato; no afecta al desplazamiento */
+#about_figure img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+/* En móvil, suele ser mejor sin desplazamiento */
+@media (max-width: 980px){
+  #about{
+    --about-shift-x: 0px;
+    --about-shift-y: 20px;
+  }
+  #about > .stack{
+    grid-template-columns: 1fr;   /* pila vertical */
+  }
+}
+
+/* Publications unificado: una por fila, card clicable y portada cuadrada */
+:is(#publications, #selected_publications) .stack{ display:grid; gap: var(--space-3); }
+
+a.card.selpub{
+  display:grid;
+  grid-template-columns:minmax(132px, 192px) 1fr !important;
+  gap: var(--space-3);
+  align-items:start;
+  text-decoration:none;
+  color:inherit;
+  transition: transform var(--dur) ease, box-shadow var(--dur) ease;
+}
+a.card.selpub:hover{ transform: translateY(-2px); }
+
+:is(#publications, #selected_publications) .selpub .cover{
+  border:1px solid var(--line); border-radius: var(--radius); overflow:hidden; background:#fff;
+}
+
+/* Fuerza CUADRADA (y pisa cualquier 3/2 previo) */
+:is(#publications, #selected_publications) .selpub .cover img{
+  width:100%; height:100%; object-fit:cover; aspect-ratio: 1 / 1 !important;
+}
+
+@media (max-width:800px){
+  a.card.selpub{ grid-template-columns:1fr; }
+}
+
+/* Base: TODOS los logos del footer */
+#footer_logos img{
+  height: 54px;          /* base */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Ajustes individuales (usa height, NO max-height) */
+#footer_logos > *:nth-child(1) img{ height: calc(54px * 1.5); } /* +50% */
+#footer_logos > *:nth-child(2) img{ height: calc(54px * 1.2); } /* +20% */
+
+
+/* --- Header: transición suave y estado 'dark' --- */
+header.site{
+  transition: background-color .45s ease, color .45s ease, border-color .45s ease;
+}
+header.site.dark {
+  background: #0a0a0a !important;
+  color:#fff;
+}
+header.site.dark a { color:#fff; }
+header.site.dark .navlinks a:hover{ background: rgba(255,255,255,.12); }
+
+/* --- Ritmo general más lento --- */
+:root{ --t-quick: .45s; --t-med: .8s; --t-slow: 1.2s; }
+.slide img{ transition-duration: var(--t-med) !important; }
+.btn, .navlinks a{
+  transition: background var(--t-quick) ease, color var(--t-quick) ease, border-color var(--t-quick) ease, transform var(--t-quick) ease;
+}
+.card{
+  transition: transform var(--t-med) ease, box-shadow var(--t-med) ease, border-color var(--t-med) ease;
+}
+
+/* Header oscuro al hacer scroll (forzado) */
+header#siteHeader.dark,
+header.site.dark{
+  background:#0a0a0a !important;
+  color:#fff !important;
+  border-color:#0a0a0a !important;
+}
+header#siteHeader.dark a,
+header.site.dark a{ color:#fff !important; }
+header#siteHeader.dark .navlinks a:hover,
+header.site.dark .navlinks a:hover{ background:rgba(255,255,255,.12) !important; }
+
+/* Tamaño de portada cuadrada en Publications (mucho más pequeña) */
+#publications{ --pub-cover: clamp(90px, 14vw, 140px); }  /* máx ~140px */
+
+a.card.selpub{
+  /* Pisar cualquier minmax previo (220–320px) */
+  grid-template-columns: var(--pub-cover) 1fr !important;
+}
+
+/* Asegurar cuadrado y recorte correcto */
+#publications .selpub .cover img{
+  width:100%; height:100%;
+  object-fit:cover;
+  aspect-ratio:1 / 1 !important;
+}
+
+/* === FINAL OVERRIDES — PUBLICATIONS === */
+
+/* Tamaño columna portada (≈40% más pequeña) */
+:is(#publications, #selected_publications){
+  --pub-cover: clamp(54px, 8.4vw, 84px);
+}
+
+/* Card de publicación clicable (una por fila) */
+:is(#publications, #selected_publications) a.card.selpub{
+  display:grid !important;
+  grid-template-columns: var(--pub-cover) 1fr !important; /* <-- tamaño portada definitivo */
+  gap: var(--space-3);
+  align-items:start;
+  text-decoration:none;
+  color:inherit;
+  will-change: transform;
+  transition: transform var(--dur, .7s) ease, box-shadow var(--dur, .7s) ease !important;
+}
+
+/* Efecto hover “flotar” (con sombra) */
+:is(#publications, #selected_publications) a.card.selpub:hover{
+  transform: translateY(-4px) scale(1.01) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.14) !important;
+}
+
+/* Portada estrictamente cuadrada y rellenando */
+:is(#publications, #selected_publications) .selpub .cover img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  aspect-ratio: 1 / 1 !important;
+}
+
+/* Publications: hover más rápido (solo en estas cards) */
+:is(#publications, #selected_publications) a.card.selpub{
+  --pub-t: .32s; /* velocidad del hover de estas cards */
+  transition: transform var(--pub-t) ease, box-shadow var(--pub-t) ease !important;
+}
+:is(#publications, #selected_publications) a.card.selpub:hover{
+  transform: translateY(-3px) scale(1.005) !important;  /* un pelín más sutil */
+  box-shadow: 0 6px 20px rgba(0,0,0,.12) !important;
+}
+
+/* (opcional) respeta usuarios con reduce motion */
+@media (prefers-reduced-motion: reduce){
+  :is(#publications, #selected_publications) a.card.selpub{
+    transition: none !important;
+  }
+}
+
+#about_pdf_wrap{ display:block !important; }
+#about_pdf{ display:inline-flex !important; }
+
+/* CV fuera del figure, debajo de la foto y en la MISMA columna */
+#about .cv-below{
+  grid-column: 1;                 /* misma columna que la foto (layout por defecto) */
+  display: flex;
+  justify-content: center;        /* pon 'flex-start' si lo quieres alineado a la izquierda */
+  margin-top: .9rem;
+}
+#about .cv-below .btn{
+  max-width: 260px;
+  width: 100%;
+}
+
+/* Si usas variante about-right (foto a la derecha), colócalo en la columna 2 */
+#about.about-right .cv-below{ grid-column: 2; }
+
+/* En móvil (una sola columna) queda igualmente debajo de la foto */
+@media (max-width:980px){
+  #about .cv-below{ grid-column: 1; }
+}
+
+/* ABOUT: grid estable — foto | texto; CV debajo de la foto */
+#about > .stack{
+  display:grid;
+  grid-template-columns: var(--about-col, 300px) 1fr;
+  gap: var(--about-gap, 2rem);
+  align-items:start;
+}
+#about_figure{ grid-column:1; grid-row:1; }
+#about_textcol{ grid-column:2; grid-row:1; }      /* columna de texto etiquetada por JS */
+#about_cv_below{
+  grid-column:1; grid-row:2;                      /* CV debajo de la foto */
+  display:flex; justify-content:center; margin-top:.9rem;
+}
+#about_cv_below .btn{ max-width:260px; width:100%; }
+
+/* Variante foto a la derecha */
+#about.about-right > .stack{ grid-template-columns: 1fr var(--about-col, 300px); }
+#about.about-right #about_textcol{ grid-column:1; grid-row:1; }
+#about.about-right #about_figure{  grid-column:2; grid-row:1; }
+#about.about-right #about_cv_below{grid-column:2; grid-row:2; justify-content:flex-end; }
+
+/* Móvil: una sola columna — CV sigue bajo la foto */
+@media (max-width:980px){
+  #about > .stack{ grid-template-columns: 1fr; }
+  #about_figure{ grid-column:1; grid-row:1; }
+  #about_cv_below{ grid-column:1; grid-row:2; }
+  #about_textcol{ grid-column:1; grid-row:3; }
+}
+
+/* === ABOUT: 2 columnas estables; CV debajo de la foto SIN tocar el texto === */
+#about > .stack{
+  display:grid;
+  grid-template-columns: var(--about-col, 300px) 1fr;
+  gap: var(--about-gap, 2rem);
+  align-items:start;
+}
+
+/* Nuevo contenedor de la COLUMNA izquierda (foto + CV). No cambies su orden */
+#about_leftcol{ display:flex; flex-direction:column; align-items:stretch; gap:.9rem; }
+#about_figure{ order:1; }
+#about_cv_below{ order:2; display:flex; justify-content:center; }
+#about_cv_below .btn{ max-width:260px; width:100%; }
+
+/* Columna derecha = texto */
+
+/* Variante foto a la derecha */
+#about.about-right > .stack{ grid-template-columns: 1fr var(--about-col, 300px); }
+#about.about-right #about_leftcol{ grid-column:2; }
+#about.about-right #about_textcol{ grid-column:1; }
+
+/* Móvil: una sola columna (foto, CV, texto) */
+@media (max-width:980px){
+  #about > .stack{ grid-template-columns: 1fr; }
+}
+
+/* === HOVER global de cards (restaurado) — sin afectar a publications === */
+.card{
+  transition: transform var(--dur, .7s) ease, box-shadow var(--dur, .7s) ease;
+}
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+/* Mantener override específico de Publications (más específico) */
+:is(#publications, #selected_publications) a.card.selpub{
+  --pub-t: .32s;
+  transition: transform var(--pub-t) ease, box-shadow var(--pub-t) ease !important;
+}
+:is(#publications, #selected_publications) a.card.selpub:hover{
+  transform: translateY(-3px) scale(1.005) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12) !important;
+}
+
+/* Por si alguna capa tapaba botones/enlaces del TEAM */
+#team .card.person a.btn, 
+#team .card.person button.btn{
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Asegura que nada tape los botones del TEAM */
+#team .card.person { position: relative; }
+#team .card.person a.btn, 
+#team .card.person button.btn{
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* === HEADER: transparente antes de scroll + línea negra full width === */
+header#siteHeader, header.site, header[role="banner"]{
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  position: sticky; top: 0; z-index: 50;
+}
+header#siteHeader::after, header.site::after, header[role="banner"]::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+  background:#000; pointer-events:none;
+}
+/* En oscuro tras scroll */
+header#siteHeader.dark, header.site.dark, header[role="banner"].dark{
+  background:#0a0a0a !important; color:#fff !important;
+}
+
+/* Back-to-top — negro, flecha blanca, 40% más grande y más a la izquierda */
+.totop{
+  right: 40px !important; bottom: 20px !important;
+  padding: .91rem !important;           /* ~40% más grande */
+  background: #000 !important; color:#fff !important;
+  border: 0 !important; border-radius: 999px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  line-height: 0 !important;
+  z-index: 2147483000 !important;       /* muy por encima de todo */
+  box-shadow: 0 8px 28px rgba(0,0,0,.25) !important;
+  mix-blend-mode: normal !important;
+  pointer-events: auto !important;
+}
+.totop svg{ width: 28px !important; height: 28px !important; display: block !important; }
+.totop svg, .totop svg *{
+  stroke: #fff !important; fill: none !important; stroke-width: 2.2px !important;
+  stroke-linecap: round !important; stroke-linejoin: round !important;
+}
+.totop:hover{ transform: translateY(-2px) !important; }
+.totop:focus-visible{ outline: 2px solid #fff; outline-offset: 3px; }
+
+/* enlaces visibles en oscuro */
+header.site.dark a{ color:#fff !important; }
+
+/* === SCROLL SUAVE + OFFSET DEL HEADER PARA ANCHORS === */
+html{ scroll-behavior: smooth; }
+
+/* margen superior al hacer scroll a secciones (compensa el header sticky) */
+#hero, #projects, #team, #about, #news, #publications{
+  scroll-margin-top: calc(var(--header-h) + 8px);
+}
+/* si usas otros anchors con id en el contenido, puedes añadirlos aquí también */
+
+/* === MENÚ: estado activo === */
+.navlinks a.is-active,
+.navlinks a[aria-current="page"]{
+  background: rgba(0,0,0,.08) !important;
+  border-radius: 8px;
+}
+header.dark .navlinks a.is-active,
+header.dark .navlinks a[aria-current="page"]{
+  background: rgba(255,255,255,.18) !important;
+}
+
+/* === CARDS: sin bordes, solo fondo blanco === */
+.card{
+  border: 0 !important;
+  background: #fff !important;
+  box-shadow: 0 2px 14px rgba(12,20,33,.06);
+}
+/* bloques media dentro de cards (projects/news/pubs) sin borde también */
+.media-32, .selpub .cover{
+  border: 0 !important;
+  box-shadow: none !important;
+  background: #fff;
+}
+
+#contact{ --line: #CBD5E1; }  /* gris suave solo dentro del contacto */
+
+/* Research como News: card clicable */
+#research_list a.card{
+  display:block; text-decoration:none; color:inherit;
+  transition: transform var(--dur) ease, box-shadow var(--dur) ease;
+}
+#research_list a.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+:root{ --corp-green: #008b4b; } /* verde corporativo */
+
+/* Cards de Research con nuevo aspecto */
+#research .card {
+  background-color: #25a3b5 !important; /* verde corporativo */
+  color: #fff; /* texto por defecto en blanco */
+}
+
+/* Título en negro */
+#research .card h3,
+#research .card .title {
+  color: #000 !important;
+}
+
+/* Summary en blanco */
+#research .card .summary,
+#research .card p {
+  color: #fff !important;
+}
+
+</style>
+
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true"></div>
+  <a class="sr-only" href="#content">Skip to content</a>
+
+  <header class="site" id="siteHeader" role="banner">
+    <div class="container nav" aria-label="Primary navigation">
+      <a href="#home" class="brand" aria-label="Home">
+        <img class="brand-logo" id="brandLeft"
+             src="./media/Logo-grupo.webp" alt="Gavilan Research"
+             onerror="this.onerror=null; this.src='./media/Logo grupo.png';">
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menuModal" id="menuBtn" type="button">☰ Menu</button>
+      <nav class="navlinks" role="navigation" aria-label="Main">
+        <a href="#projects">Projects</a><a href="#team">Team</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#about">Dr. Gavilán</a><a href="#news">News</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="brand-right">
+        <img id="brandRight"
+             src="./media/home/QUIMICAS_COLOR_SOLO.webp" alt="Partner logo"
+             onerror="this.onerror=null; this.src='./media/QUIMICAS_COLOR_SOLO.webp';">
+      </div>
+    </div>
+  </header>
+
+  <!-- Modal menú móvil -->
+  <div class="menu-modal" id="menuModal" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+    <div class="inner">
+      <header><strong id="menuTitle">Menu</strong><button class="btn" id="menuClose" type="button" aria-label="Close">✕</button></header>
+      <nav id="menuList"><a href="#projects">Projects</a><a href="#team">Team</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#about">Dr. Gavilán</a><a href="#news">News</a><a href="#contact">Contact</a></nav>
+    </div>
+  </div>
+
+  <main id="content">
+    <!-- HOME / HERO -->
+    <section id="home" class="section" aria-labelledby="home_title">
+      <div class="hero">
+        <div class="hero-grid" data-reveal>
+          <div>
+            <div class="eyebrow" id="home_kicker">Materials that move medicine</div>
+            <h1 class="h1 hero-title" id="home_title">Nanocolloids, magnetism and biomedical applications</h1>
+            <p class="muted" id="home_intro">We design nanomaterials with defined shapes and compositions through advanced colloidal synthesis.</p>
+          </div>
+          <div class="hero-right">
+            <figure class="hero-figure" data-reveal>
+              <div class="carousel" id="heroCarousel" role="region" aria-label="Hero carousel">
+                <button class="ctrl prev" id="heroPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15.5 3.87L13.73 2.1 4.84 11l8.89 8.9 1.77-1.77L8.38 11z"/></svg></button>
+                <div class="track" id="heroTrack" aria-live="polite"></div>
+                <button class="ctrl next" id="heroNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M8.5 20.13L10.27 21.9 19.16 13 10.27 4.1 8.5 5.87 15.62 13z"/></svg></button>
+              </div>
+            </figure>
+            <div class="gallery-actions" data-reveal><button class="btn btn-primary" id="openGallery" type="button" aria-haspopup="dialog">View all</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container section" style="--space-6: 1.25rem;";" aria-labelledby="projects_title">
+      <header data-reveal><div class="eyebrow" id="projects_kicker">What we’re building</div><h2 class="h2" id="projects_title">Projects</h2><p class="muted" id="projects_intro">Ongoing and completed projects.</p></header>
+      <div class="grid grid-4" id="projects_list"></div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="container section" aria-labelledby="team_title">
+      <header data-reveal><div class="eyebrow" id="team_kicker">People behind the science</div><h2 class="h2" id="team_title">Team</h2><p class="muted" id="team_intro">Researchers and collaborators.</p></header>
+      <div class="grid grid-3" id="team_list"></div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="container section" aria-labelledby="research_title">
+      <header data-reveal><div class="eyebrow" id="research_kicker">Ideas we test in the lab</div><h2 class="h2" id="research_title">Research</h2><p class="muted" id="research_intro">Key research lines.</p></header>
+      <div class="grid grid-4" id="research_list"></div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="container section" aria-labelledby="pubs_title">
+  <header>
+    <div class="eyebrow" id="publications_kicker">Selected by impact</div>
+    <h2 class="h2" id="pubs_title">Selected Publications</h2>
+    <p class="muted" id="publications_intro">Representative selection with cover & abstract.</p>
+  </header>
+  <div id="publications_list" class="stack"></div>
+</section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container section about-left" aria-labelledby="about_title">
+  <header>
+    <div class="eyebrow" id="about_kicker">Profile</div>
+    <h2 class="h2" id="about_title">About Dr. H. Gavilán</h2>
+  </header>
+
+  <div class="stack">
+    <!-- COLUMNA IZQUIERDA: foto + CV -->
+    <div id="about_leftcol">
+      <figure id="about_figure">
+        <!-- el loader ya mete la imagen aquí -->
+      </figure>
+      <div id="about_cv_below">
+        <!-- aquí va el botón (lo rellena el JS de abajo) -->
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: texto -->
+    <div id="about_textcol">
+      <div id="about_text" class="muted"></div>
+      <!-- si tenías un viejo #about_pdf_wrap en esta columna, bórralo -->
+    </div>
+  </div>
+</section>
+
+    <!-- NEWS -->
+    <section id="news" class="container section" aria-labelledby="news_title">
+      <header data-reveal><div class="eyebrow" id="news_kicker">Latest from the lab</div><h2 class="h2" id="news_title">News</h2><p class="muted" id="news_intro">Latest updates.</p></header>
+      <div class="grid grid-3" id="news_list"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container section" aria-labelledby="contact_title">
+      <header data-reveal><div class="eyebrow" id="contact_kicker">Let’s collaborate</div><h2 class="h2" id="contact_title">Contact</h2><p class="muted" id="contact_intro">Get in touch for collaborations and enquiries.</p></header>
+      <form class="card" aria-describedby="consent" onsubmit="event.preventDefault(); alert('Message sent (demo)');" data-reveal>
+        <div class="grid grid-2">
+          <label>Name<br><input required name="name" autocomplete="name" style="width:100%;background:#fff;border:1px solid var(--line);color:#0A1320;border-radius:.75rem;padding:.6rem"/></label>
+          <label>Email<br><input required type="email" name="email" autocomplete="email" style="width:100%;background:#fff;border:1px solid var(--line);color:#0A1320;border-radius:.75rem;padding:.6rem"/></label>
+        </div>
+        <label style="display:block;margin-top:.75rem">Message<br><textarea required name="message" rows="5" style="width:100%;background:#fff;border:1px solid var(--line);color:#0A1320;border-radius:.75rem;padding:.6rem"></textarea></label>
+        <label id="consent" style="display:flex;gap:.5rem;align-items:flex-start;margin-top:.75rem"><input type="checkbox" required aria-required="true"/><span class="muted">I consent to my data being processed according to the privacy policy.</span></label>
+        <p style="margin-top:.75rem"><button class="btn btn-primary" type="submit">Send</button></p>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="site">
+  <div class="container" style="padding-block:2rem;">
+    <div class="logos" id="footer_logos" aria-label="Partner logos"></div>
+    <div style="text-align:center;margin-top:1rem">© <span id="year"></span> Gavilan Research</div>
+  </div>
+</footer>
+
+  <button id="toTop" class="totop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4l-7-7z"/></svg>
+  </button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* Header + toTop */
+    const header=document.getElementById('siteHeader');const toTop=document.getElementById('toTop');
+    const onScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    header.classList.toggle('scrolled', y > 2);
+    header.classList.toggle('dark', y > 80);   // ← añade esta línea
+    toTop.classList.toggle('show', y > 400);
+};
+
+    /* Modal menú móvil */
+    const menuBtn=document.getElementById('menuBtn');const menuModal=document.getElementById('menuModal');const menuClose=document.getElementById('menuClose');const menuLinks=Array.from(document.querySelectorAll('#menuList a'));const focusablesSel='a,button,[tabindex]:not([tabindex="-1"])';
+    function openMenu(){menuModal.classList.add('open');document.body.style.overflow='hidden';menuBtn.setAttribute('aria-expanded','true');(menuLinks[0]||menuClose).focus()}
+    function closeMenu(){menuModal.classList.remove('open');document.body.style.overflow='';menuBtn.setAttribute('aria-expanded','false');menuBtn.focus()}
+    menuBtn.addEventListener('click',openMenu);menuClose.addEventListener('click',closeMenu);menuModal.addEventListener('click',e=>{if(e.target===menuModal)closeMenu()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menuModal.classList.contains('open'))closeMenu()});
+    menuModal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const f=Array.from(menuModal.querySelectorAll(focusablesSel));const first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault()}else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault()}});menuLinks.forEach(a=>a.addEventListener('click',closeMenu));
+
+    /* Helpers */
+    const $=id=>document.getElementById(id); // Ensure this is declared only once
+    async function loadJSON(path){try{const r=await fetch(path,{cache:'no-store'});if(!r.ok)return null;return await r.json()}catch(_){return null}}
+    function setText(id,v){const el=$(id);if(!el||v==null)return;el.textContent=v}
+    function setHTML(id,v){const el=$(id);if(!el||v==null)return;el.innerHTML=v}
+    function normalizePath(p){
+    return String(p||"").replace(/\\/g,'/');  // convierte "\" en "/"
+}
+
+    /* Dedupe prefer WEBP (para evitar duplicados por variantes) */
+    const EXT_ORDER=['.webp','.avif','.jpg','.jpeg','.png']; // Ensure this is declared only once
+    const WIDTH_WHITELIST=new Set([320,360,375,384,414,480,512,540,576,640,720,750,768,800,828,900,960,992,1024,1080,1152,1200,1242,1280,1366,1440,1536,1600,1668,1728,1792,1920,2048,2160,2304,2400,2560,2732,2880,3000,3072,3200,3440,3840]);
+    function extOf(p){const m=String(p).toLowerCase().match(/\.[a-z0-9]+$/);return m?m[0]:''}
+    function fname(p){return String(p).split('/').pop()}
+    function stripExt(n){return n.replace(/\.[^.]+$/,'')}
+    function stripResponsiveTail(base){if (/(?:[._-])\d{3,4}x\d{3,4}$/i.test(base)) return base.replace(/(?:[._-])\d{3,4}x\d{3,4}$/i,''); if (/(?:@|[._-])\d{1,2}x$/i.test(base)) return base.replace(/(?:@|[._-])\d{1,2}x$/i,''); const m=base.match(/(.*?)(?:[._-])(\d{3,4})(?:w|px)?$/i); if(m){const n=parseInt(m[2],10); if(WIDTH_WHITELIST.has(n)) return m[1]} return base}
+    function normalizeBaseStrict(p){let b=stripExt(fname(p)).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[-\s_]+/g,'-');b=b.replace(/(?:[._-])(copy|copia|final|final2|edit|edited|retouched|retouch|fix|fixed|export|output|scaled)$/i,'');b=b.replace(/[-_.]+/g,'-').replace(/^-+|-+$/g,'');b=stripResponsiveTail(b);return b.toLowerCase()}
+    function uniqueBySrc(list){const seen=new Set();const out=[];for(const it of list||[]){const k=(it&&it.src?it.src.toLowerCase():'');if(!k||seen.has(k))continue;seen.add(k);out.push(it)}return out}
+    function dedupePreferWebpStrict(items){const cleaned=uniqueBySrc(items||[]);const groups=new Map();for(const it of cleaned){const key=normalizeBaseStrict(it.src);const arr=groups.get(key)||[];arr.push(it);groups.set(key,arr)}const out=[];for(const arr of groups.values()){arr.sort((a,b)=>EXT_ORDER.indexOf(extOf(a.src))-EXT_ORDER.indexOf(extOf(b.src)));out.push(arr[0])}out.sort((a,b)=>a.src.localeCompare(b.src,undefined,{numeric:true}));return out}
+
+    /* === Images manifest (si existe) para srcset === */
+    // Removed duplicate declaration of IMG_MANIFEST
+    function buildImgAttrs(inputPath, defaultSizes="(max-width: 680px) 100vw, 360px") {
+      if (!inputPath) return { src: "", srcset: "", sizes: "" };
+      const m = inputPath.replace(/^[.][/\\]*/, '').split('/');
+      if (m.length < 3) return { src: inputPath, srcset: "", sizes: "" };
+      const dir = m[1];
+      const file = m[m.length - 1];
+      const base = file.replace(/\.[^.]+$/, '').replace(/-(\d{2,4})$/, '');
+      const key = `${dir}/${base}`;
+      const entry = IMG_MANIFEST[key];
+      if (!entry) return { src: inputPath, srcset: "", sizes: "" };
+      const src = entry.original || (entry.variants.length ? entry.variants[entry.variants.length - 1].path : inputPath);
+      const srcset = entry.variants && entry.variants.length
+        ? entry.variants.map(v => `${v.path} ${v.w}w`).join(', ')
+        : "";
+      return { src, srcset, sizes: srcset ? defaultSizes : "" };
+    }
+    function imgAttrs(path, sizes) {
+      const a = buildImgAttrs(path, sizes);
+      const s = [`src="${a.src}"`];
+      if (a.srcset) s.push(`srcset="${a.srcset}"`);
+      if (a.sizes)  s.push(`sizes="${a.sizes}"`);
+      return s.join(' ');
+    }
+
+    /* ===== HERO ===== */
+    async function loadHeroImagesFallback(){
+      try{
+        const m=await fetch('./content/hero-images.json',{cache:'no-store'});
+        if(m.ok){const arr=await m.json();if(Array.isArray(arr)&&arr.length)return arr}
+      }catch(_){}
+      return [];
+    }
+
+    function buildHeroSlider(images){
+      const track=$('heroTrack');const prev=$('heroPrev');const next=$('heroNext');
+      const list=dedupePreferWebpStrict(Array.isArray(images)?images:[]);
+      track.innerHTML=(list.length?list:[{src:"./media/hero/hero.webp",alt:"Hero"}]).map((it,i)=>`
+        <div class="slide">
+          <img src="${it.src}" alt="${it.alt||''}" loading="${i===0?'eager':'lazy'}" ${i===0?'fetchpriority="high"':''} decoding="async">
+        </div>`).join('');
+      const width = ()=>track.clientWidth; const slides=()=>Array.from(track.children);
+      const index = ()=>Math.round(track.scrollLeft/width()); const wrap=i=>{const N=slides().length;return(i%N+N)%N}; const goTo=i=>track.scrollTo({left:wrap(i)*width(),behavior:'smooth'}); const nextFn=()=>goTo(index()+1); const prevFn=()=>goTo(index()-1);
+      $('heroPrev').onclick=prevFn; $('heroNext').onclick=nextFn;
+      let timer=null,hovering=false; const start=()=>{stop(); if(slides().length>1) timer=setInterval(()=>{if(!hovering&&!document.hidden)nextFn()},3000)}; const stop=()=>{if(timer){clearInterval(timer);timer=null}}
+      track.addEventListener('mouseenter',()=>{hovering=true;stop()}); track.addEventListener('mouseleave',()=>{hovering=false;start()}); document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else start()}); window.addEventListener('resize',()=>{goTo(index())},{passive:true});
+      slides().forEach(sl=>{const im=sl.querySelector('img');im.addEventListener('load',()=>im.classList.add('is-loaded'),{once:true});im.addEventListener('error',()=>{sl.remove();if(slides().length<=1){$('heroPrev').style.display=$('heroNext').style.display='none';stop()}},{once:true});});
+      if(slides().length<=1){$('heroPrev').style.display=$('heroNext').style.display='none'}
+      start();
+
+      // Modal “View all” (sin {once:true}, reabrible)
+      const openGalleryBtn=$('openGallery');
+      openGalleryBtn?.addEventListener('click',()=>{
+        let dlg=document.getElementById('galleryDialog');
+        if(!dlg){
+          dlg=document.createElement('dialog');
+          dlg.id='galleryDialog';
+          dlg.setAttribute('aria-label','Gallery');
+          dlg.innerHTML=`
+            <div style="position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-bottom:1px solid var(--line);background:#fff">
+              <strong>Gallery</strong>
+              <button class="btn btn-primary" id="closeGallery" type="button">Close</button>
+            </div>
+            <div id="galleryGrid" style="padding:1rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;max-height:75vh;overflow:auto"></div>`;
+          document.body.appendChild(dlg);
+          dlg.addEventListener('click',e=>{ if(e.target===dlg) dlg.close(); });
+          dlg.addEventListener('cancel',()=>dlg.close());
+          dlg.addEventListener('close',()=>openGalleryBtn.focus());
+          dlg.addEventListener('keydown',e=>{ if(e.key==='Escape') dlg.close(); });
+          dlg.querySelector('#closeGallery').addEventListener('click',()=>dlg.close());
+        }
+        const grid=dlg.querySelector('#galleryGrid');
+        grid.innerHTML=list.map(it=>`<div class="media-32"><img src="${it.src}" alt="${it.alt||''}"></div>`).join('');
+        dlg.showModal();
+      });
+    }
+
+    /* Scroll reveal + stagger */
+    function setupReveal(){
+      const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-inview');io.unobserve(e.target)}})},{threshold:0.12});
+      document.querySelectorAll('[data-reveal]').forEach((el,i)=>{el.classList.add('reveal');el.style.setProperty('--d',`${(i%10)*70}ms`);io.observe(el)});
+    }
+
+    (async function boot(){
+      // Manifest de imágenes responsive (si existe)
+      IMG_MANIFEST = (await loadJSON("./content/images-manifest.json")) || {};
+
+      // HOME (texto por defecto del hero)
+      const h = await loadJSON("./content/home.json");
+      if (h){
+        setText("home_kicker", h.kicker ?? "Materials that move medicine");
+        setText("home_title",  h.title  ?? "Nanocolloids, magnetism and biomedical applications");
+        setHTML("home_intro",  h.intro  ?? "");
+      }
+
+      // HERO (content/hero.json)
+try{
+  const hero = await loadJSON("./content/hero.json");
+  if (hero) {
+    setText("hero_kicker", hero.kicker ?? "");
+    setText("hero_title",  hero.title  ?? "");
+    setText("hero_sub",    hero.subtitle ?? "");
+    setHTML("hero_intro",  hero.intro ?? "");
+    const cta = document.getElementById("hero_cta");
+    if (cta && hero?.cta?.label) { cta.textContent = hero.cta.label; cta.href = hero.cta.href || "#"; }
+
+    if (Array.isArray(hero.images)) {
+      const wrap = document.getElementById("hero_gallery");
+      if (wrap) {
+        wrap.innerHTML = hero.images.slice(0,4).map(h => `
+          <figure data-reveal>
+            <img ${imgAttrs(normalizePath(h.src), "(max-width: 1200px) 100vw, 900px")} alt="${h.alt||''}">
+          </figure>`).join("");
+      }
+      // View all dialog (fiable varias veces)
+      const dlg = document.getElementById("heroDialog");
+      const grid = document.getElementById("hero_dialog_gallery");
+      if (grid) {
+        grid.innerHTML = hero.images.map(h => `
+          <figure class="card">
+            <img ${imgAttrs(normalizePath(h.src), "(max-width: 1200px) 100vw, 900px")} alt="${h.alt||''}">
+          </figure>`).join("");
+      }
+      const openBtn  = document.getElementById("hero_viewall");
+      const closeBtn = document.getElementById("hero_dialog_close");
+      openBtn?.addEventListener('click', () => dlg.showModal());
+      closeBtn?.addEventListener('click', () => dlg.close());
+      dlg?.addEventListener('cancel', e => { e.preventDefault(); dlg.close(); });
+    }
+  }
+} catch(e){ console.warn('hero.json:', e); }
+
+      /* Projects */
+      const p = await loadJSON("./content/projects.json");
+      if (p){
+        setText("projects_kicker", p.kicker ?? "Projects");
+        setText("projects_title",  p.title  ?? "Projects");
+        setHTML("projects_intro",  p.intro  ?? "");
+        const grid = document.getElementById("projects_list");
+        if (grid && Array.isArray(p.items)) {
+          grid.innerHTML = p.items.map(pr => {
+            const imgPath = pr.image || pr.cover || pr.photo || "";
+            return `
+            <article class="card" data-reveal>
+              ${imgPath ? `<img ${imgAttrs(imgPath, "(max-width: 980px) 100vw, 480px")} alt="${pr.alt||pr.title||''}" onerror="this.remove()">` : ""}
+              <div>
+                <h3 class="h3" style="margin:0">${pr.title||''}</h3>
+                ${pr.subtitle ? `<p class="muted" style="margin:.25rem 0">${pr.subtitle}</p>` : ""}
+                ${pr.summary  ? `<p class="muted" style="margin:.25rem 0">${pr.summary}</p>` : ""}
+                ${pr.link     ? `<p style="margin:0"><a class="btn btn-primary" href="${pr.link}" target="_blank" rel="noopener">Learn more</a></p>` : ""}
+              </div>
+            </article>`;
+          }).join("");
+        }
+      }
+
+      /* Team (si hay bioLink → link a About; si no, modal Bio si hay bio) */
+      const t = await loadJSON("./content/team.json");
+      if (t) {
+        setText("team_kicker", t.kicker ?? "People behind the science");
+        setText("team_title", t.title ?? "Team");
+        setHTML("team_intro", t.intro ?? "");
+        const el = document.getElementById("team_list");
+        if (el && Array.isArray(t.items)) {
+          el.innerHTML = t.items.map((m, idx) => {
+            const hasLink = !!m.bioLink;
+            const hasModal = !hasLink && !!m.bio;
+            return `
+              <article class="card person" data-reveal>
+                ${
+                  m.photo
+                    ? `<img ${imgAttrs(m.photo, "(max-width: 680px) 100vw, 300px")} alt="${m.alt || m.name}" onerror="this.remove()">`
+                    : `<div aria-hidden="true" style="width:88px;height:88px;border-radius:999px;border:1px solid var(--line)"></div>`
+                }
+                <div>
+                  <h3 class="h3" style="margin:0">${m.name}</h3>
+                  <p class="muted" style="margin:.25rem 0">${[m.role, m.affiliation].filter(Boolean).join(" — ")}</p>
+                  ${
+                    hasLink
+                      ? `<p><a class="btn btn-primary" href="${m.bioLink}">Bio</a></p>`
+                      : (hasModal ? `<p><button class="btn btn-primary show-bio" data-id="${idx}">Bio</button></p>` : "")
+                  }
+                  ${m.email ? `<p style="margin:0"><a class="btn btn-primary" href="mailto:${m.email}">Email</a></p>` : ""}
+                </div>
+              </article>
+            `;
+          }).join("");
+
+          // dialog único global para bio modal (si algún miembro trae bio)
+          if (t.items.some(m=>m.bio && !m.bioLink)) {
+            const dialog = document.createElement("dialog");
+            dialog.id = "bioDialog";
+            dialog.innerHTML = `
+              <div style="padding:1rem;max-width:600px">
+                <h3 id="bioTitle"></h3>
+                <div id="bioText"></div>
+                <p style="margin-top:1rem"><button id="closeBio" class="btn btn-primary">Close</button></p>
+              </div>`;
+            document.body.appendChild(dialog);
+            dialog.addEventListener('click',e=>{ if(e.target===dialog) dialog.close(); });
+            dialog.addEventListener('cancel',()=>dialog.close());
+            document.querySelectorAll(".show-bio").forEach(btn => {
+              btn.addEventListener("click", () => {
+                const i = parseInt(btn.dataset.id);
+                const member = t.items[i];
+                document.getElementById("bioTitle").textContent = member.name;
+                document.getElementById("bioText").innerHTML = member.bio || "";
+                dialog.showModal();
+              });
+            });
+            document.getElementById("closeBio").addEventListener("click", () => dialog.close());
+          }
+        }
+      }
+
+      /* Research */
+      const r=await loadJSON("./content/research.json");
+      if(r){
+        setText("research_kicker",r.kicker??"Ideas we test in the lab");
+        setText("research_title",r.title??"Research");
+        setHTML("research_intro",r.intro??"");
+        const el=document.getElementById("research_list");
+        if(el&&Array.isArray(r.items)){
+          el.innerHTML=r.items.map(x=>`
+            <article class="card" data-reveal>
+              ${x.image?`<div class="media-32"><img src="${x.image}" alt="" onerror="this.closest('.media-32').remove()"></div>`:""}
+              <h3 class="h3">${x.title}</h3>
+              <p class="muted">${x.summary||""}</p>
+            </article>
+          `).join("")
+        }
+      }
+
+      /* Publications */
+(async function(){
+  if (typeof loadJSON !== 'function') return;
+
+  // 1) Acepta ambos nombres y ambas ubicaciones (content/ y raíz)
+  const pubs =
+    await loadJSON("./content/publications.json") ??
+    await loadJSON("./content/selected-publications.json") ??
+    await loadJSON("./publications.json") ??
+    await loadJSON("./selected-publications.json");
+
+  if (!pubs) return;
+
+  // 2) Utilidades mínimas
+  const $ = (id) => document.getElementById(id);
+  const setT = (id, v) => { const n=$(id); if(n && v!=null) n.textContent=v; };
+  const setH = (id, v) => { const n=$(id); if(n && v!=null) n.innerHTML=v; };
+
+  // 3) Títulos/intro
+  setT("publications_kicker", pubs.kicker ?? "Selected by impact");
+  setT("pubs_title",          pubs.title  ?? "Selected Publications");
+  setH("publications_intro",  pubs.intro  ?? "");
+
+  // 4) Render: card clicable + portada cuadrada con fallback por índice
+  const wrap = $("publications_list");
+  if (!wrap || !Array.isArray(pubs.items)) return;
+
+  function coverByIndex(i, provided){
+    const idx = i + 1;
+    if (provided) return `<img src="${provided}" alt="">`;
+    const w = `./media/selected_publications/${idx}.webp`;
+    const j = `./media/selected_publications/${idx}.jpg`;
+    const p = `./media/selected_publications/${idx}.png`;
+    // Fallback: webp → jpg → png
+    const onerr = `onerror="this.onerror=null; this.src='${j}'; this.onerror=function(){this.src='${p}'}"`;
+    return `<img src="${w}" ${onerr} alt="">`;
+  }
+
+  wrap.innerHTML = pubs.items.map((it, i) => {
+    const href = it.doi || it.link || "#";
+    return `
+      <a class="card selpub" data-reveal href="${href}" target="_blank" rel="noopener"
+         aria-label="${(it.title||'Publication')}${it.doi?' (opens DOI)':''}">
+        <div class="cover">${ coverByIndex(i, it.image) }</div>
+        <div>
+          <h3 class="h3" style="margin:0">${it.title || ""}</h3>
+          <p class="muted" style="margin:.25rem 0">
+            ${[it.authors, it.year, it.venue].filter(Boolean).join(" — ")}
+          </p>
+          ${ it.abstract ? `<p class="muted" style="margin:.25rem 0">${it.abstract}</p>` : "" }
+        </div>
+      </a>`;
+  }).join("");
+})();
+
+      /* About */
+      const about = await loadJSON("./content/about.json");
+      if (about){
+        setText("about_kicker", about.kicker ?? "Profile");
+        setHTML("about_text",  about.body ?? "");
+        const fig = document.getElementById("about_figure");
+        if (fig && about.photo){
+          fig.innerHTML = `<img ${imgAttrs(about.photo, "(max-width: 980px) 100vw, 420px")} alt="${about.photoAlt||'Portrait'}">`;
+        }
+        if (about.pdf) {
+          const a = document.getElementById("about_pdf");
+          a.href = about.pdf;
+          a.textContent = about.pdfLabel || "View PDF";
+        } else {
+          document.getElementById("about_pdf_wrap")?.remove();
+        }
+      }
+
+      /* News */
+      const n = await loadJSON("./content/news.json");
+      if (n){
+        setText("news_kicker", n.kicker ?? "Latest from the lab");
+        setText("news_title",  n.title  ?? "News");
+        setHTML("news_intro",  n.intro  ?? "Latest updates.");
+        const list = document.getElementById("news_list");
+        if (list && Array.isArray(n.items)) {
+          list.innerHTML = n.items.map(it => `
+            <article class="card" data-reveal>
+              ${it.image ? `<div class="media-32"><img ${imgAttrs(it.image, "(max-width: 800px) 100vw, 360px")} alt="${it.alt||it.title||''}" onerror="this.closest('.media-32').remove()"></div>` : ""}
+              <div>
+                <h3 class="h3" style="margin:0">${it.title||''}</h3>
+                ${it.date ? `<p class="muted" style="margin:.25rem 0">${it.date}</p>` : ""}
+                ${it.summary ? `<p class="muted" style="margin:.25rem 0">${it.summary}</p>` : ""}
+                ${it.link ? `<p style="margin:0"><a class="btn btn-primary" href="${it.link}" target="_blank" rel="noopener">Read more</a></p>` : ""}
+              </div>
+            </article>
+          `).join("");
+        }
+      }
+
+      /* Footer */
+      const f=await loadJSON("./content/footer.json");
+      if(f&&Array.isArray(f.items)){
+        const wrap=document.getElementById('footer_logos');
+        const seen=new Set();const only4=[];
+        for(const it of f.items){
+          const key=String(it.src||'').split('/').pop().replace(/\.[^.]+$/,'').toLowerCase();
+          if(!seen.has(key)){seen.add(key);only4.push(it)}
+          if(only4.length>=4)break
+        }
+        wrap.innerHTML=only4.map(l=>`<a href="${l.href||'#'}" target="_blank" rel="noopener"><img src="${l.src}" alt="${l.alt||''}"></a>`).join("")
+      }
+
+      /* activar animaciones */
+      setupReveal();
+    })();
+  </script>
+
+  <script>
+(function patchSelPubs(){
+  const $ = id => document.getElementById(id);
+  const norm = window.normalizePath || (p=>String(p||'').replace(/\\/g,'/'));
+
+  // Genera <img> con fallback 1.webp -> 1.jpg -> 1.png (o usa la ruta dada)
+  function pubCover(i, provided){
+    const idx = i + 1;
+    const cands = [];
+    if (provided) cands.push(norm(provided));
+    cands.push(`./media/selected_publications/${idx}.webp`);
+    cands.push(`./media/selected_publications/${idx}.jpg`);
+    cands.push(`./media/selected_publications/${idx}.png`);
+    const [first, second, third] = cands;
+    const onerr = second
+      ? `onerror="this.onerror=null; this.src='${second}'; ${third ? `this.onerror=function(){this.src='${third}'};` : ''}"`
+      : '';
+    return `<img src="${first}" ${onerr} alt="">`;
+  }
+
+  window.renderSelectedPubs = function(sp){
+    $('#selpubs_kicker') && ($('#selpubs_kicker').textContent = sp.kicker || 'Selected by impact');
+    $('#selpubs_title')  && ($('#selpubs_title').textContent  = sp.title  || 'Selected Publications');
+    $('#selpubs_intro')  && ($('#selpubs_intro').innerHTML    = sp.intro  || '');
+
+    const wrap = $('#selpubs_list');
+    if(!wrap || !Array.isArray(sp.items)) return;
+
+    wrap.innerHTML = sp.items.map((it, i) => {
+      const href = it.doi || it.link || '#';
+      return `
+        <a class="card selpub" data-reveal href="${href}" target="_blank" rel="noopener"
+           aria-label="${(it.title||'Publication')}${it.doi?' (opens DOI)':''}">
+          <div class="cover">
+            ${ pubCover(i, it.image) }
+          </div>
+          <div>
+            <h3 class="h3" style="margin:0">${it.title||''}</h3>
+            <p class="muted" style="margin:.25rem 0">
+              ${[it.authors, it.year, it.venue].filter(Boolean).join(' — ')}
+            </p>
+            ${ it.abstract ? `<p class="muted" style="margin:.25rem 0">${it.abstract}</p>` : '' }
+          </div>
+        </a>`;
+    }).join('');
+  };
+
+  // Si ya cargaste el JSON en el loader anterior como `sp`, vuelve a dibujarlo:
+  // (Descomenta si quieres forzar la re-renderización después de cargar sp.)
+  // if (window.__lastSelPubs) renderSelectedPubs(window.__lastSelPubs);
+})();
+</script>
+
+  <script>
+/* --- Utilidades robustas --- */
+// Removed duplicate declaration of $
+async function loadJSONFirst(paths){
+  for (const p of paths){
+    try{
+      const r = await fetch(p, { cache:'no-store' });
+      if (r.ok) return await r.json();
+    }catch(_){}
+  }
+  return null;
+}
+function normalizePath(p){ return String(p||"").replace(/\\/g,'/'); }
+
+/* Reutiliza tu manifest para srcset si existe */
+// Removed duplicate declaration of IMG_MANIFEST
+function buildImgAttrs(inputPath, defaultSizes="(max-width: 680px) 100vw, 360px") {
+  if (!inputPath) return { src: "", srcset: "", sizes: "" };
+  const m = normalizePath(inputPath).replace(/^[.][/\\]*/, '').split('/');
+  if (m.length < 2) return { src: inputPath, srcset: "", sizes: "" };
+  const dir = m[m.length-2];
+  const file = m[m.length-1];
+  const base = file.replace(/\.[^.]+$/, '').replace(/-(\d{2,4})$/, '');
+  const key = `${dir}/${base}`;
+  const entry = IMG_MANIFEST[key];
+  if (!entry) return { src: inputPath, srcset: "", sizes: "" };
+  const src = entry.original || (entry.variants?.[entry.variants.length-1]?.path ?? inputPath);
+  const srcset = (entry.variants||[]).map(v => `${v.path} ${v.w}w`).join(', ');
+  return { src, srcset, sizes: srcset ? defaultSizes : "" };
+}
+function imgTagAttrs(path, sizes){
+  const a = buildImgAttrs(path, sizes);
+  const bits = [`src="${encodeURI(a.src)}"`];
+  if (a.srcset) bits.push(`srcset="${a.srcset}"`);
+  if (a.sizes)  bits.push(`sizes="${a.sizes}"`);
+  return bits.join(' ');
+}
+
+/* Dedupe prefer WEBP para el hero */
+// Removed duplicate declaration of EXT_ORDER
+function extOf(p){ const m = String(p).toLowerCase().match(/\.[a-z0-9]+$/); return m?m[0]:'' }
+function fname(p){ return String(p).split('/').pop() }
+function stripExt(n){ return n.replace(/\.[^.]+$/,'') }
+function stripResponsiveTail(base){
+  if (/(?:[._-])\d{3,4}x\d{3,4}$/i.test(base)) return base.replace(/(?:[._-])\d{3,4}x\d{3,4}$/i,'');
+  if (/(?:@|[._-])\d{1,2}x$/i.test(base)) return base.replace(/(?:@|[._-])\d{1,2}x$/i,'');
+  const m = base.match(/(.*?)(?:[._-])(\d{3,4})(?:w|px)?$/i);
+  if(m){ const n=parseInt(m[2],10); const WL=new Set([320,360,375,384,414,480,512,540,576,640,720,750,768,800,828,900,960,992,1024,1080,1152,1200,1242,1280,1366,1440,1536,1600,1668,1728,1792,1920,2048,2160,2304,2400,2560,2732,2880,3000,3072,3200,3440,3840]); if(WL.has(n)) return m[1] }
+  return base;
+}
+function normalizeBaseStrict(p){
+  let b = stripExt(fname(p)).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[-\s_]+/g,'-');
+  b = b.replace(/(?:[._-])(copy|copia|final|final2|edit|edited|retouched|retouch|fix|fixed|export|output|scaled)$/i,'');
+  b = b.replace(/[-_.]+/g,'-').replace(/^-+|-+$/g,'');
+  b = stripResponsiveTail(b);
+  return b.toLowerCase();
+}
+function uniqueBySrc(list){
+  const seen=new Set(), out=[];
+  for(const it of list||[]){ const k = (it?.src||'').toLowerCase(); if(!k || seen.has(k)) continue; seen.add(k); out.push(it); }
+  return out;
+}
+function dedupePreferWebpStrict(items){
+  const cleaned = uniqueBySrc(items||[]);
+  const groups = new Map();
+  for(const it of cleaned){
+    const key = normalizeBaseStrict(it.src);
+    const arr = groups.get(key) || [];
+    arr.push(it);
+    groups.set(key, arr);
+  }
+  const out=[];
+  for(const arr of groups.values()){
+    arr.sort((a,b)=>EXT_ORDER.indexOf(extOf(a.src))-EXT_ORDER.indexOf(extOf(b.src)));
+    out.push(arr[0]);
+  }
+  out.sort((a,b)=>a.src.localeCompare(b.src,undefined,{numeric:true}));
+  return out;
+}
+
+/* HERO slider real (sin depender de autoPatch) */
+function buildHeroSlider(images){
+  const track = $('heroTrack');
+  const prev = $('heroPrev');
+  const next = $('heroNext');
+  const list = dedupePreferWebpStrict((Array.isArray(images)?images:[]).filter(it=>it?.src));
+  track.innerHTML = (list.length?list:[{src:"./media/hero/hero.webp",alt:"Hero"}]).map((it,i)=>`
+    <div class="slide">
+      <img ${imgTagAttrs(normalizePath(it.src), "(max-width: 1200px) 100vw, 900px")} alt="${it.alt||''}" loading="${i===0?'eager':'lazy'}" ${i===0?'fetchpriority="high"':''} decoding="async">
+    </div>`).join('');
+
+  const width = ()=>track.clientWidth, slides=()=>Array.from(track.children);
+  const index = ()=>Math.round(track.scrollLeft/width());
+  const wrap = i=>{const N=slides().length; return (i%N+N)%N};
+  const goTo = i=>track.scrollTo({left:wrap(i)*width(),behavior:'smooth'});
+  const nextFn = ()=>goTo(index()+1), prevFn=()=>goTo(index()-1);
+  prev.onclick = prevFn; next.onclick = nextFn;
+
+  let timer=null, hovering=false;
+  const start=()=>{ stop(); if(slides().length>1) timer=setInterval(()=>{ if(!hovering&&!document.hidden) nextFn() }, 3000) };
+  const stop =()=>{ if(timer){clearInterval(timer); timer=null} };
+  track.addEventListener('mouseenter',()=>{hovering=true;stop()});
+  track.addEventListener('mouseleave',()=>{hovering=false;start()});
+  document.addEventListener('visibilitychange',()=>{ document.hidden?stop():start() });
+  window.addEventListener('resize',()=>{ goTo(index()) }, {passive:true});
+  slides().forEach(sl=>{
+    const im=sl.querySelector('img');
+    im.addEventListener('load',()=>im.classList.add('is-loaded'),{once:true});
+    im.addEventListener('error',()=>{ sl.remove(); if(slides().length<=1){ prev.style.display=next.style.display='none'; stop(); }},{once:true});
+  });
+  if(slides().length<=1){ prev.style.display=next.style.display='none' }
+  start();
+
+  // “View all” dialog fiable
+  const openGalleryBtn=$('openGallery');
+  openGalleryBtn?.addEventListener('click',()=>{
+    let dlg=$('galleryDialog');
+    if(!dlg){
+      dlg=document.createElement('dialog'); dlg.id='galleryDialog';
+      dlg.innerHTML=`
+        <div style="position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-bottom:1px solid var(--line);background:#fff">
+          <strong>Gallery</strong>
+          <button class="btn btn-primary" id="closeGallery" type="button">Close</button>
+        </div>
+        <div id="galleryGrid" style="padding:1rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;max-height:75vh;overflow:auto"></div>`;
+      document.body.appendChild(dlg);
+      dlg.addEventListener('click',e=>{ if(e.target===dlg) dlg.close(); });
+      dlg.addEventListener('cancel',()=>dlg.close());
+      dlg.addEventListener('close',()=>openGalleryBtn.focus());
+      dlg.addEventListener('keydown',e=>{ if(e.key==='Escape') dlg.close(); });
+      dlg.querySelector('#closeGallery').addEventListener('click',()=>dlg.close());
+    }
+    const grid = dlg.querySelector('#galleryGrid');
+    grid.innerHTML = list.map(it=>`<div class="media-32"><img ${imgTagAttrs(normalizePath(it.src), "(max-width: 1200px) 100vw, 900px")} alt="${it.alt||''}"></div>`).join('');
+    dlg.showModal();
+  });
+}
+
+/* --- Bootstrap de contenidos con fallback ./content/ o raíz --- */
+(async function hydrate(){
+  // Manifest (si existe)
+  IMG_MANIFEST = (await loadJSONFirst(["./content/images-manifest.json","./images-manifest.json"])) || {};
+
+  // Header
+  const header = await loadJSONFirst(["./content/header.json","./header.json"]);
+  if(header?.logos){
+    const [left,right] = header.logos;
+    const leftImg = $('brandLeft');
+    if(leftImg && left?.src){
+      leftImg.src = normalizePath(left.src);
+      leftImg.alt = left.alt || leftImg.alt || '';
+      const a = document.querySelector('header.site .brand');
+      if(a && left.href) a.href = left.href;
+    }
+    const rightWrap = document.querySelector('header.site .brand-right');
+    if(rightWrap){
+      rightWrap.innerHTML = '';
+      if(right?.src){
+        const el = right.href ? document.createElement('a') : document.createElement('span');
+        if(right.href){ el.href = right.href; el.target='_blank'; el.rel='noopener'; }
+        el.innerHTML = `<img id="brandRight" alt="${right.alt||'logo'}" ${imgTagAttrs(normalizePath(right.src), "(max-width: 680px) 100vw, 300px")}>`;
+        rightWrap.appendChild(el);
+      }
+    }
+  }
+
+  // Hero (texto + slider)
+  const hero = await loadJSONFirst(["./content/hero.json","./hero.json"]);
+  if(hero){
+    $('home_kicker') && ($('home_kicker').textContent = hero.kicker || "Materials that move medicine");
+    $('home_title')  && ($('home_title').textContent  = hero.title  || "Nanocolloids, magnetism and biomedical applications");
+    $('home_intro')  && ($('home_intro').innerHTML    = hero.intro  || "");
+    const gallery = hero.gallery || hero.images || [];
+    buildHeroSlider(gallery);
+
+    // Fondo de página: usa hero.heroImage si existe como fallback
+    const bg = document.querySelector('.site-bg');
+    if (bg){
+      const bgUrl = normalizePath(hero.heroImage || "./media/bg.webp");
+      bg.style.backgroundImage = `url('${bgUrl}')`;
+    }
+  }
+
+  // Projects (envolvemos en .media-32 para recorte uniforme)
+  const p = await loadJSONFirst(["./content/projects.json","./projects.json"]);
+  if(p){
+    $('projects_kicker') && ($('projects_kicker').textContent = p.kicker || "Projects");
+    $('projects_title')  && ($('projects_title').textContent  = p.title  || "Projects");
+    $('projects_intro')  && ($('projects_intro').innerHTML    = p.intro  || "");
+    const grid = $('projects_list');
+    if(grid && Array.isArray(p.items)){
+      grid.innerHTML = p.items.map(pr=>{
+        const imgPath = pr.image || pr.cover || pr.photo || "";
+        return `
+        <article class="card" data-reveal>
+          ${imgPath ? `<div class="media-32"><img ${imgTagAttrs(normalizePath(imgPath), "(max-width: 980px) 100vw, 480px") } alt="${pr.alt||pr.title||''}" onerror="this.closest('.media-32').remove()"></div>` : ""}
+          <div>
+            <h3 class="h3" style="margin:0">${pr.title||''}</h3>
+            ${pr.subtitle ? `<p class="muted" style="margin:.25rem 0">${pr.subtitle}</p>` : ""}
+            ${pr.summary  ? `<p class="muted" style="margin:.25rem 0">${pr.summary}</p>` : ""}
+            ${pr.link     ? `<p style="margin:0"><a class="btn btn-primary" href="${pr.link}" target="_blank" rel="noopener">Learn more</a></p>` : ""}
+          </div>
+        </article>`;
+      }).join('');
+    }
+  }
+
+  // Team
+  const t = await loadJSONFirst(["./content/team.json","./team.json"]);
+  if(t){
+    $('team_kicker') && ($('team_kicker').textContent = t.kicker || "People behind the science");
+    $('team_title')  && ($('team_title').textContent  = t.title  || "Team");
+    $('team_intro')  && ($('team_intro').innerHTML    = t.intro  || "");
+    const el = $('team_list');
+    if(el && Array.isArray(t.items)){
+      el.innerHTML = t.items.map((m,idx)=>`
+        <article class="card person" data-reveal>
+          ${ m.photo ? `<img ${imgTagAttrs(normalizePath(m.photo), "(max-width: 680px) 100vw, 300px")} alt="${m.alt||m.name}" onerror="this.remove()">`
+                     : `<div aria-hidden="true" style="width:88px;height:88px;border-radius:999px;border:1px solid var(--line)"></div>`}
+          <div>
+            <h3 class="h3" style="margin:0">${m.name}</h3>
+            <p class="muted" style="margin:.25rem 0">${[m.role, m.affiliation].filter(Boolean).join(" — ")}</p>
+            ${m.bioLink ? `<p><a class="btn btn-primary" href="${m.bioLink}">Bio</a></p>` : (m.bio ? `<p><button class="btn btn-primary show-bio" data-id="${idx}">Bio</button></p>` : "")}
+            ${m.email ? `<p style="margin:0"><a class="btn btn-primary" href="mailto:${m.email}">Email</a></p>` : ""}
+          </div>
+        </article>
+      `).join('');
+
+      if (t.items.some(m=>m.bio && !m.bioLink)){
+        const dialog = document.createElement('dialog');
+        dialog.id = 'bioDialog';
+        dialog.innerHTML = `
+          <div style="padding:1rem;max-width:600px">
+            <h3 id="bioTitle"></h3>
+            <div id="bioText"></div>
+            <p style="margin-top:1rem"><button id="closeBio" class="btn btn-primary">Close</button></p>
+          </div>`;
+        document.body.appendChild(dialog);
+        dialog.addEventListener('click',e=>{ if(e.target===dialog) dialog.close(); });
+        dialog.addEventListener('cancel',()=>dialog.close());
+        document.querySelectorAll(".show-bio").forEach(btn=>{
+          btn.addEventListener('click',()=>{
+            const i = parseInt(btn.dataset.id);
+            const member = t.items[i];
+            $('bioTitle').textContent = member.name;
+            $('bioText').innerHTML    = member.bio || "";
+            dialog.showModal();
+          });
+        });
+        dialog.querySelector('#closeBio').addEventListener('click',()=>dialog.close());
+      }
+    }
+  }
+
+  // About (con foto y PDF)
+  const about = await loadJSONFirst(["./content/about.json","./about.json"]);
+  if(about){
+    $('about_kicker') && ($('about_kicker').textContent = about.kicker || "Profile");
+    $('about_text')   && ($('about_text').innerHTML     = about.body   || "");
+    const fig = $('about_figure');
+    if (fig && about.photo){
+      fig.innerHTML = `<img ${imgTagAttrs(normalizePath(about.photo), "(max-width: 980px) 100vw, 420px")} alt="${about.photoAlt||'Portrait'}">`;
+    }
+    if (about.pdf){
+      const a = $('about_pdf'); if (a){ a.href = about.pdf; a.textContent = about.pdfLabel || "View PDF"; }
+    } else {
+      document.getElementById("about_pdf_wrap")?.remove();
+    }
+  }
+
+  // News
+  const n = await loadJSONFirst(["./content/news.json","./news.json"]);
+  if(n){
+    $('news_kicker') && ($('news_kicker').textContent = n.kicker || "Latest from the lab");
+    $('news_title')  && ($('news_title').textContent  = n.title  || "News");
+    $('news_intro')  && ($('news_intro').innerHTML    = n.intro  || "");
+    const list = $('news_list');
+    if(list && Array.isArray(n.items)){
+      list.innerHTML = n.items.map(it=>`
+        <article class="card" data-reveal>
+          ${ it.image ? `<div class="media-32"><img ${imgTagAttrs(normalizePath(it.image), "(max-width: 800px) 100vw, 360px")} alt="${it.alt||it.title||''}" onerror="this.closest('.media-32').remove()"></div>` : "" }
+          <div>
+            <h3 class="h3" style="margin:0">${it.title||''}</h3>
+            ${ it.date ? `<p class="muted" style="margin:.25rem 0">${it.date}</p>` : "" }
+            ${ it.summary ? `<p class="muted" style="margin:.25rem 0">${it.summary}</p>` : "" }
+            ${ it.link ? `<p style="margin:0"><a class="btn btn-primary" href="${it.link}" target="_blank" rel="noopener">Read more</a></p>` : "" }
+          </div>
+        </article>
+      `).join('');
+    }
+  }
+
+  // Footer (usa manifest + espacios seguros)
+  const f = await loadJSONFirst(["./content/footer.json","./footer.json"]);
+  if (f?.items?.length){
+    const wrap = $('footer_logos');
+    if (wrap){
+      const seen = new Set(); const only4=[];
+      for (const it of f.items){
+        const key = String(it.src||'').split('/').pop().replace(/\.[^.]+$/,'').toLowerCase();
+        if(!seen.has(key)){ seen.add(key); only4.push(it); }
+        if(only4.length>=4) break;
+      }
+      wrap.innerHTML = only4.map(l=>{
+        const img = `<img ${imgTagAttrs(normalizePath(l.src), "(max-width: 800px) 100vw, 360px")} alt="${l.alt||''}">`;
+        return l.href ? `<a href="${l.href}" target="_blank" rel="noopener">${img}</a>` : `<span>${img}</span>`;
+      }).join('');
+    }
+  }
+})();
+</script>
+
+<script>
+/* Forzar modo 'dark' del header en scroll o cuando el HERO deja de ser visible */
+(function(){
+  const header = document.querySelector('header#siteHeader, header.site');
+  if (!header) return;
+
+  // Fallback por scroll (independiente de otros scripts)
+  const applyByScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop || 0;
+    header.classList.toggle('dark', y > 80);
+  };
+  applyByScroll();
+  addEventListener('scroll', applyByScroll, { passive:true });
+
+  // Extra: si el HERO está poco visible, también activamos 'dark'
+  const hero = document.getElementById('hero');
+  if ('IntersectionObserver' in window && hero){
+    const io = new IntersectionObserver((entries)=>{
+      for (const e of entries){
+        // menos del 60% visible => oscuro
+        const dark = e.intersectionRatio < 0.6;
+        header.classList.toggle('dark', dark || (window.scrollY > 80));
+      }
+    }, { threshold:[0,.6,1] });
+    io.observe(hero);
+  }
+})();
+</script>
+
+<script>
+/* Swap del logo secundario (#brandRight) cuando el header está en modo 'dark' */
+(function(){
+  // Usa siempre barras normales en la ruta
+  const WHITE_LOGO = "./media/home/QUIMICAS_COLOR_SOLO_BLANCO.webp";
+
+  function setLogoVariant(dark){
+    const img = document.getElementById('brandRight');
+    if (!img) return;
+
+    // Guarda el original (color) la primera vez
+    if (!img.dataset.colorSrc) img.dataset.colorSrc = img.currentSrc || img.src;
+    if (!img.dataset.whiteSrc) img.dataset.whiteSrc = WHITE_LOGO;
+
+    const target = dark ? img.dataset.whiteSrc : img.dataset.colorSrc;
+
+    // Si tienes manifest + helper, úsalo para responsive
+    if (typeof window.buildImgAttrs === 'function'){
+      const a = window.buildImgAttrs(target, "(max-width: 680px) 100vw, 300px");
+      img.src = a.src || target;
+      if (a.srcset) img.setAttribute('srcset', a.srcset); else img.removeAttribute('srcset');
+      if (a.sizes)  img.setAttribute('sizes',  a.sizes);  else img.removeAttribute('sizes');
+    } else {
+      // Fallback simple
+      img.src = target;
+      img.removeAttribute('srcset');
+      img.removeAttribute('sizes');
+    }
+  }
+
+  // Aplica con scroll/observer sin depender de otros scripts
+  const header = document.getElementById('siteHeader') || document.querySelector('header.site');
+
+  function applyByState(){
+    const isDark = header && header.classList.contains('dark');
+    setLogoVariant(!!isDark);
+  }
+
+  // Espera a que el loader pinte #brandRight y luego engancha observadores
+  (function waitForLogo(maxMs=5000){
+    const t0 = Date.now();
+    (function tick(){
+      if (document.getElementById('brandRight')){
+        applyByState();
+
+        // Observa cambios en la clase del header
+        if (header){
+          const mo = new MutationObserver(applyByState);
+          mo.observe(header, { attributes:true, attributeFilter:['class'] });
+        }
+        // Ajusta también en scroll (por si tu script alterna .dark ahí)
+        window.addEventListener('scroll', applyByState, { passive:true });
+
+        return; // listo
+      }
+      if (Date.now() - t0 < maxMs) return setTimeout(tick, 100);
+      // Si no aparece, no hacemos nada (no rompe)
+    })();
+  })();
+})();
+</script>
+
+<script>
+/* === FINAL OVERRIDE — SWAP LOGO SECUNDARIO EN HEADER OSCURO === */
+(function(){
+  // Normaliza barras
+  const toPath = (p) => String(p||"").replace(/\\/g, "/");
+
+  // Ruta del logo blanco (asegúrate de que existe)
+  const WHITE_LOGO = toPath("./media/home/QUIMICAS_COLOR_SOLO_BLANCO.webp");
+
+  // Encuentra el img del logo secundario (id o dentro de .brand-right)
+  function getRightLogoEl(){
+    return document.getElementById("brandRight")
+        || document.querySelector("header .brand-right img")
+        || null;
+  }
+
+  // Aplica un src/srcset usando buildImgAttrs si existe
+  function applyImage(el, path){
+    if (!el) return;
+    if (typeof window.buildImgAttrs === "function"){
+      const a = window.buildImgAttrs(path, "(max-width: 680px) 100vw, 300px");
+      el.src = a.src || path;
+      if (a.srcset) el.setAttribute("srcset", a.srcset); else el.removeAttribute("srcset");
+      if (a.sizes)  el.setAttribute("sizes",  a.sizes);  else el.removeAttribute("sizes");
+    } else {
+      el.src = path;
+      el.removeAttribute("srcset");
+      el.removeAttribute("sizes");
+    }
+  }
+
+  // Cambia a blanco si header tiene .dark; si no, restaura el original
+  function setLogoVariant(){
+    const header = document.getElementById("siteHeader") || document.querySelector("header.site");
+    if (!header) return;
+    const dark = header.classList.contains("dark");
+    const img = getRightLogoEl();
+    if (!img) return;
+
+    // Guarda color “original” al primer paso
+    if (!img.dataset.colorSrc) {
+      // currentSrc puede estar vacío si aún no resolvió; usa src como respaldo
+      img.dataset.colorSrc = img.currentSrc || img.getAttribute("src") || "";
+    }
+    // Guarda blanco
+    img.dataset.whiteSrc = img.dataset.whiteSrc || WHITE_LOGO;
+
+    const target = dark ? img.dataset.whiteSrc : img.dataset.colorSrc;
+    if (!target) return;
+    // Evita re-asignar si ya está puesto
+    const now = img.currentSrc || img.getAttribute("src") || "";
+    if (now.endsWith(target)) return;
+
+    applyImage(img, target);
+  }
+
+  // Espera a que exista el logo y conecta observadores
+  function boot(maxMs=5000){
+    const t0 = Date.now();
+    (function tick(){
+      const img = getRightLogoEl();
+      const header = document.getElementById("siteHeader") || document.querySelector("header.site");
+      if (img && header){
+        // Pre-carga el blanco para evitar “parpadeo”
+        const pre = new Image();
+        pre.src = WHITE_LOGO;
+
+        // Observa cambios de clase (cuando otros scripts añaden .dark)
+        const mo = new MutationObserver(setLogoVariant);
+        mo.observe(header, { attributes:true, attributeFilter:["class"] });
+
+        // Aplica por scroll también (belt & braces)
+        addEventListener("scroll", setLogoVariant, { passive:true });
+
+        // Primera aplicación
+        setLogoVariant();
+        return;
+      }
+      if (Date.now() - t0 < maxMs) return setTimeout(tick, 100);
+      // Si no aparece, no rompemos nada
+    })();
+  }
+
+  // Ejecuta
+  boot();
+})();
+</script>
+
+<script>
+/* === FIX: recuperar botón "Curriculum vitae" en ABOUT, sin depender del loader === */
+(async function ensureAboutCV(){
+  // Intentar leer about.json desde ./content o desde la raíz
+  async function getAbout(){
+    const opts = { cache: 'no-store' };
+    for (const p of ["./content/about.json","./about.json"]){
+      try{ const r = await fetch(p, opts); if(r.ok) return await r.json(); }catch(_){}
+    }
+    return null;
+  }
+
+  const about = await getAbout();
+  // Si no hay JSON, lo intentamos igualmente con el path típico por defecto
+  const pdf   = (about && (about.pdf || about.cv || about.cvUrl)) || "./media/about/cv.pdf";
+  const label = (about && (about.pdfLabel || about.cvLabel)) || "Curriculum vitae (PDF)";
+
+  // Asegura el contenedor y el <a>
+  const aboutSection = document.getElementById("about");
+  if(!aboutSection) return;
+  const targetCol = aboutSection.querySelector(".stack > div") || aboutSection; // columna de texto
+
+  let wrap = document.getElementById("about_pdf_wrap");
+  if(!wrap){
+    wrap = document.createElement("p");
+    wrap.id = "about_pdf_wrap";
+    targetCol.appendChild(wrap);
+  }
+
+  let link = document.getElementById("about_pdf");
+  if(!link){
+    link = document.createElement("a");
+    link.id = "about_pdf";
+    link.className = "btn btn-primary";
+    link.target = "_blank";
+    link.rel = "noopener";
+    wrap.appendChild(link);
+  }
+
+  // Setear href + texto (y mostrarlo por si alguna regla lo ocultó)
+  link.href = (""+pdf).replace(/\\/g,"/"); // normaliza barras
+  link.textContent = label;
+  wrap.style.display = "";
+  link.style.display = "";
+
+  // “Antiborrado”: si otro script lo elimina, lo volvemos a poner
+  const mo = new MutationObserver(()=> {
+    if (!document.getElementById("about_pdf")) {
+      ensureAboutCV(); // re-invoca para recrearlo
+    }
+  });
+  mo.observe(targetCol, { childList:true, subtree:true });
+})();
+</script>
+
+<script>
+/* ABOUT: coloca el botón de CV FUERA del <figure>, justo debajo de la foto */
+(function(){
+  function $(id){ return document.getElementById(id); }
+
+  async function readAbout(){
+    const opts = { cache: "no-store" };
+    try{
+      let r = await fetch("./content/about.json", opts);
+      if (r.ok) return await r.json();
+      r = await fetch("./about.json", opts);
+      if (r.ok) return await r.json();
+    }catch(_){}
+    return null;
+  }
+
+  async function setupCV(){
+    const about = await readAbout();
+    const pdf   = ((about && (about.pdf || about.cv || about.cvUrl)) || "./media/about/cv.pdf")+"";
+    const label = (about && (about.pdfLabel || about.cvLabel)) || "Curriculum vitae (PDF)";
+
+    const section = $("about");
+    if(!section) return;
+    const stack = section.querySelector(":scope > .stack") || section;
+    const figure = $("about_figure");
+    if(!figure || !stack) return;
+
+    // Detecta la columna de texto (el div que contiene #about_text) y dale un id estable
+    let textCol = $("about_textcol");
+    if(!textCol){
+      const textNode = $("about_text");
+      textCol = textNode ? textNode.closest("div") : null;
+      if(!textCol){
+        // Fallback: primer <div> hijo de stack que no sea figure ni CV
+        textCol = Array.from(stack.children).find(el =>
+          el.tagName === "DIV" && el.id !== "about_cv_below" && el.id !== "about_figure"
+        ) || null;
+      }
+      if(textCol && !textCol.id) textCol.id = "about_textcol";
+    }
+
+    // Crea bloque CV si no existe y colócalo como último hijo del grid
+    let cv = $("about_cv_below");
+    if(!cv){
+      cv = document.createElement("div");
+      cv.id = "about_cv_below";
+    }
+    if(cv.parentNode !== stack) stack.appendChild(cv);
+
+    // Enlace (reutiliza si existe)
+    let link = $("about_pdf");
+    if(!link){
+      link = document.createElement("a");
+      link.id = "about_pdf";
+      link.className = "btn btn-primary";
+      link.target = "_blank";
+      link.rel = "noopener";
+      cv.appendChild(link);
+    }else if(link.parentNode !== cv){
+      cv.appendChild(link);
+    }
+
+    link.href = pdf.replace(/\\/g,"/");
+    link.textContent = label;
+
+    // Limpia posibles restos anteriores
+    const old = $("about_pdf_wrap"); if(old) old.remove();
+  }
+
+  // Ejecuta una vez, cuando el DOM está listo (sin observers ni loops)
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", setupCV);
+  } else {
+    setupCV();
+  }
+})();
+</script>
+
+<script>
+/* ABOUT: coloca/actualiza el botón de CV en #about_cv_below (columna de la foto) */
+(function(){
+  const norm = s => String(s||"").replace(/\\/g,"/");
+
+  async function readAbout(){
+    const opts = { cache: "no-store" };
+    try{
+      let r = await fetch("./content/about.json", opts);
+      if (r.ok) return await r.json();
+      r = await fetch("./about.json", opts);
+      if (r.ok) return await r.json();
+    }catch(_){}
+    return null;
+  }
+
+  async function mountCV(){
+    try{
+      const about = await readAbout();
+      const pdf   = norm((about && (about.pdf || about.cv || about.cvUrl)) || "./media/about/cv.pdf");
+      const label = (about && (about.pdfLabel || about.cvLabel)) || "Curriculum vitae (PDF)";
+
+      const sec   = document.getElementById("about");
+      if (!sec) return;
+      const stack = sec.querySelector(":scope > .stack") || sec;
+
+      // Asegura contenedores de columnas
+      let left = document.getElementById("about_leftcol");
+      let fig  = document.getElementById("about_figure");
+      let textCol = document.getElementById("about_textcol") 
+                 || stack.querySelector(":scope > div:not(#about_leftcol)");
+
+      if (!left){
+        left = document.createElement("div");
+        left.id = "about_leftcol";
+        // si existe figure como primer hijo, inserta left delante y mueve figure dentro
+        if (fig) fig.parentNode.insertBefore(left, fig);
+        else stack.prepend(left);
+      }
+      if (fig && fig.parentElement !== left) left.insertBefore(fig, left.firstChild);
+
+      if (textCol && !textCol.id) textCol.id = "about_textcol";
+
+      // Asegura bloque CV debajo de la foto
+      let cv = document.getElementById("about_cv_below");
+      if (!cv){
+        cv = document.createElement("div");
+        cv.id = "about_cv_below";
+        left.appendChild(cv);
+      } else if (cv.parentElement !== left){
+        left.appendChild(cv);
+      }
+
+      // Enlace
+      let link = document.getElementById("about_pdf");
+      if (!link){
+        link = document.createElement("a");
+        link.id = "about_pdf";
+        link.className = "btn btn-primary";
+        link.target = "_blank";
+        link.rel = "noopener";
+        cv.appendChild(link);
+      } else if (link.parentElement !== cv){
+        cv.appendChild(link);
+      }
+      link.href = pdf;
+      link.textContent = label;
+
+      // Limpieza de restos antiguos (si quedara algo)
+      document.getElementById("about_pdf_wrap")?.remove();
+    }catch(e){
+      // No romper nada si falla
+      console.warn("CV mount skipped:", e);
+    }
+  }
+
+  // Ejecuta cuando el DOM esté listo
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", mountCV);
+  } else {
+    mountCV();
+  }
+})();
+</script>
+
+<script>
+/* TEAM — Bio en popup: delegado + resolución por id o nombre */
+(function(){
+  if (window.__teamBioFix) return; window.__teamBioFix = true;
+
+  const norm = s => String(s||"").replace(/\\/g,"/");
+
+  async function loadTeam(){
+    const opts = { cache: "no-store" };
+    try{ const r = await fetch("./content/team.json", opts); if (r.ok) return await r.json(); }catch(_){}
+    try{ const r2 = await fetch("./team.json", opts);        if (r2.ok) return await r2.json(); }catch(_){}
+    return null;
+  }
+
+  function ensureDialog(){
+    let dlg = document.getElementById("bioDialog");
+    if (!dlg){
+      dlg = document.createElement("dialog");
+      dlg.id = "bioDialog";
+      dlg.innerHTML = `
+        <div style="padding:1rem;max-width:700px">
+          <h3 id="bioTitle" style="margin-top:0"></h3>
+          <div id="bioText" class="muted"></div>
+          <p style="margin-top:1rem;display:flex;justify-content:flex-end">
+            <button id="closeBio" class="btn btn-primary" type="button">Close</button>
+          </p>
+        </div>`;
+      document.body.appendChild(dlg);
+      dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+      dlg.querySelector("#closeBio").addEventListener("click", () => dlg.close());
+      dlg.addEventListener("cancel", () => dlg.close());
+    }
+    return dlg;
+  }
+
+  function findCard(btn){
+    return btn.closest(".card.person") || btn.closest("article") || btn.parentElement;
+  }
+
+  function extractNameFromCard(card){
+    const h = card ? card.querySelector("h3, .h3") : null;
+    return (h ? h.textContent : "").trim();
+  }
+
+  function selectMember(data, btn){
+    const items = Array.isArray(data?.items) ? data.items : [];
+    // 1) Por data-id (si encaja)
+    const idAttr = btn.getAttribute("data-id");
+    if (idAttr != null){
+      const i = parseInt(idAttr, 10);
+      if (Number.isFinite(i) && i >= 0 && i < items.length && items[i]) return items[i];
+    }
+    // 2) Por nombre en la card
+    const card = findCard(btn);
+    const name = extractNameFromCard(card);
+    if (name){
+      const byName = items.find(m => (m?.name || "").trim().toLowerCase() === name.toLowerCase());
+      if (byName) return byName;
+    }
+    // 3) Por data-name (si alguien lo añadió)
+    const dataName = (btn.getAttribute("data-name") || "").trim();
+    if (dataName){
+      const byDataName = items.find(m => (m?.name || "").trim().toLowerCase() === dataName.toLowerCase());
+      if (byDataName) return byDataName;
+    }
+    return null;
+  }
+
+  function getBioHtml(member){
+    // Admite varias claves por si el JSON usa otra nomenclatura
+    return member?.bio || member?.bioHtml || member?.biography || "";
+  }
+
+  async function openBio(btn){
+    const data = await loadTeam();
+    if (!data){ console.warn("No se pudo cargar team.json"); return; }
+    const m = selectMember(data, btn);
+    if (!m){ console.warn("No se encontró el miembro para este botón.", btn); return; }
+
+    const bioHtml = getBioHtml(m);
+    const title   = m?.name || "Bio";
+
+    const dlg = ensureDialog();
+    dlg.querySelector("#bioTitle").textContent = title;
+    dlg.querySelector("#bioText").innerHTML    = bioHtml || "<em>Biography unavailable.</em>";
+    try{ dlg.showModal(); }catch{ dlg.open = true; }
+  }
+
+  // Delegado: cubre .show-bio y variantes
+  document.addEventListener("click", function(e){
+    const btn = e.target.closest("#team .show-bio, #team button.show-bio, #team .card.person .btn.show-bio");
+    if (!btn) return;
+    e.preventDefault(); e.stopPropagation();
+    openBio(btn);
+  }, { capture: true });
+})();
+</script>
+
+<script>
+/* Scroll suave con offset del header también para cualquier <a href="#..."> */
+(function(){
+  const sel = 'a[href^="#"]:not([href="#"]):not([data-no-smooth])';
+  const header = document.getElementById('siteHeader') || document.querySelector('header.site');
+  const getHeaderH = ()=> {
+    const h = header ? header.getBoundingClientRect().height : 0;
+    // usa var(--header-h) como fallback si aún no está pintado
+    const cssVar = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 0;
+    return Math.max(h, cssVar, 0);
+  };
+
+  document.addEventListener('click', function(e){
+    const a = e.target.closest(sel);
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    e.preventDefault();
+    const top = window.pageYOffset + target.getBoundingClientRect().top - (getHeaderH() + 8);
+    window.scrollTo({ top, behavior: 'smooth' });
+    // opcional: si venías desde un <dialog>, ciérralo
+    const dlg = a.closest('dialog'); if (dlg && typeof dlg.close === 'function') dlg.close();
+  }, { capture: true });
+})();
+</script>
+
+<script>
+(function(){
+  const header = document.getElementById('siteHeader')
+              || document.querySelector('header.site')
+              || document.querySelector('header[role="banner"]');
+
+  /* 0) Asegura transparencia real al cargar (por si hay estilos inline) */
+  function setHeaderTransparent(){
+    if (!header) return;
+    if (!header.classList.contains('dark')) {
+      header.style.background = 'transparent';
+      header.style.backgroundImage = 'none';
+    }
+  }
+  setHeaderTransparent();
+
+  /* 1) Back-to-top: crea si no existe */
+  let toTop = document.getElementById('toTop');
+  if(!toTop){
+    toTop = document.createElement('button');
+    toTop.id = 'toTop'; toTop.className = 'totop'; toTop.type='button';
+    toTop.setAttribute('aria-label','Back to top');
+    toTop.innerHTML = '⬆';
+    document.body.appendChild(toTop);
+  }
+  })();
+</script>
+
+<script>
+/* Back-to-top: creación + toggle + scroll suave (autónomo) */
+(function(){
+  function initToTop(){
+    // 1) crear o reutilizar el botón
+    let btn = document.getElementById('toTop');
+    if(!btn){
+      btn = document.createElement('button');
+      btn.id = 'toTop';
+      btn.className = 'totop';
+      btn.type = 'button';
+      btn.setAttribute('aria-label','Back to top');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+      document.body.appendChild(btn);
+    }
+
+    // 2) mostrar/ocultar con scroll
+    const TH = 400; // px desde los que se muestra
+    const onScroll = () => {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      if (y > TH) btn.classList.add('show'); else btn.classList.remove('show');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive:true });
+
+    // 3) acción: scroll suave arriba
+    btn.addEventListener('click', () => {
+      try{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }catch(_){
+        // fallback por si el navegador no soporta behavior
+        window.scrollTo(0, 0);
+      }
+    });
+  }
+
+  // Ejecuta cuando el DOM esté listo
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initToTop);
+  } else {
+    initToTop();
+  }
+})();
+</script>
+
+<script>
+(function(){
+  function ensureTopIcon(){
+    var btn = document.getElementById('toTop');
+    if(!btn) return;
+    // Inyecta un SVG blanco robusto (aunque el CSS falle, el stroke va en inline)
+    btn.innerHTML =
+      '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" ' +
+      'xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
+      '<polyline points="18 15 12 9 6 15"></polyline>' +
+      '</svg>';
+  }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', ensureTopIcon);
+  } else {
+    ensureTopIcon();
+  }
+})();
+</script>
+
+<script id="researchCardsClickable">
+(function(){
+  if (window.__researchCardsClickable) return; window.__researchCardsClickable = true;
+
+  const wrap = document.getElementById('research_list');
+  if (!wrap) return;
+
+  function convertToLinks(){
+    // Convierte <article.card.research-card> → <a class="card" data-slug="${it.slug}" href="…">
+    const articles = wrap.querySelectorAll('article.card.research-card, article.card');
+    articles.forEach(art=>{
+      if (art.tagName.toLowerCase() !== 'article') return;      // ya es <a class="card">
+      const href =
+        art.querySelector('.actions a[href]')?.getAttribute('href') ||
+        art.getAttribute('data-href') || '#';
+
+      const a = document.createElement('a');
+      a.className = 'card';
+      a.href = href;
+
+      // Copiamos el contenido excepto el bloque .actions (botón)
+      [...art.children].forEach(ch=>{
+        if (!ch.classList.contains('actions')) a.appendChild(ch.cloneNode(true));
+      });
+
+      art.replaceWith(a);
+    });
+
+    // Limpieza por si quedase algún .actions dentro de <a.card>
+    wrap.querySelectorAll('a.card .actions')?.forEach(n=>n.remove());
+  }
+
+  // Ejecuta cuando ya se hayan pintado las cards:
+  if (wrap.children.length) convertToLinks();
+  const mo = new MutationObserver(() => {
+    if (wrap.children.length) { convertToLinks(); mo.disconnect(); }
+  });
+  mo.observe(wrap, { childList:true });
+
+  // Fallback: por si el loader acaba muy tarde
+  window.addEventListener('load', convertToLinks);
+})();
+</script>
+
+<script id="researchLinkFix">
+(function(){
+  const wrap = document.getElementById('research_list');
+  if (!wrap) return;
+
+  const toKey = s => (s||"")
+    .toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+    .replace(/\s+/g," ").trim();
+
+  let catalog = null;
+  async function get(p){ try{ const r=await fetch(p,{cache:'no-store'}); if(r.ok) return r.json(); }catch(_){ } return null; }
+  async function loadCatalog(){
+    if (catalog) return catalog;
+    const data = await (get('./content/research.json') || get('./content/research/index.json')) || { items:[] };
+    const map = new Map();
+    (data.items||[]).forEach(it=>{
+      const slug = String(it.slug||"").toLowerCase();
+      if (!slug) return;
+      if (it.title) map.set(toKey(it.title), slug);
+      if (it.cover){
+        const m = String(it.cover).match(/\/media\/research\/([^/]+)\//);
+        if (m) map.set('cover:'+m[1], m[1]);
+      }
+    });
+    catalog = map;
+    return catalog;
+  }
+
+  function setHref(a, slug){
+    if (!slug) return;
+    a.href = `${location.origin}/research.html?p=${encodeURIComponent(slug)}`;
+    a.removeAttribute('target'); a.removeAttribute('rel');
+    const h3 = a.querySelector('h3');
+    a.setAttribute('aria-label', `Read more: ${h3 ? h3.textContent.trim() : slug}`);
+  }
+
+  async function fixLinks(){
+    const map = await loadCatalog();
+    wrap.querySelectorAll('a.card').forEach(a=>{
+      // 1) si el builder ya puso data-slug (opcional), úsalo
+      let slug = a.dataset.slug || null;
+
+      // 2) intenta sacarlo de la portada: /media/research/<slug>/…
+      if (!slug){
+        const img = a.querySelector('img');
+        const m = img?.src && img.src.match(/\/media\/research\/([^/]+)\//);
+        if (m) slug = m[1];
+      }
+
+      // 3) si no, empareja por título con el catálogo
+      if (!slug){
+        const title = a.querySelector('h3')?.textContent;
+        if (title){
+          const key = toKey(title);
+          if (map.has(key)) slug = map.get(key);
+        }
+      }
+
+      // 4) aplica sólo si tenemos slug (no toca Publications ni otras secciones)
+      if (slug) setHref(a, slug);
+    });
+  }
+
+  if (wrap.children.length) fixLinks();
+  const mo = new MutationObserver(()=>{ if (wrap.children.length) fixLinks(); });
+  mo.observe(wrap, { childList:true, subtree:true });
+})();
+</script>
+
+</body>
+</html>

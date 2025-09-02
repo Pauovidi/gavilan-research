@@ -1,0 +1,47 @@
+{
+  "kicker": "Latest from the lab",
+  "title": "News",
+  "intro": "Our latest updates and milestones.",
+  "items": [
+    {
+      "date": "2026-07-01",
+      "title": "Fernando — STSM visit",
+      "summary": "Our Ph.D. student F. Martín Garrido is at the Italian Institute of Technology for a Short-Term Scientific Mission (STSM) to advance his research on magnetic nanomaterials.",
+      "image": "./media/news/fernando-stsm.webp",
+      "alt": "Fernando STSM",
+      "link": ""
+    },
+    {
+      "date": "2025-09-01",
+      "title": "PhD Workshop on Nanomedicine",
+      "summary": "Organization of an PhD Workshop on Nanomedicine (UCM, Una Europa DREAM-Nano project).",
+      "image": "./media/news/DISEÑO-Roll up.webp",
+      "alt": "PhD Workshop on Nanomedicine",
+      "link": ""
+    },
+    {
+      "date": "2025-06-01",
+      "title": "Pauline — STSM visit",
+      "summary": "We are delighted to welcome Pauline Rooms, a visiting Ph.D. researcher, to our group as part of a Short-Term Scientific Mission (STSM) within the NexMPI COST Action. Great science discussions — and a wonderful group dinner to celebrate!",
+      "image": "./media/news/pauline-stsm.webp",
+      "alt": "Pauline STSM",
+      "link": ""
+    },
+    {
+      "date": "2025-02-01",
+      "title": "DreamNano — Brainstorming meeting ",
+      "summary": "DREAM-Nano Brainstorming meeting with partners from UCD, UZH, and JU.",
+      "image": "./media/news/dream-nano_brainstorming-meeting2.jpg-scaled.webp",
+      "alt": "DreamNano brainstorming meeting",
+      "link": ""
+    },
+    {
+      "date": "2025-01-01",
+      "title": "DreamNano — Kick-off meeting",
+      "summary": "DREAM-Nano kick-off meeting with partners from UCD, UZH, and JU.",
+      "image": "./media/news/dream-nano.webp",
+      "alt": "DreamNano kick-off meeting",
+      "link": ""
+    }
+  ]
+}

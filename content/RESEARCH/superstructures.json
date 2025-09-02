@@ -1,0 +1,22 @@
+{
+  "title": "Exploration of Field-Guided Assemblies of Magnetic Nanoparticles into Superstructures",
+  "year": 2025,
+  "summary": "In this emerging line we focus on reconfigurable magnetic superstructures directed by dipolar interactions, tunable through particle size, morphology and surface chemistry.",
+  "descriptionHtml": "<p>We study the template-free fabrication of reconfigurable superstructures from magnetic nanoparticles. Field-guided self-organization and dipolar coupling govern mesoscale order, enabling reversible transitions between architectures. The goal is to program magnetic response and topology without lithographic constraints.</p><p>By tuning size, shape and surface of the building blocks we access regimes where long-range interactions dominate, producing lattices and chains whose mechanical and magnetic properties can be modulated on demand. Preliminary findings outline design rules for robust, rewritable assemblies.</p>",
+  "images": [
+    {
+      "src": "media/research/superstructures/1.webp"
+    },
+    {
+      "src": "media/research/superstructures/2.webp"
+    },
+    {
+      "src": "media/research/superstructures/3.webp"
+    }
+  ],
+  "papers": [],
+  "related": [
+    "scalable",
+    "shape-tuning"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Tuning Magnetic Properties Through Nanoparticle Shape Engineering and Assembly",
+  "year": 2025,
+  "summary": "Shape Engineering and Assembly (IM\u00c1GENES) SUMMARY: Our research explores how nanoparticle shape and programmed assembly routes enable emergent collective magnetic properties beyond individual particles.",
+  "descriptionHtml": "<p>Our research explores how nanoparticle shape and programmed assembly routes enable emergent collective magnetic properties beyond individual particles. We design shape-controlled syntheses and templating approaches to direct particles into ordered architectures where interparticle dipolar coupling dominates the response. This allows tailoring of coercivity, anisotropy and dissipative behaviour for applications such as magnetic hyperthermia and actuation.</p><p>We integrate in-situ field alignment, confinement, and multiscale characterization to correlate mesoscale order with magnetization dynamics. The approach spans from 2D nanosheets to confined structures in porous frameworks, linking synthetic pathways to functional magnetic performance. These insights guide the engineering of assemblies with predictable, tunable responses.</p><p>The program connects fundamental magnetization processes with practical use-cases including remote heating, field-responsive soft matter and reconfigurable metamaterials. By combining shape engineering with controlled assembly we target robust, scalable strategies to optimize energy dissipation and directional response in colloidal systems.</p>",
+  "images": [
+    {
+      "src": "media/research/shape-tuning/1.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/2.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/3.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/4.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/5.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/6.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/7.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/8.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/9.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/10.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/11.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/12.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/13.webp"
+    },
+    {
+      "src": "media/research/shape-tuning/14.webp"
+    }
+  ],
+  "papers": [],
+  "related": [
+    "scalable",
+    "superstructures",
+    "mxenes"
+  ]
+}

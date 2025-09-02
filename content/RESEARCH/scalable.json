@@ -1,0 +1,41 @@
+{
+  "slug": "scalable",
+  "title": "Scalable Synthesis of Magnetic Nanoparticles",
+  "year": "",
+  "summary": "Our research develops scalable and reproducible synthesis methods for magnetic nanoparticles (MNPs) optimized for magnetic hyperthermia. By controlling crystallinity, size, shape, and magnetic anisotropy, we uncover how these properties govern specific absorption rates (SAR) under clinically relevant fields. This work bridges the gap between small-batch precision and large-scale production, enabling high-performance MNPs and advancing predictable nanomedicine applications.",
+  "descriptionHtml": "<p>Our research explores the scalable colloidal synthesis of magnetic nanoparticles (MNPs), a critical step toward unlocking their full potential in applications like magnetic hyperthermia. At the heart of this effort lies a fundamental scientific challenge: how to precisely control magnetic anisotropy, crystallinity, and interparticle interactions—all of which govern heat generation at the nanoscale—while scaling up synthesis without compromising performance. We develop chemically robust, reproducible routes that bridge the gap between small-batch precision and large-scale production. This allows us to systematically investigate how nanoparticle crystallinity, size, shape and composition affect specific absorption rates (SAR) under clinically relevant alternating magnetic fields. Our work not only delivers scalable methods for producing high-performing MNPs but also deepens the fundamental understanding of the structure–property relationships that define magnetic heating efficiency, paving the way for more effective and predictable nanomedicine technologies.</p>",
+  "images": [
+    "./media/research/scalable/1.webp",
+    "./media/research/scalable/2.webp",
+    "./media/research/scalable/3.webp",
+    "./media/research/scalable/4.webp",
+    "./media/research/scalable/5.webp",
+    "./media/research/scalable/6.webp",
+    "./media/research/scalable/7.webp",
+    "./media/research/scalable/8.webp",
+    "./media/research/scalable/9.webp",
+    "./media/research/scalable/10.webp"
+  ],
+  "papers": [
+    {
+      "label": "DOI • s41596-022-00779-3",
+      "url": "https://doi.org/10.1038/s41596-022-00779-3"
+    },
+    {
+      "label": "DOI • smll.202310522",
+      "url": "https://doi.org/10.1002/smll.202310522"
+    },
+    {
+      "label": "DOI • acsami.2c14752",
+      "url": "https://doi.org/10.1021/acsami.2c14752"
+    },
+    {
+      "label": "DOI • pharmaceutics13101668",
+      "url": "https://doi.org/10.3390/pharmaceutics13101668"
+    },
+    {
+      "label": "DOI • acsami.9b15501",
+      "url": "https://doi.org/10.1021/acsami.9b15501"
+    }
+  ]
+}

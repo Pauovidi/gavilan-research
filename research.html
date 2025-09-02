@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gavilan Research — NanoColloids & Magnetism Lab</title>
+  <meta name="description" content="NanoColloids & Magnetism Lab — research, projects, publications, news and team." />
+  <meta name="theme-color" content="#2aa1b6" />
+  <link rel="preload" as="image" href="./media/bg.webp">
+  <link rel="preload" as="image" href="./media/Logo-grupo.webp">
+  <link rel="preload" as="image" href="./media/home/QUIMICAS_COLOR_SOLO.webp">
+  <style>
+    :root{
+      --brand:#2aa1b6; --brand-700:#1b6f80; --brand-100:#6fc5d6;
+      --bg:#F7FAFC; --surface:#fff; --ink:#0A1320; --muted:#41556F; --line: transparent;
+      --font:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+      --base:16px; --radius:8px; --container:1200px;
+      --space-1:.5rem; --space-2:.75rem; --space-3:1rem; --space-4:1.5rem; --space-5:2rem; --space-6:3rem;
+      --dur:500ms; --bez:cubic-bezier(.2,.7,.2,1); --elev:0 2px 14px rgba(12,20,33,.06);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--base)/1.6 var(--font)}
+    img,svg,video{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:3px}
+    ::selection{background:#dff2f6;color:#051015}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* Fondo fijo con velo suave */
+    .site-bg{position:fixed;inset:0;z-index:-1;background:#f2f6fb url('./media/bg.webp') center/cover no-repeat;box-shadow:inset 0 0 0 100vmax rgba(255,255,255,.78);pointer-events:none}
+
+    .container{max-width:var(--container);margin-inline:auto;padding-inline:1rem}
+    .section{padding-block:var(--space-6)}
+
+    /* ===== HEADER (blur) ===== */
+    header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);transition:background var(--dur) var(--bez)}
+    header.site.scrolled{background:rgba(255,255,255,.84)}
+    header .container{padding-block:.65rem;position:relative;min-height:72px}
+    .nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.75rem}
+    .brand{display:flex;align-items:center;padding-block:.25rem}
+    .brand-logo{height:78px;width:auto;object-fit:contain}
+    .navlinks{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;justify-content:flex-start}
+    .navlinks a{padding:.25rem .45rem;border-radius:.5rem;font-weight:600;font-size:.95rem}
+    .navlinks a[aria-current="page"],.navlinks a:hover{background:rgba(0,0,0,.06)}
+    .brand-right{display:flex;align-items:center;justify-content:end;padding-block:.25rem}
+    .brand-right img{height:52px;width:auto;object-fit:contain}
+    .menu-btn{display:none;background:none;border:0;color:inherit;font-size:1rem}
+    @media (max-width:860px){.menu-btn{display:inline-flex}.nav{grid-template-columns:auto 1fr auto}.navlinks{display:none}}
+
+    /* Type & grid */
+    .eyebrow{letter-spacing:.10em;text-transform:uppercase;font-weight:800;font-size:.78rem;color:var(--brand)}
+    .h1{font-size:clamp(2rem,3vw,2.3rem) !important;line-height:1.0;margin:0 0 .6rem 0;font-weight:850}
+    .h2{font-size:clamp(1.6rem,2.8vw,2.2rem);line-height:1.2;margin:0 0 .6rem 0;font-weight:800}
+    .h3{font-size:1.25rem;margin:.2rem 0 .3rem 0;font-weight:750}
+    .muted{color:#41556F}
+    .grid{display:grid;gap:var(--space-3)}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:1024px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:680px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:var(--space-3);box-shadow:var(--elev);transition:transform var(--dur) var(--bez),box-shadow var(--dur) var(--bez)}
+    .card:hover{transform:translateY(-3px)}
+    .meta{font-size:.92rem;color:#41556F}
+
+    /* Botones */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.55rem .9rem;border-radius:999px;border:0;cursor:pointer;font-weight:700;font-size:.95rem;line-height:1;min-height:40px;text-decoration:none}
+    .btn-primary{background:var(--brand-700);color:#fff}
+    .btn-primary:hover{background:#000;color:#fff}
+
+    /* Util imagen 3:2 (cards, news, projects) */
+    .media-32{aspect-ratio:3/2;border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line)}
+    .media-32>img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* ===== HERO ===== */
+    .hero{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);background:transparent;padding-block:clamp(.6rem, 2.5vw, 1.25rem);min-height:clamp(420px,58vh,680px)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--space-5);max-width:var(--container);margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem);align-items:center}
+    @media (max-width:980px){.hero-grid{grid-template-columns:1fr}}
+    .hero-right{max-width:700px;margin-inline:auto;align-self:center}
+    .carousel{position:relative}
+    .track{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;border:1px solid var(--line);border-radius:var(--radius);background:#fff;aspect-ratio:3/2;max-height:540px;box-shadow:0 8px 28px rgba(12,20,33,.08);-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-width:none;-ms-overflow-style:none}
+    .track::-webkit-scrollbar{width:0;height:0;display:none}
+    @media (max-width:680px){.track{max-height:40vh}}
+    .slide{flex:0 0 100%;width:100%;scroll-snap-align:start;position:relative}
+    .slide img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 380ms var(--bez)}
+    .slide img.is-loaded{opacity:1}
+    .ctrl{position:absolute;top:50%;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:0;cursor:pointer;background:rgba(255,255,255,.85);backdrop-filter:saturate(150%) blur(8px);box-shadow:0 6px 24px rgba(0,0,0,.14);z-index:2}
+    .prev{left:10px}.next{right:10px}
+    .ctrl svg{width:22px;height:22px}
+    .ctrl:active{transform:translateY(-50%) scale(.98)}
+    .gallery-actions{display:flex;justify-content:center;margin-top:1.8rem}
+
+    /* ===== ABOUT ===== */
+    .about-grid{align-items:start}
+    @media (min-width:980px){.about-grid{grid-template-columns:1fr 1fr}}
+    #about_figure{margin:0;place-self:start;display:inline-block;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+    #about_figure img{display:block;width:clamp(260px,36vw,420px);height:auto}
+
+    /* ===== TEAM ===== */
+    #team_list .person{display:flex;gap:1rem;align-items:center}
+    #team_list .person img{width:88px;height:88px;border-radius:999px;border:1px solid var(--line);object-fit:cover}
+
+    /* ===== NEWS ===== */
+    #news_list time{font-size:.9rem;color:#41556F}
+
+    /* ===== Footer ===== */
+    footer{border-top:1px solid var(--line)}
+    footer .logos{display:grid;gap:1rem;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;padding-block:1rem}
+    footer .logos img{height:44px;width:auto;object-fit:contain}
+    footer .logos a:nth-child(1) img{height:66px}
+    footer .logos a:nth-child(2) img{height:57px}
+
+    /* Back to top */
+    .totop{position:fixed;right:20px;bottom:20px;z-index:60;border:0;border-radius:999px;padding:.65rem;background:rgba(255,255,255,.75);-webkit-backdrop-filter:saturate(160%) blur(10px);backdrop-filter:saturate(160%) blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.12);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity var(--dur) var(--bez),transform var(--dur) var(--bez),visibility var(--dur) var(--bez)}
+    .totop svg{display:block;width:20px;height:20px}
+    .totop.show{opacity:1;visibility:visible;transform:none}
+
+    /* Modal menú móvil */
+    .menu-modal{position:fixed;inset:0;z-index:80;display:none;background:rgba(255,255,255,.96);-webkit-backdrop-filter:saturate(140%) blur(10px);backdrop-filter:saturate(140%) blur(10px)}
+    .menu-modal.open{display:block}
+    .menu-modal .inner{max-width:min(92vw,520px);margin:8vh auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.12);padding:1rem}
+    .menu-modal header{display:flex;justify-content:space-between;align-items:center;padding:.25rem .25rem .5rem .25rem;border-bottom:1px solid var(--line)}
+    .menu-modal nav{display:grid;gap:.35rem;padding:1rem .5rem}
+    .menu-modal a{padding:.6rem .8rem;border-radius:.75rem;font-weight:700}
+    .menu-modal a:hover{background:#f3f6fb}
+
+    /* Scroll reveal + stagger */
+    .reveal{opacity:0;transform:translateY(6px);transition:opacity 420ms var(--bez),transform 420ms var(--bez);transition-delay:var(--d,0ms)}
+    .reveal.is-inview{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.reveal{transition:none!important}}
+
+    /* Alinear columnas del About por arriba */
+.about-grid { align-items: start; }
+
+/* La figura ya forzaba alineación arriba, lo dejamos explícito */
+#about_figure { align-self: start; }
+
+/* Reducir la imagen un 30% (de clamp(260px,36vw,420px) a aprox 182px,25vw,294px) */
+#about_figure img { width: clamp(182px, 25vw, 294px); }
+
+/* Ajustes específicos About */
+#about .about-grid{
+  grid-template-columns: minmax(0, 420px) minmax(0, 560px);
+  column-gap: clamp(12px, 2vw, 20px);
+  justify-content: center;   /* centrar horizontal */
+  align-items: start;        /* alinear arriba */
+}
+#about_figure{ align-self: start; }
+
+/* Header “dark” al scroll */
+header.site.dark {
+  background: #0a0a0a !important;
+  color: #fff;
+}
+header.site.dark a { color:#fff; }
+header.site.dark .navlinks a[aria-current="page"], 
+header.site.dark .navlinks a:hover { background: rgba(255,255,255,.12); }
+
+/* === ABOUT: mover el marco (figure) a la derecha/abajo === */
+
+/* Ajusta estos valores donde quieras (en #about, o en un scope superior) */
+#about{
+  --about-col: 300px;    /* ancho de la columna de la imagen */
+  --about-gap: 3rem;     /* separación entre imagen y texto */
+
+  /* DESPLAZAMIENTO del marco: +X => derecha, +Y => abajo */
+  --about-shift-x: 20px;
+  --about-shift-y: 20px;
+}
+
+/* Disposición en 2 columnas: [imagen | texto] */
+#about > .stack{
+  display: grid;
+  grid-template-columns: var(--about-col) 1fr;
+  gap: var(--about-gap);
+  align-items: start;
+}
+
+/* Desplazamiento del marco (afecta al flujo: el texto respeta la posición) */
+#about_figure{
+  margin-left: var(--about-shift-x);
+  margin-top:  var(--about-shift-y);
+}
+
+/* (Opcional) Estilo básico del retrato; no afecta al desplazamiento */
+#about_figure img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+/* En móvil, suele ser mejor sin desplazamiento */
+@media (max-width: 980px){
+  #about{
+    --about-shift-x: 0px;
+    --about-shift-y: 20px;
+  }
+  #about > .stack{
+    grid-template-columns: 1fr;   /* pila vertical */
+  }
+}
+
+/* Publications unificado: una por fila, card clicable y portada cuadrada */
+:is(#publications, #selected_publications) .stack{ display:grid; gap: var(--space-3); }
+
+a.card.selpub{
+  display:grid;
+  grid-template-columns:minmax(132px, 192px) 1fr !important;
+  gap: var(--space-3);
+  align-items:start;
+  text-decoration:none;
+  color:inherit;
+  transition: transform var(--dur) ease, box-shadow var(--dur) ease;
+}
+a.card.selpub:hover{ transform: translateY(-2px); }
+
+:is(#publications, #selected_publications) .selpub .cover{
+  border:1px solid var(--line); border-radius: var(--radius); overflow:hidden; background:#fff;
+}
+
+/* Fuerza CUADRADA (y pisa cualquier 3/2 previo) */
+:is(#publications, #selected_publications) .selpub .cover img{
+  width:100%; height:100%; object-fit:cover; aspect-ratio: 1 / 1 !important;
+}
+
+@media (max-width:800px){
+  a.card.selpub{ grid-template-columns:1fr; }
+}
+
+/* Base: TODOS los logos del footer */
+#footer_logos img{
+  height: 54px;          /* base */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Ajustes individuales (usa height, NO max-height) */
+#footer_logos > *:nth-child(1) img{ height: calc(54px * 1.5); } /* +50% */
+#footer_logos > *:nth-child(2) img{ height: calc(54px * 1.2); } /* +20% */
+
+
+/* --- Header: transición suave y estado 'dark' --- */
+header.site{
+  transition: background-color .45s ease, color .45s ease, border-color .45s ease;
+}
+header.site.dark {
+  background: #0a0a0a !important;
+  color:#fff;
+}
+header.site.dark a { color:#fff; }
+header.site.dark .navlinks a:hover{ background: rgba(255,255,255,.12); }
+
+/* --- Ritmo general más lento --- */
+:root{ --t-quick: .45s; --t-med: .8s; --t-slow: 1.2s; }
+.slide img{ transition-duration: var(--t-med) !important; }
+.btn, .navlinks a{
+  transition: background var(--t-quick) ease, color var(--t-quick) ease, border-color var(--t-quick) ease, transform var(--t-quick) ease;
+}
+.card{
+  transition: transform var(--t-med) ease, box-shadow var(--t-med) ease, border-color var(--t-med) ease;
+}
+
+/* Header oscuro al hacer scroll (forzado) */
+header#siteHeader.dark,
+header.site.dark{
+  background:#0a0a0a !important;
+  color:#fff !important;
+  border-color:#0a0a0a !important;
+}
+header#siteHeader.dark a,
+header.site.dark a{ color:#fff !important; }
+header#siteHeader.dark .navlinks a:hover,
+header.site.dark .navlinks a:hover{ background:rgba(255,255,255,.12) !important; }
+
+/* Tamaño de portada cuadrada en Publications (mucho más pequeña) */
+#publications{ --pub-cover: clamp(90px, 14vw, 140px); }  /* máx ~140px */
+
+a.card.selpub{
+  /* Pisar cualquier minmax previo (220–320px) */
+  grid-template-columns: var(--pub-cover) 1fr !important;
+}
+
+/* Asegurar cuadrado y recorte correcto */
+#publications .selpub .cover img{
+  width:100%; height:100%;
+  object-fit:cover;
+  aspect-ratio:1 / 1 !important;
+}
+
+/* === FINAL OVERRIDES — PUBLICATIONS === */
+
+/* Tamaño columna portada (≈40% más pequeña) */
+:is(#publications, #selected_publications){
+  --pub-cover: clamp(54px, 8.4vw, 84px);
+}
+
+/* Card de publicación clicable (una por fila) */
+:is(#publications, #selected_publications) a.card.selpub{
+  display:grid !important;
+  grid-template-columns: var(--pub-cover) 1fr !important; /* <-- tamaño portada definitivo */
+  gap: var(--space-3);
+  align-items:start;
+  text-decoration:none;
+  color:inherit;
+  will-change: transform;
+  transition: transform var(--dur, .7s) ease, box-shadow var(--dur, .7s) ease !important;
+}
+
+/* Efecto hover “flotar” (con sombra) */
+:is(#publications, #selected_publications) a.card.selpub:hover{
+  transform: translateY(-4px) scale(1.01) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.14) !important;
+}
+
+/* Portada estrictamente cuadrada y rellenando */
+:is(#publications, #selected_publications) .selpub .cover img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  aspect-ratio: 1 / 1 !important;
+}
+
+/* Publications: hover más rápido (solo en estas cards) */
+:is(#publications, #selected_publications) a.card.selpub{
+  --pub-t: .32s; /* velocidad del hover de estas cards */
+  transition: transform var(--pub-t) ease, box-shadow var(--pub-t) ease !important;
+}
+:is(#publications, #selected_publications) a.card.selpub:hover{
+  transform: translateY(-3px) scale(1.005) !important;  /* un pelín más sutil */
+  box-shadow: 0 6px 20px rgba(0,0,0,.12) !important;
+}
+
+/* (opcional) respeta usuarios con reduce motion */
+@media (prefers-reduced-motion: reduce){
+  :is(#publications, #selected_publications) a.card.selpub{
+    transition: none !important;
+  }
+}
+
+#about_pdf_wrap{ display:block !important; }
+#about_pdf{ display:inline-flex !important; }
+
+/* CV fuera del figure, debajo de la foto y en la MISMA columna */
+#about .cv-below{
+  grid-column: 1;                 /* misma columna que la foto (layout por defecto) */
+  display: flex;
+  justify-content: center;        /* pon 'flex-start' si lo quieres alineado a la izquierda */
+  margin-top: .9rem;
+}
+#about .cv-below .btn{
+  max-width: 260px;
+  width: 100%;
+}
+
+/* Si usas variante about-right (foto a la derecha), colócalo en la columna 2 */
+#about.about-right .cv-below{ grid-column: 2; }
+
+/* En móvil (una sola columna) queda igualmente debajo de la foto */
+@media (max-width:980px){
+  #about .cv-below{ grid-column: 1; }
+}
+
+/* ABOUT: grid estable — foto | texto; CV debajo de la foto */
+#about > .stack{
+  display:grid;
+  grid-template-columns: var(--about-col, 300px) 1fr;
+  gap: var(--about-gap, 2rem);
+  align-items:start;
+}
+#about_figure{ grid-column:1; grid-row:1; }
+#about_textcol{ grid-column:2; grid-row:1; }      /* columna de texto etiquetada por JS */
+#about_cv_below{
+  grid-column:1; grid-row:2;                      /* CV debajo de la foto */
+  display:flex; justify-content:center; margin-top:.9rem;
+}
+#about_cv_below .btn{ max-width:260px; width:100%; }
+
+/* Variante foto a la derecha */
+#about.about-right > .stack{ grid-template-columns: 1fr var(--about-col, 300px); }
+#about.about-right #about_textcol{ grid-column:1; grid-row:1; }
+#about.about-right #about_figure{  grid-column:2; grid-row:1; }
+#about.about-right #about_cv_below{grid-column:2; grid-row:2; justify-content:flex-end; }
+
+/* Móvil: una sola columna — CV sigue bajo la foto */
+@media (max-width:980px){
+  #about > .stack{ grid-template-columns: 1fr; }
+  #about_figure{ grid-column:1; grid-row:1; }
+  #about_cv_below{ grid-column:1; grid-row:2; }
+  #about_textcol{ grid-column:1; grid-row:3; }
+}
+
+/* === ABOUT: 2 columnas estables; CV debajo de la foto SIN tocar el texto === */
+#about > .stack{
+  display:grid;
+  grid-template-columns: var(--about-col, 300px) 1fr;
+  gap: var(--about-gap, 2rem);
+  align-items:start;
+}
+
+/* Nuevo contenedor de la COLUMNA izquierda (foto + CV). No cambies su orden */
+#about_leftcol{ display:flex; flex-direction:column; align-items:stretch; gap:.9rem; }
+#about_figure{ order:1; }
+#about_cv_below{ order:2; display:flex; justify-content:center; }
+#about_cv_below .btn{ max-width:260px; width:100%; }
+
+/* Columna derecha = texto */
+
+/* Variante foto a la derecha */
+#about.about-right > .stack{ grid-template-columns: 1fr var(--about-col, 300px); }
+#about.about-right #about_leftcol{ grid-column:2; }
+#about.about-right #about_textcol{ grid-column:1; }
+
+/* Móvil: una sola columna (foto, CV, texto) */
+@media (max-width:980px){
+  #about > .stack{ grid-template-columns: 1fr; }
+}
+
+/* === HOVER global de cards (restaurado) — sin afectar a publications === */
+.card{
+  transition: transform var(--dur, .7s) ease, box-shadow var(--dur, .7s) ease;
+}
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+/* Mantener override específico de Publications (más específico) */
+:is(#publications, #selected_publications) a.card.selpub{
+  --pub-t: .32s;
+  transition: transform var(--pub-t) ease, box-shadow var(--pub-t) ease !important;
+}
+:is(#publications, #selected_publications) a.card.selpub:hover{
+  transform: translateY(-3px) scale(1.005) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12) !important;
+}
+
+/* Por si alguna capa tapaba botones/enlaces del TEAM */
+#team .card.person a.btn, 
+#team .card.person button.btn{
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Asegura que nada tape los botones del TEAM */
+#team .card.person { position: relative; }
+#team .card.person a.btn, 
+#team .card.person button.btn{
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* === HEADER: transparente antes de scroll + línea negra full width === */
+header#siteHeader, header.site, header[role="banner"]{
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  position: sticky; top: 0; z-index: 50;
+}
+header#siteHeader::after, header.site::after, header[role="banner"]::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+  background:#000; pointer-events:none;
+}
+/* En oscuro tras scroll */
+header#siteHeader.dark, header.site.dark, header[role="banner"].dark{
+  background:#0a0a0a !important; color:#fff !important;
+}
+
+/* Back-to-top — negro, flecha blanca, 40% más grande y más a la izquierda */
+.totop{
+  right: 40px !important; bottom: 20px !important;
+  padding: .91rem !important;           /* ~40% más grande */
+  background: #000 !important; color:#fff !important;
+  border: 0 !important; border-radius: 999px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  line-height: 0 !important;
+  z-index: 2147483000 !important;       /* muy por encima de todo */
+  box-shadow: 0 8px 28px rgba(0,0,0,.25) !important;
+  mix-blend-mode: normal !important;
+  pointer-events: auto !important;
+}
+.totop svg{ width: 28px !important; height: 28px !important; display: block !important; }
+.totop svg, .totop svg *{
+  stroke: #fff !important; fill: none !important; stroke-width: 2.2px !important;
+  stroke-linecap: round !important; stroke-linejoin: round !important;
+}
+.totop:hover{ transform: translateY(-2px) !important; }
+.totop:focus-visible{ outline: 2px solid #fff; outline-offset: 3px; }
+
+/* enlaces visibles en oscuro */
+header.site.dark a{ color:#fff !important; }
+
+/* === SCROLL SUAVE + OFFSET DEL HEADER PARA ANCHORS === */
+html{ scroll-behavior: smooth; }
+
+/* margen superior al hacer scroll a secciones (compensa el header sticky) */
+#hero, #projects, #team, #about, #news, #publications{
+  scroll-margin-top: calc(var(--header-h) + 8px);
+}
+/* si usas otros anchors con id en el contenido, puedes añadirlos aquí también */
+
+/* === MENÚ: estado activo === */
+.navlinks a.is-active,
+.navlinks a[aria-current="page"]{
+  background: rgba(0,0,0,.08) !important;
+  border-radius: 8px;
+}
+header.dark .navlinks a.is-active,
+header.dark .navlinks a[aria-current="page"]{
+  background: rgba(255,255,255,.18) !important;
+}
+
+/* === CARDS: sin bordes, solo fondo blanco === */
+.card{
+  border: 0 !important;
+  background: #fff !important;
+  box-shadow: 0 2px 14px rgba(12,20,33,.06);
+}
+/* bloques media dentro de cards (projects/news/pubs) sin borde también */
+.media-32, .selpub .cover{
+  border: 0 !important;
+  box-shadow: none !important;
+  background: #fff;
+}
+
+#contact{ --line: #CBD5E1; }  /* gris suave solo dentro del contacto */
+
+#res_gallery .track{
+  display:flex; overflow-x:auto;
+  scroll-snap-type:x mandatory; scroll-behavior:smooth;
+}
+#res_gallery .slide{ flex:0 0 100%; scroll-snap-align:start; aspect-ratio: 3/2; }
+#res_gallery .slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* ——— Research slider: forzar visibilidad de las imágenes ——— */
+#res_gallery .slide img{
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important; /* evita que otra transición vuelva a 0 */
+}
+#res_gallery .slide{ aspect-ratio: 3 / 2; } /* por si la altura dependía del load */
+
+/* ==== Research slider — ajustes de tamaño y controles ==== */
+#res_gallery{
+  /* 👇 Toca aquí los valores */
+  --res-max: 720px;          /* ancho máximo del carrusel */
+  --res-ar: 3 / 2;           /* relación de aspecto del área visible */
+  --res-pad: .75rem;         /* “aire” interior alrededor de la imagen */
+  --res-ctrl-size: 44px;     /* diámetro de las flechas */
+  --res-ctrl-offset: 12px;   /* separación respecto a los bordes */
+  --res-radius: 12px;
+  --res-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+#res_gallery{ max-width: var(--res-max); margin: 1rem auto 2rem; position: relative; }
+#res_gallery .track{
+  display: flex; overflow-x: auto;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  background: #fff;
+  border: 1px solid var(--line, rgba(0,0,0,.08));
+  border-radius: var(--res-radius);
+  box-shadow: var(--res-shadow);
+}
+
+/* Cada slide ocupa todo el ancho del carrusel, con “aire” interno */
+#res_gallery .slide{
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  aspect-ratio: var(--res-ar);
+  padding: var(--res-pad);
+  display: grid; place-items: center;
+}
+/* Imagen más pequeña (no estira): */
+#res_gallery .slide img{
+  width: 100%; height: 100%;
+  object-fit: contain !important;   /* << antes era cover */
+  opacity: 1 !important;            /* por si el reveal la deja a 0 */
+  visibility: visible !important;
+}
+
+/* Controles simétricos y centrados verticalmente */
+#res_gallery .ctrl{
+  position: absolute; inset: 50% auto auto auto;
+  transform: translateY(-50%);
+  width: var(--res-ctrl-size); height: var(--res-ctrl-size);
+  border-radius: 999px; display: grid; place-items: center;
+  background: #fff; color: #111;
+  border: 1px solid var(--line, rgba(0,0,0,.08));
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  z-index: 2; cursor: pointer; margin: 0 !important;
+}
+#res_gallery .prev{ left:  var(--res-ctrl-offset); right: auto; }
+#res_gallery .next{ right: var(--res-ctrl-offset); left:  auto; }
+
+/* Responsive: a pantalla estrecha, ocupa todo el ancho y controles algo más cerca */
+@media (max-width: 720px){
+  #res_gallery{ --res-max: 100%; --res-ctrl-size: 38px; --res-ctrl-offset: 8px; }
+}
+
+/* ===== Slider Gavilan — preset compacto ===== */
+#res_gallery{
+  /* presets editables */
+  --res-w: 840px;         /* ancho máx del carrusel */
+  --res-ar: 4/3;          /* aspect-ratio del área visible */
+  --res-arrow: 36px;      /* tamaño de flechas */
+  --res-gap: 14px;        /* distancia flecha-borde */
+
+  position: relative;
+  width: min(100%, var(--res-w));
+  aspect-ratio: var(--res-ar);
+  margin: 0 auto;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+/* Pista */
+#res_gallery .track{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 200ms ease;
+}
+
+/* Cada slide ocupa todo el viewport del carrusel */
+#res_gallery .track > *{ flex: 0 0 100%; display:grid; place-items:center; }
+
+/* Imágenes un poco más pequeñas y siempre visibles */
+#res_gallery img{
+  width: 1000%;
+  height: 1000%;
+  object-fit: contain;              /* no recorta */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block;                   /* elimina gap inline */
+}
+
+/* Flechas: centradas verticalmente respecto al carrusel */
+#res_gallery .ctrl{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--res-arrow);
+  height: var(--res-arrow);
+  line-height: var(--res-arrow);
+  text-align: center;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+/* pegadas a los bordes */
+#res_gallery .ctrl.prev{ left: var(--res-gap); }
+#res_gallery .ctrl.next{ right: var(--res-gap); }
+
+/* Responsive */
+@media (max-width: 920px){
+  #res_gallery{ --res-w: 720px; --res-arrow: 32px; --res-gap: 10px; }
+  #res_gallery img{ width: 92%; height: 92%; }
+}
+
+/* Accesibilidad de foco (visible) */
+#res_gallery .ctrl:focus-visible{
+  outline: 3px solid #fff;
+  box-shadow: 0 0 0 3px #000;
+}
+
+</style>
+
+</head>
+<body>
+  <a class="sr-only" href="#content">Skip to content</a>
+
+  <!-- Header (copia tal cual el de la home; no re-hidratamos aquí) -->
+  <header class="site" id="siteHeader" role="banner">
+    <div class="container nav" aria-label="Primary navigation">
+      <a href="./" class="brand" aria-label="Home">
+        <img class="brand-logo" id="brandLeft"
+             src="./media/Logo-grupo.webp" alt="Gavilan Research"
+             onerror="this.onerror=null; this.src='./media/Logo grupo.png';">
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menuModal" id="menuBtn" type="button">☰ Menu</button>
+      <nav class="navlinks" role="navigation" aria-label="Main">
+        <a href="./#projects">Projects</a><a href="./#team">Team</a><a href="./research.html">Research</a><a href="./#publications">Publications</a><a href="./#about">Dr. Gavilán</a><a href="./#news">News</a><a href="./#contact">Contact</a>
+      </nav>
+      <div class="brand-right">
+        <img id="brandRight"
+             src="./media/home/QUIMICAS_COLOR_SOLO.webp" alt="Partner logo"
+             onerror="this.onerror=null; this.src='./media/QUIMICAS_COLOR_SOLO.webp';">
+      </div>
+    </div>
+  </header>
+
+  <!-- Modal menú móvil -->
+  <div class="menu-modal" id="menuModal" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+    <div class="inner">
+      <header><strong id="menuTitle">Menu</strong><button class="btn" id="menuClose" type="button" aria-label="Close">✕</button></header>
+      <nav id="menuList"><a href="./#research">Projects</a><a href="./#team">Team</a><a href="./research.html">Research</a><a href="./#publications">Publications</a><a href="./#about">Dr. Gavilán</a><a href="./#news">News</a><a href="./#contact">Contact</a></nav>
+    </div>
+  </div>
+
+  <main id="content" class="container section">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="display:flex;gap:.5rem;align-items:center;font-size:.95rem;color:#41556F;margin:.5rem 0 1rem">
+      <a href="./">Home</a> <span class="sep">›</span>
+      <span id="crumb_title">…</span>
+    </nav>
+
+    <!-- Research detail -->
+    <section id="research" aria-labelledby="res_title">
+      <header>
+        <div class="eyebrow" id="res_kicker">Research</div>
+        <h1 class="h1" id="res_title">Project</h1>
+        <p class="muted" id="res_summary"></p>
+      </header>
+
+      <!-- Slider -->
+      <div class="carousel" id="res_gallery" hidden>
+        <button class="ctrl prev" aria-label="Previous">&#10094;</button>
+        <div class="track" id="res_track"></div>
+        <button class="ctrl next" aria-label="Next">&#10095;</button>
+      </div>
+
+      <!-- Descripción -->
+      <article id="res_desc" class="stack"></article>
+
+      <!-- Botones / Papers -->
+      <div id="res_papers" class="stack" hidden>
+        <h3 class="h3">Publications & Links</h3>
+        <div id="res_papers_list" style="display:flex;flex-wrap:wrap;gap:.5rem;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (copia tal cual el de la home) -->
+  <footer role="contentinfo" class="site">
+    <div class="container" style="padding-block:2rem;">
+      <div class="logos" id="footer_logos" aria-label="Partner logos"></div>
+      <div style="text-align:center;margin-top:1rem">© <span id="year"></span> Gavilan Research</div>
+    </div>
+  </footer>
+
+  <!-- Fondo global -->
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button id="toTop" class="totop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4l-7-7z"/></svg>
+  </button>
+
+  <!-- === Scripts mínimos y sin duplicados === -->
+  <script>
+  (function(){
+    const $ = (id)=>document.getElementById(id);
+
+    // ===== Menú móvil =====
+    const menuBtn=$('menuBtn'), menuModal=$('menuModal'), menuClose=$('menuClose');
+    const menuLinks=[...document.querySelectorAll('#menuList a')];
+    const focusablesSel='a,button,[tabindex]:not([tabindex="-1"])';
+    function openMenu(){menuModal.classList.add('open');document.body.style.overflow='hidden';menuBtn.setAttribute('aria-expanded','true');(menuLinks[0]||menuClose)?.focus();}
+    function closeMenu(){menuModal.classList.remove('open');document.body.style.overflow='';menuBtn.setAttribute('aria-expanded','false');menuBtn.focus();}
+    menuBtn.addEventListener('click',openMenu); menuClose.addEventListener('click',closeMenu);
+    menuModal.addEventListener('click',e=>{if(e.target===menuModal)closeMenu()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menuModal.classList.contains('open'))closeMenu()});
+    menuModal.addEventListener('keydown',e=>{
+      if(e.key!=='Tab')return; const f=[...menuModal.querySelectorAll(focusablesSel)];
+      const first=f[0],last=f[f.length-1];
+      if(e.shiftKey && document.activeElement===first){ last.focus(); e.preventDefault(); }
+      else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault(); }
+    });
+    menuLinks.forEach(a=>a.addEventListener('click',closeMenu));
+
+    // ===== Utilidades =====
+    async function fetchJSON(paths){
+      const list = Array.isArray(paths)?paths:[paths];
+      for (const p of list){
+        try{ const r=await fetch(p,{cache:'no-store'}); if(r.ok) return await r.json(); }catch(_){}
+      }
+      return null;
+    }
+    const setT=(id,v)=>{const n=$(id); if(n&&v!=null) n.textContent=v;};
+    const setH=(id,v)=>{const n=$(id); if(n&&v!=null) n.innerHTML=v;};
+
+    // ===== Hidratar footer (logos + año) =====
+    (async()=>{
+      const f = await fetchJSON(["./content/footer.json","./footer.json"]);
+      if (f?.items && $('footer_logos')){
+        const seen=new Set(); const only4=[];
+        for (const it of f.items){
+          const key=String(it.src||'').split('/').pop().replace(/\.[^.]+$/,'').toLowerCase();
+          if(!seen.has(key)){ seen.add(key); only4.push(it); }
+          if(only4.length>=4) break;
+        }
+        $('footer_logos').innerHTML = only4.map(l=>`<a href="${l.href||'#'}" target="_blank" rel="noopener"><img src="${l.src}" alt="${l.alt||''}"></a>`).join('');
+      }
+      const y=$('year'); if(y) y.textContent = new Date().getFullYear();
+    })();
+
+    // ===== Cargar proyecto por ?p=slug =====
+    (async()=>{
+      const qs = new URLSearchParams(location.search);
+      const slug = (qs.get('p')||'').trim().toLowerCase();
+      if (!slug){ setT('res_title','Research'); setT('res_summary','Select a project from the list.'); return; }
+
+      const data = await fetchJSON([`./content/research/${slug}.json`,`./research/${slug}.json`]);
+      if (!data){ setT('res_title','Project not found'); setT('crumb_title','Not found'); return; }
+
+      setT('res_title', data.title || slug);
+      setT('crumb_title', data.title || slug);
+      setT('res_kicker', data.year ? `Research · ${data.year}` : 'Research');
+      setT('res_summary', data.summary || '');
+      if (data.descriptionHtml) setH('res_desc', data.descriptionHtml);
+
+      // Papers
+      const papers = Array.isArray(data.papers) ? data.papers.filter(p=>p && p.url) : [];
+      if (papers.length){
+        const list = document.getElementById('res_papers_list');
+        list.innerHTML = papers.map(p => `<a class="btn btn-primary" href="${p.url}" target="_blank" rel="noopener">${p.label||'Open'}</a>`).join('');
+        document.getElementById('res_papers').hidden = false;
+      }
+
+      // Slider — usa /media/research/<slug>/1.webp… sin depender de data.images
+{
+  const gallery = document.getElementById('res_gallery');
+  const track   = document.getElementById('res_track');
+  if (gallery && track){
+    const base   = new URL(`media/research/${slug}/`, document.baseURI);
+    const widths = [640,960,1280,1600];
+
+    track.innerHTML = '';
+    let shown = false;
+
+    for (let i = 1; i <= 40; i++){
+      const fig = document.createElement('figure'); fig.className = 'slide';
+      const img = document.createElement('img');   img.loading = 'lazy'; img.alt = '';
+
+      // p.ej. http://127.0.0.1:5500/media/research/scalable/1
+      const root = new URL(String(i), base).href.replace(/\/$/, '');
+
+      img.onerror = () => { fig.remove(); };
+      img.onload  = () => { if (!shown) { gallery.hidden = false; shown = true; } };
+
+      img.src    = `${root}.webp`;
+      img.srcset = widths.map(w => `${root}-${w}.webp ${w}w`).join(', ');
+      img.sizes  = '(max-width: 680px) 100vw, 1000px';
+
+      fig.appendChild(img);
+      track.appendChild(fig);
+    }
+
+    const goto = d => track.scrollBy({ left: d * track.clientWidth, behavior: 'smooth' });
+    document.querySelector('#res_gallery .prev')?.addEventListener('click', () => goto(-1));
+    document.querySelector('#res_gallery .next')?.addEventListener('click', () => goto(1));
+  }
+}
+      // Título de la pestaña
+      document.title = (data.title ? `${data.title} — Research` : 'Research');
+    })();
+
+    // ===== Header oscuro + Back-to-top (único bloque) =====
+    const header = document.getElementById('siteHeader');
+    const toTop  = document.getElementById('toTop');
+
+    function setHeaderState(){
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      if (header) header.classList.toggle('dark', y > 80);
+      if (toTop)  toTop.classList.toggle('show', y > 400);
+    }
+    setHeaderState();
+    addEventListener('scroll', setHeaderState, { passive:true });
+
+    // Swap del logo secundario en modo dark (blanco)
+    (function(){
+      const WHITE = "./media/home/QUIMICAS_COLOR_SOLO_BLANCO.webp";
+      function apply(dark){
+        const img = document.getElementById("brandRight"); if(!img) return;
+        if(!img.dataset.colorSrc) img.dataset.colorSrc = img.currentSrc || img.src || "";
+        img.dataset.whiteSrc = img.dataset.whiteSrc || WHITE;
+        img.src = dark ? img.dataset.whiteSrc : img.dataset.colorSrc;
+        img.removeAttribute('srcset'); img.removeAttribute('sizes');
+      }
+      const mo = new MutationObserver(()=> apply(header?.classList.contains('dark')));
+      if (header) mo.observe(header, { attributes:true, attributeFilter:['class'] });
+      apply(header?.classList.contains('dark'));
+    })();
+
+    // Back-to-top icon (blanco)
+    (function(){
+      const btn = document.getElementById('toTop');
+      if (!btn) return;
+      btn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>';
+      btn.addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
+    })();
+  })();
+  </script>
+
+<script>
+/* =======================
+   1) HEADER: cargar logos igual que en la home (con fallbacks)
+   ======================= */
+(async function hydrateHeaderLogos(){
+  const norm = s => String(s||"").replace(/\\/g,"/");
+  async function getHeader(){
+    for (const p of ["./content/header.json","./header.json"]){
+      try{ const r = await fetch(p, {cache:"no-store"}); if(r.ok) return await r.json(); }catch(_){}
+    }
+    return null;
+  }
+  function tryLoad(el, candidates){
+    return new Promise(resolve=>{
+      if (!el) return resolve(false);
+      const list = candidates.filter(Boolean).map(norm);
+      (function next(i){
+        if (i>=list.length) return resolve(false);
+        const test = new Image();
+        test.onload = ()=>{ el.src = list[i]; el.removeAttribute("srcset"); el.removeAttribute("sizes"); resolve(true); };
+        test.onerror = ()=> next(i+1);
+        test.src = list[i];
+      })(0);
+    });
+  }
+
+  const data = await getHeader();
+  const left  = document.getElementById("brandLeft");
+  const right = document.getElementById("brandRight");
+
+  // candidatos (coinciden con lo que te funciona en index)
+  const candLeft  = [data?.logos?.[0]?.src, "./media/home/Logo-grupo.webp", "./media/Logo-grupo.webp"];
+  const candRight = [data?.logos?.[1]?.src, "./media/home/QUIMICAS_COLOR_SOLO.webp"];
+
+  await tryLoad(left,  candLeft);
+  await tryLoad(right, candRight);
+
+  // swap a versión blanca cuando el header está en .dark
+  const WHITE = "./media/home/QUIMICAS_COLOR_SOLO_BLANCO.webp";
+  function applySwap(){
+    if (!right) return;
+    if (!right.dataset.colorSrc) right.dataset.colorSrc = right.currentSrc || right.src || "";
+    right.dataset.whiteSrc = right.dataset.whiteSrc || WHITE;
+    const dark = (document.getElementById("siteHeader")||document.querySelector("header.site"))?.classList.contains("dark");
+    right.src = dark ? right.dataset.whiteSrc : right.dataset.colorSrc;
+  }
+  new MutationObserver(applySwap).observe(document.getElementById("siteHeader")||document.querySelector("header.site"), {attributes:true, attributeFilter:["class"]});
+  applySwap();
+})();
+</script>
+
+<script id="researchDetailAndGallery">
+(() => {
+  const $ = id => document.getElementById(id);
+
+  const slug = (new URLSearchParams(location.search).get('p')||'').trim().toLowerCase();
+  const setT = (id,v)=>{ const n=$(id); if(n) n.textContent=v||''; };
+  const setH = (id,v)=>{ const n=$(id); if(n) n.innerHTML =v||''; };
+
+  async function getJSON(paths){
+    for (const p of (Array.isArray(paths)?paths:[paths])){
+      try { const r = await fetch(p,{cache:'no-store'}); if (r.ok) return await r.json(); } catch(_){}
+    }
+    return null;
+  }
+
+  // --- ÚNICO SLIDER ---
+  function initGallery(slug){
+    const gallery = $('res_gallery');
+    const track   = $('res_track');
+    if (!gallery || !track || !slug) return;
+
+    // Base absoluta: /media/research/<slug> relativo a esta página
+    const base = new URL(`media/research/${slug}/`, document.baseURI);
+    const widths = [640, 960, 1280, 1600];
+
+    track.innerHTML = '';              // limpia por si había restos
+    let shown = false;
+
+    // Pintamos 1..40.webp (las dos primeras con carga “eager”)
+    for (let i=1; i<=40; i++){
+      const fig = document.createElement('figure'); fig.className='slide';
+      const img = document.createElement('img');   img.alt=''; img.decoding='async';
+      if (i<=2){ img.loading='eager'; img.fetchPriority='high'; } else { img.loading='lazy'; }
+
+      const root = new URL(String(i), base).href.replace(/\/$/, ''); // …/1
+      img.onerror = () => { fig.remove(); };
+      img.onload  = () => { if (!shown){ gallery.hidden=false; shown=true; } };
+
+      img.src    = `${root}.webp`;
+      img.srcset = widths.map(w => `${root}-${w}.webp ${w}w`).join(', ');
+      img.sizes  = '(max-width: 680px) 100vw, 1000px';
+
+      fig.appendChild(img);
+      track.appendChild(fig);
+    }
+
+    // Controles
+    const goto = d => track.scrollBy({ left: d * track.clientWidth, behavior:'smooth' });
+    gallery.querySelector('.prev')?.addEventListener('click', () => goto(-1));
+    gallery.querySelector('.next')?.addEventListener('click', () => goto(1));
+  }
+
+  // --- Detalle del research ---
+  (async () => {
+    if (!slug){
+      setT('res_title','Research');
+      setH('res_summary','Añade ?p=<slug> en la URL (p.ej. ?p=scalable) o entra desde la card.');
+      $('crumb_title') && ($('crumb_title').textContent='…');
+      return;
+    }
+
+    const data = await getJSON([`./content/research/${slug}.json`,`./research/${slug}.json`]);
+
+    if (!data){
+      // Si no hay JSON, mostramos aviso pero IGUAL lanzamos la galería (porque las imágenes están en /media)
+      setT('res_title','Project not found');
+      setH('res_summary', `<small style="color:#b00">No se pudo cargar <code>content/research/${slug}.json</code> ni <code>research/${slug}.json</code>.</small>`);
+      $('crumb_title') && ($('crumb_title').textContent='Not found');
+      initGallery(slug);
+      return;
+    }
+
+    // Texto
+    setT('res_title', data.title || slug);
+    $('crumb_title') && ($('crumb_title').textContent = data.title || slug);
+    setT('res_kicker', data.year ? `Research · ${data.year}` : 'Research');
+    setT('res_summary', data.summary || '');
+    if (data.descriptionHtml) setH('res_desc', data.descriptionHtml);
+
+    // Papers
+    const papers = Array.isArray(data.papers) ? data.papers.filter(p=>p && p.url) : [];
+    if (papers.length){
+      const list = $('res_papers_list');
+      if (list){
+        list.innerHTML = papers.map(p => `<a class="btn btn-primary" href="${p.url}" target="_blank" rel="noopener">${p.label||'Open'}</a>`).join('');
+        $('res_papers').hidden = false;
+      }
+    }
+
+    document.title = (data.title ? `${data.title} — Research` : 'Research');
+
+    // Galería (siempre desde /media/research/<slug>/)
+    initGallery(slug);
+  })();
+})();
+</script>
+</body>
+</html>

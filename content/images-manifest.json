@@ -1,0 +1,1285 @@
+{
+  "about/profile": {
+    "original": "./media/about/profile.webp",
+    "variants": [
+      {
+        "path": "./media/about/profile-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/_raw/about/profile-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/about/profile-800.webp",
+        "w": 800
+      }
+    ]
+  },
+  "footer/LOGO PRTR COLOR": {
+    "original": "./media/footer/LOGO PRTR COLOR.webp",
+    "variants": [
+      {
+        "path": "./media/footer/LOGO PRTR COLOR-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/footer/LOGO PRTR COLOR-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/footer/LOGO PRTR COLOR-1200.avif",
+        "w": 1200
+      },
+      {
+        "path": "./media/footer/LOGO PRTR COLOR-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "footer/Logo PRTR dos líneas_COLOR": {
+    "original": "./media/footer/Logo PRTR dos líneas_COLOR.webp",
+    "variants": [
+      {
+        "path": "./media/footer/Logo PRTR dos líneas_COLOR-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/footer/Logo PRTR dos líneas_COLOR-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/footer/Logo PRTR dos líneas_COLOR-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "footer/Logotipo_de_la_Agencia_Estatal_de_Investigación": {
+    "original": "./media/footer/Logotipo_de_la_Agencia_Estatal_de_Investigación.webp",
+    "variants": [
+      {
+        "path": "./media/footer/Logotipo_de_la_Agencia_Estatal_de_Investigación-640.webp",
+        "w": 640
+      }
+    ]
+  },
+  "footer/Logotipo_de_la_Agencia_Estatal_de_Investigación.svg": {
+    "original": "./media/footer/Logotipo_de_la_Agencia_Estatal_de_Investigación.svg.webp",
+    "variants": [
+      {
+        "path": "./media/footer/Logotipo_de_la_Agencia_Estatal_de_Investigación.svg-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/footer/Logotipo_de_la_Agencia_Estatal_de_Investigación.svg-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/footer/Logotipo_de_la_Agencia_Estatal_de_Investigación.svg-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "footer/Logotipo_del_Ministerio_de_Ciencia_e_Innovación": {
+    "original": "./media/footer/Logotipo_del_Ministerio_de_Ciencia_e_Innovación.webp",
+    "variants": [
+      {
+        "path": "./media/footer/Logotipo_del_Ministerio_de_Ciencia_e_Innovación-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/footer/Logotipo_del_Ministerio_de_Ciencia_e_Innovación-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/footer/Logotipo_del_Ministerio_de_Ciencia_e_Innovación-1200.avif",
+        "w": 1200
+      },
+      {
+        "path": "./media/_raw/footer/Logotipo_del_Ministerio_de_Ciencia_e_Innovación-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "footer/Next generation EU": {
+    "original": "./media/footer/Next generation EU.webp",
+    "variants": [
+      {
+        "path": "./media/footer/Next generation EU-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/footer/Next generation EU-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/footer/Next generation EU-1200.avif",
+        "w": 1200
+      },
+      {
+        "path": "./media/_raw/footer/Next generation EU-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "hero/07-07_20000X": {
+    "original": "./media/hero/07-07_20000X_0007.webp",
+    "variants": [
+      {
+        "path": "./media/hero/07-07_20000X_0007.jpg",
+        "w": 7
+      }
+    ]
+  },
+  "hero/07-07_20000X_0007": {
+    "original": "./media/hero/07-07_20000X_0007-800.webp",
+    "variants": [
+      {
+        "path": "./media/hero/07-07_20000X_0007-800.avif",
+        "w": 800
+      }
+    ]
+  },
+  "hero/1e-A1": {
+    "original": "./media/hero/1e-A1_0010.webp",
+    "variants": [
+      {
+        "path": "./media/hero/1e-A1_0010.jpg",
+        "w": 10
+      }
+    ]
+  },
+  "hero/1e-A1_0010": {
+    "original": "./media/hero/1e-A1_0010-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/1e-A1_0010-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/1e-A1_0010-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/2a Heptaldeyde": {
+    "original": "./media/hero/2a Heptaldeyde_0007.webp",
+    "variants": [
+      {
+        "path": "./media/hero/2a Heptaldeyde_0007.jpg",
+        "w": 7
+      }
+    ]
+  },
+  "hero/2a Heptaldeyde_0007": {
+    "original": "./media/hero/2a Heptaldeyde_0007-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/2a Heptaldeyde_0007-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/2a Heptaldeyde_0007-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/2b-A3-60min": {
+    "original": "./media/hero/2b-A3-60min_0006.webp",
+    "variants": [
+      {
+        "path": "./media/hero/2b-A3-60min_0006.jpg",
+        "w": 6
+      }
+    ]
+  },
+  "hero/2b-A3-60min_0006": {
+    "original": "./media/hero/2b-A3-60min_0006-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/2b-A3-60min_0006-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/2b-A3-60min_0006-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/3a-dodecylamine": {
+    "original": "./media/hero/3a-dodecylamine_0010.webp",
+    "variants": [
+      {
+        "path": "./media/hero/3a-dodecylamine_0010.jpg",
+        "w": 10
+      }
+    ]
+  },
+  "hero/3a-dodecylamine_0010": {
+    "original": "./media/hero/3a-dodecylamine_0010-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/3a-dodecylamine_0010-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/3a-dodecylamine_0010-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/3a-HGR141": {
+    "original": "./media/hero/3a-HGR141_0005.webp",
+    "variants": [
+      {
+        "path": "./media/hero/3a-HGR141_0005.jpg",
+        "w": 5
+      }
+    ]
+  },
+  "hero/3a-HGR141_0005": {
+    "original": "./media/hero/3a-HGR141_0005-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/3a-HGR141_0005-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/3a-HGR141_0005-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/3b-B0-230-time0": {
+    "original": "./media/hero/3b-B0-230-time0_0014.webp",
+    "variants": [
+      {
+        "path": "./media/hero/3b-B0-230-time0_0014.jpg",
+        "w": 14
+      },
+      {
+        "path": "./media/hero/3b-B0-230-time0_0015.jpg",
+        "w": 15
+      }
+    ]
+  },
+  "hero/3b-B0-230-time0_0014": {
+    "original": "./media/hero/3b-B0-230-time0_0014-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/3b-B0-230-time0_0014-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/3b-B0-230-time0_0014-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/3b-B0-230-time0_0015": {
+    "original": "./media/hero/3b-B0-230-time0_0015-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/3b-B0-230-time0_0015-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/3b-B0-230-time0_0015-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/4a-180degrees": {
+    "original": "./media/hero/4a-180degrees_0005.webp",
+    "variants": [
+      {
+        "path": "./media/hero/4a-180degrees_0005.jpg",
+        "w": 5
+      }
+    ]
+  },
+  "hero/4a-180degrees_0005": {
+    "original": "./media/hero/4a-180degrees_0005-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/4a-180degrees_0005-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/4a-180degrees_0005-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/5a-Au-FeO-overnightMAG": {
+    "original": "./media/hero/5a-Au-FeO-overnightMAG_0006.webp",
+    "variants": [
+      {
+        "path": "./media/hero/5a-Au-FeO-overnightMAG_0006.jpg",
+        "w": 6
+      }
+    ]
+  },
+  "hero/5a-Au-FeO-overnightMAG_0006": {
+    "original": "./media/hero/5a-Au-FeO-overnightMAG_0006-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/5a-Au-FeO-overnightMAG_0006-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/5a-Au-FeO-overnightMAG_0006-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/7C-HGR6-MR8-6h": {
+    "original": "./media/hero/7C-HGR6-MR8-6h_0004.webp",
+    "variants": [
+      {
+        "path": "./media/hero/7C-HGR6-MR8-6h_0004.jpg",
+        "w": 4
+      },
+      {
+        "path": "./media/hero/7C-HGR6-MR8-6h_0005.jpg",
+        "w": 5
+      }
+    ]
+  },
+  "hero/7C-HGR6-MR8-6h_0004": {
+    "original": "./media/hero/7C-HGR6-MR8-6h_0004-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/7C-HGR6-MR8-6h_0004-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/7C-HGR6-MR8-6h_0004-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/7C-HGR6-MR8-6h_0005": {
+    "original": "./media/hero/7C-HGR6-MR8-6h_0005-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/7C-HGR6-MR8-6h_0005-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/7C-HGR6-MR8-6h_0005-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/9-srg-1-40k": {
+    "original": "./media/hero/9-srg-1-40k.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9-srg-1-40k-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/hero/9-srg-1-40k-800.avif",
+        "w": 800
+      }
+    ]
+  },
+  "hero/9c-HGR97-OLA-verdad": {
+    "original": "./media/hero/9c-HGR97-OLA-verdad_0006.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9c-HGR97-OLA-verdad_0006.jpg",
+        "w": 6
+      }
+    ]
+  },
+  "hero/9c-HGR97-OLA-verdad_0006": {
+    "original": "./media/hero/9c-HGR97-OLA-verdad_0006-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9c-HGR97-OLA-verdad_0006-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/9c-HGR97-OLA-verdad_0006-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/9e-HGR-134-giacomo": {
+    "original": "./media/hero/9e-HGR-134-giacomo_0004.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0004.jpg",
+        "w": 4
+      },
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0008.jpg",
+        "w": 8
+      },
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0014.jpg",
+        "w": 14
+      },
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0027.jpg",
+        "w": 27
+      }
+    ]
+  },
+  "hero/9e-HGR-134-giacomo_0004": {
+    "original": "./media/hero/9e-HGR-134-giacomo_0004-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0004-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0004-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/9e-HGR-134-giacomo_0008": {
+    "original": "./media/hero/9e-HGR-134-giacomo_0008-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0008-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0008-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/9e-HGR-134-giacomo_0014": {
+    "original": "./media/hero/9e-HGR-134-giacomo_0014-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0014-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0014-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/9e-HGR-134-giacomo_0027": {
+    "original": "./media/hero/9e-HGR-134-giacomo_0027-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0027-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/9e-HGR-134-giacomo_0027-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/9e-HGR99-C12-verdad": {
+    "original": "./media/hero/9e-HGR99-C12-verdad_0003.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9e-HGR99-C12-verdad_0003.jpg",
+        "w": 3
+      }
+    ]
+  },
+  "hero/9e-HGR99-C12-verdad_0003": {
+    "original": "./media/hero/9e-HGR99-C12-verdad_0003-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/9e-HGR99-C12-verdad_0003-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/9e-HGR99-C12-verdad_0003-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/brand-right": {
+    "original": "./media/_raw/hero/brand-right.webp",
+    "variants": [
+      {
+        "path": "./media/_raw/hero/brand-right-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/_raw/hero/brand-right-1200.webp",
+        "w": 1200
+      },
+      {
+        "path": "./media/_raw/hero/brand-right-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "hero/CAPS-20nm-diluted": {
+    "original": "./media/hero/CAPS-20nm-diluted_0008.webp",
+    "variants": [
+      {
+        "path": "./media/hero/CAPS-20nm-diluted_0008.jpg",
+        "w": 8
+      }
+    ]
+  },
+  "hero/CAPS-20nm-diluted_0008": {
+    "original": "./media/hero/CAPS-20nm-diluted_0008-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/CAPS-20nm-diluted_0008-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/CAPS-20nm-diluted_0008-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/CSIC_30000X": {
+    "original": "./media/hero/CSIC_30000X_0008.webp",
+    "variants": [
+      {
+        "path": "./media/hero/CSIC_30000X_0008.jpg",
+        "w": 8
+      }
+    ]
+  },
+  "hero/CSIC_30000X_0008": {
+    "original": "./media/hero/CSIC_30000X_0008-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/CSIC_30000X_0008-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/CSIC_30000X_0008-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/Fer NC3 Marco_5000X": {
+    "original": "./media/hero/Fer NC3 Marco_5000X_0004.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Fer NC3 Marco_5000X_0004.jpg",
+        "w": 4
+      }
+    ]
+  },
+  "hero/Fer NC3 Marco_5000X_0004": {
+    "original": "./media/hero/Fer NC3 Marco_5000X_0004-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Fer NC3 Marco_5000X_0004-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/Fer NC3 Marco_5000X_0004-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/Giacomo MNC3 NCs - 4d": {
+    "original": "./media/hero/Giacomo MNC3 NCs - 4d_0009.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Giacomo MNC3 NCs - 4d_0009.jpg",
+        "w": 9
+      }
+    ]
+  },
+  "hero/Giacomo MNC3 NCs - 4d_0009": {
+    "original": "./media/hero/Giacomo MNC3 NCs - 4d_0009-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Giacomo MNC3 NCs - 4d_0009-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/Giacomo MNC3 NCs - 4d_0009-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/hero": {
+    "original": "./media/hero/hero.webp",
+    "variants": [
+      {
+        "path": "./media/hero/hero-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/hero/hero-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/hero-1200.webp",
+        "w": 1200
+      },
+      {
+        "path": "./media/hero/hero-1600.avif",
+        "w": 1600
+      },
+      {
+        "path": "./media/_raw/hero/hero-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "hero/HGR-1-NOMAG-MW2": {
+    "original": "./media/hero/HGR-1-NOMAG-MW2_0003.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-1-NOMAG-MW2_0003.jpg",
+        "w": 3
+      }
+    ]
+  },
+  "hero/HGR-1-NOMAG-MW2_0003": {
+    "original": "./media/hero/HGR-1-NOMAG-MW2_0003-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-1-NOMAG-MW2_0003-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/HGR-1-NOMAG-MW2_0003-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/HGR-12-ND": {
+    "original": "./media/hero/HGR-12-ND_0013.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-12-ND_0013.jpg",
+        "w": 13
+      }
+    ]
+  },
+  "hero/HGR-12-ND_0013": {
+    "original": "./media/hero/HGR-12-ND_0013-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-12-ND_0013-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/HGR-12-ND_0013-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/HGR-48WA1-reproduci-autrocalvenuevo": {
+    "original": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007.jpg",
+        "w": 7
+      }
+    ]
+  },
+  "hero/HGR-48WA1-reproduci-autrocalvenuevo_0007": {
+    "original": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/HGR-48WA1-reproduci-autrocalvenuevo_0007-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/HGR-73": {
+    "original": "./media/hero/HGR-73_0002.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-73_0002.jpg",
+        "w": 2
+      }
+    ]
+  },
+  "hero/HGR-73_0002": {
+    "original": "./media/hero/HGR-73_0002-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR-73_0002-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/HGR-73_0002-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/HGR39-nobenz": {
+    "original": "./media/hero/HGR39-nobenz_0003.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR39-nobenz_0003.jpg",
+        "w": 3
+      }
+    ]
+  },
+  "hero/HGR39-nobenz_0003": {
+    "original": "./media/hero/HGR39-nobenz_0003-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/HGR39-nobenz_0003-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/HGR39-nobenz_0003-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/Logo-grupo": {
+    "original": "./media/hero/Logo-grupo.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Logo-grupo-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/hero/Logo-grupo-800.avif",
+        "w": 800
+      }
+    ]
+  },
+  "hero/NC3_15000X": {
+    "original": "./media/hero/NC3_15000X_0003.webp",
+    "variants": [
+      {
+        "path": "./media/hero/NC3_15000X_0003.jpg",
+        "w": 3
+      }
+    ]
+  },
+  "hero/NC3_15000X_0003": {
+    "original": "./media/hero/NC3_15000X_0003-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/NC3_15000X_0003-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/NC3_15000X_0003-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/Reaccion inversion Fe y BZD 8 h_30000X": {
+    "original": "./media/hero/Reaccion inversion Fe y BZD 8 h_30000X_0012.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Reaccion inversion Fe y BZD 8 h_30000X_0012.jpg",
+        "w": 12
+      }
+    ]
+  },
+  "hero/Reaccion inversion Fe y BZD 8 h_30000X_0012": {
+    "original": "./media/hero/Reaccion inversion Fe y BZD 8 h_30000X_0012-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Reaccion inversion Fe y BZD 8 h_30000X_0012-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/Reaccion inversion Fe y BZD 8 h_30000X_0012-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/Walls-3-HGR-48_MAG": {
+    "original": "./media/hero/Walls-3-HGR-48_MAG_0005.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Walls-3-HGR-48_MAG_0005.jpg",
+        "w": 5
+      },
+      {
+        "path": "./media/hero/Walls-3-HGR-48_MAG_0011.jpg",
+        "w": 11
+      }
+    ]
+  },
+  "hero/Walls-3-HGR-48_MAG_0005": {
+    "original": "./media/hero/Walls-3-HGR-48_MAG_0005-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Walls-3-HGR-48_MAG_0005-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/Walls-3-HGR-48_MAG_0005-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "hero/Walls-3-HGR-48_MAG_0011": {
+    "original": "./media/hero/Walls-3-HGR-48_MAG_0011-1200.webp",
+    "variants": [
+      {
+        "path": "./media/hero/Walls-3-HGR-48_MAG_0011-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/hero/Walls-3-HGR-48_MAG_0011-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "home/Logo-grupo": {
+    "original": "./media/home/Logo-grupo.webp",
+    "variants": [
+      {
+        "path": "./media/home/Logo-grupo-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/home/Logo-grupo-800.avif",
+        "w": 800
+      }
+    ]
+  },
+  "home/QUIMICAS_BLANCO_COMPLETO": {
+    "original": "./media/home/QUIMICAS_BLANCO_COMPLETO.webp",
+    "variants": [
+      {
+        "path": "./media/home/QUIMICAS_BLANCO_COMPLETO-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/home/QUIMICAS_BLANCO_COMPLETO-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/home/QUIMICAS_BLANCO_COMPLETO-1200.avif",
+        "w": 1200
+      }
+    ]
+  },
+  "home/QUIMICAS_COLOR_ESCUDO": {
+    "original": "./media/home/QUIMICAS_COLOR_ESCUDO.webp",
+    "variants": [
+      {
+        "path": "./media/home/QUIMICAS_COLOR_ESCUDO-640.webp",
+        "w": 640
+      }
+    ]
+  },
+  "home/QUIMICAS_COLOR_SOLO": {
+    "original": "./media/home/QUIMICAS_COLOR_SOLO.webp",
+    "variants": [
+      {
+        "path": "./media/home/QUIMICAS_COLOR_SOLO-640.webp",
+        "w": 640
+      }
+    ]
+  },
+  "news/DISEÑO-Roll up": {
+    "original": "./media/news/DISEÑO-Roll up.webp",
+    "variants": []
+  },
+  "news/dream-nano": {
+    "original": "./media/news/dream-nano.webp",
+    "variants": []
+  },
+  "news/dream-nano_brainstorming-meeting2.jpg-scaled": {
+    "original": "./media/news/dream-nano_brainstorming-meeting2.jpg-scaled.webp",
+    "variants": []
+  },
+  "news/fernando-stsm": {
+    "original": "./media/news/fernando-stsm.webp",
+    "variants": []
+  },
+  "news/pauline-stsm": {
+    "original": "./media/news/pauline-stsm.webp",
+    "variants": []
+  },
+  "projects/DISEÑO-Roll up": {
+    "original": "./media/projects/DISEÑO-Roll up-1024.webp",
+    "variants": [
+      {
+        "path": "./media/projects/DISEÑO-Roll up-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/projects/DISEÑO-Roll up-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/projects/DISEÑO-Roll up-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/projects/DISEÑO-Roll up-1024.webp",
+        "w": 1024
+      },
+      {
+        "path": "./media/projects/DISEÑO-Roll up-1280.webp",
+        "w": 1280
+      },
+      {
+        "path": "./media/projects/DISEÑO-Roll up-1600.webp",
+        "w": 1600
+      },
+      {
+        "path": "./media/projects/DISEÑO-Roll up-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "projects/dream-nano": {
+    "original": "./media/projects/dream-nano-1024.webp",
+    "variants": [
+      {
+        "path": "./media/projects/dream-nano-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/projects/dream-nano-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/projects/dream-nano-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/projects/dream-nano-1024.webp",
+        "w": 1024
+      },
+      {
+        "path": "./media/projects/dream-nano-1280.webp",
+        "w": 1280
+      }
+    ]
+  },
+  "projects/dream-nano_brainstorming-meeting2.jpg-scaled": {
+    "original": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-1024.webp",
+    "variants": [
+      {
+        "path": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-1024.webp",
+        "w": 1024
+      },
+      {
+        "path": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-1280.webp",
+        "w": 1280
+      },
+      {
+        "path": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-1600.webp",
+        "w": 1600
+      },
+      {
+        "path": "./media/projects/dream-nano_brainstorming-meeting2.jpg-scaled-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "projects/Fernando_Martín": {
+    "original": "./media/projects/Fernando_Martín-1024.webp",
+    "variants": [
+      {
+        "path": "./media/projects/Fernando_Martín-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/projects/Fernando_Martín-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/projects/Fernando_Martín-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/projects/Fernando_Martín-1024.webp",
+        "w": 1024
+      }
+    ]
+  },
+  "projects/fernando-stsm": {
+    "original": "./media/projects/fernando-stsm-480.webp",
+    "variants": [
+      {
+        "path": "./media/projects/fernando-stsm-480.webp",
+        "w": 480
+      }
+    ]
+  },
+  "projects/gavilan": {
+    "original": "./media/projects/gavilan-1024.webp",
+    "variants": [
+      {
+        "path": "./media/projects/gavilan-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/projects/gavilan-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/projects/gavilan-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/projects/gavilan-1024.webp",
+        "w": 1024
+      },
+      {
+        "path": "./media/projects/gavilan-1280.webp",
+        "w": 1280
+      },
+      {
+        "path": "./media/projects/gavilan-1600.webp",
+        "w": 1600
+      },
+      {
+        "path": "./media/projects/gavilan-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "projects/Marco": {
+    "original": "./media/projects/Marco-480.webp",
+    "variants": [
+      {
+        "path": "./media/projects/Marco-480.webp",
+        "w": 480
+      }
+    ]
+  },
+  "projects/Pauline": {
+    "original": "./media/projects/Pauline-1024.webp",
+    "variants": [
+      {
+        "path": "./media/projects/Pauline-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/projects/Pauline-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/projects/Pauline-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/projects/Pauline-1024.webp",
+        "w": 1024
+      },
+      {
+        "path": "./media/projects/Pauline-1280.webp",
+        "w": 1280
+      },
+      {
+        "path": "./media/projects/Pauline-1600.webp",
+        "w": 1600
+      }
+    ]
+  },
+  "projects/Zhu": {
+    "original": "./media/projects/Zhu-1024.webp",
+    "variants": [
+      {
+        "path": "./media/projects/Zhu-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/projects/Zhu-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/projects/Zhu-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/projects/Zhu-1024.webp",
+        "w": 1024
+      },
+      {
+        "path": "./media/projects/Zhu-1280.webp",
+        "w": 1280
+      },
+      {
+        "path": "./media/projects/Zhu-1600.webp",
+        "w": 1600
+      },
+      {
+        "path": "./media/projects/Zhu-1920.webp",
+        "w": 1920
+      }
+    ]
+  },
+  "team/Alma": {
+    "original": "./media/team/Alma.webp",
+    "variants": [
+      {
+        "path": "./media/team/Alma-320.webp",
+        "w": 320
+      },
+      {
+        "path": "./media/team/Alma-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/team/Alma-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/team/Alma-800.webp",
+        "w": 800
+      }
+    ]
+  },
+  "team/Fernando": {
+    "original": "./media/team/Fernando.webp",
+    "variants": [
+      {
+        "path": "./media/team/Fernando-320.webp",
+        "w": 320
+      },
+      {
+        "path": "./media/team/Fernando-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/team/Fernando-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/team/Fernando-800.webp",
+        "w": 800
+      }
+    ]
+  },
+  "team/Helena": {
+    "original": "./media/team/Helena.webp",
+    "variants": [
+      {
+        "path": "./media/team/Helena-320.webp",
+        "w": 320
+      },
+      {
+        "path": "./media/team/Helena-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/team/Helena-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/team/Helena-800.webp",
+        "w": 800
+      }
+    ]
+  },
+  "team/Marco": {
+    "original": "./media/team/Marco.webp",
+    "variants": [
+      {
+        "path": "./media/team/Marco-320.webp",
+        "w": 320
+      },
+      {
+        "path": "./media/team/Marco-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/team/Marco-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/team/Marco-800.webp",
+        "w": 800
+      }
+    ]
+  },
+  "team/Pauline": {
+    "original": "./media/team/Pauline.webp",
+    "variants": [
+      {
+        "path": "./media/team/Pauline-320.webp",
+        "w": 320
+      },
+      {
+        "path": "./media/team/Pauline-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/team/Pauline-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/team/Pauline-800.webp",
+        "w": 800
+      }
+    ]
+  },
+  "team/Zhu": {
+    "original": "./media/team/Zhu.webp",
+    "variants": [
+      {
+        "path": "./media/team/Zhu-320.webp",
+        "w": 320
+      },
+      {
+        "path": "./media/team/Zhu-480.webp",
+        "w": 480
+      },
+      {
+        "path": "./media/team/Zhu-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/team/Zhu-800.webp",
+        "w": 800
+      }
+    ]
+  },
+  "home/QUIMICAS_COLOR_SOLO_BLANCO": {
+    "original": "./media/home/QUIMICAS_COLOR_SOLO_BLANCO.webp",
+    "variants": [
+      {
+        "path": "./media/home/QUIMICAS_COLOR_SOLO_BLANCO-640.webp",
+        "w": 640
+      },
+      {
+        "path": "./media/home/QUIMICAS_COLOR_SOLO_BLANCO-800.webp",
+        "w": 800
+      },
+      {
+        "path": "./media/home/QUIMICAS_COLOR_SOLO_BLANCO-800.avif",
+        "w": 800
+      },
+      {
+        "path": "./media/home/QUIMICAS_COLOR_SOLO_BLANCO-1200.webp",
+        "w": 1200
+      },
+      {
+        "path": "./media/home/QUIMICAS_COLOR_SOLO_BLANCO-1200.avif",
+        "w": 1200
+      }
+    ]
+  }
+}

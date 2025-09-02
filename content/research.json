@@ -1,0 +1,39 @@
+{
+  "title": "Research",
+  "intro": "",
+  "items": [
+    {
+      "slug": "scalable",
+      "title": "Scalable Synthesis of Magnetic Nanoparticles",
+      "summary": "Scalable and reproducible synthesis methods for magnetic nanoparticles.",
+      "cover": "./media/research/scalable/1.webp"
+    },
+    {
+      "slug": "shape-tuning",
+      "title": "Tuning Magnetic Properties Through Nanoparticle Shape Engineering and Assembly",
+      "year": 2025,
+      "summary": "How nanoparticle shape and programmed assembly enable emergent collective magnetic properties.",
+      "cover": "./media/research/shape-tuning/1.webp",
+      "priority": 1,
+      "order": 20
+    },
+    {
+      "slug": "mxenes",
+      "title": "Emerging Lines: MXenes & Multifunctional Nanoparticles",
+      "year": 2025,
+      "summary": "Our research focuses on the design and engineering of hybrid nanomaterials that combine multiple components through conjugation or form single nano-objects with distinct chemical domains.",
+      "cover": "./media/research/mxenes/1.webp",
+      "priority": 2,
+      "order": 15
+    },
+    {
+      "slug": "superstructures",
+      "title": "Field-Guided Magnetic Nanoparticle Superstructures",
+      "year": 2025,
+      "summary": "Reconfigurable superstructures via dipolar coupling and field-guided assembly of magnetic nanoparticles.",
+      "cover": "./media/research/superstructures/1.webp",
+      "priority": 3,
+      "order": 10
+    }
+  ]
+}

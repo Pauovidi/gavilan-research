@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "src": "./media/footer/LOGO PRTR COLOR-1200.webp",
+      "alt": "Logo PRTR dos líneas_COLOR",
+      "href": ""
+    },
+    {
+      "src": "./media/footer/Logotipo_de_la_Agencia_Estatal_de_Investigación.svg-1200.webp",
+      "alt": "Logotipo_de_la_Agencia_Estatal_de_Investigación",
+      "href": ""
+    },
+    {
+      "src": "./media/footer/Logotipo_del_Ministerio_de_Ciencia_e_Innovación-1200.webp",
+      "alt": "Logotipo_del_Ministerio_de_Ciencia_e_Innovación",
+      "href": ""
+    },
+    {
+      "src": "./media/footer/Next generation EU-1200.webp",
+      "alt": "Next generation EU",
+      "href": ""
+    }
+  ]
+}

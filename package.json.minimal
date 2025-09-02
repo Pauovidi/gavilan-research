@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "update": "node update-all.mjs",
+    "preview": "npx serve . -l 5173"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

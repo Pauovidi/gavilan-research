@@ -1,0 +1,14 @@
+{
+  "logos": [
+    {
+      "src": "./media/home/Logo-grupo.webp",
+      "alt": "Grupo Mag N’Col",
+      "href": "/"
+    },
+    {
+      "src": "./media/home/QUIMICAS_COLOR_SOLO.webp",
+      "alt": "Universidad Complutense de Madrid",
+      "href": "https://www.ucm.es/"
+    }
+  ]
+}
