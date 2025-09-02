@@ -1,32 +1,13 @@
 {
   "name": "gavilan-research-site",
+  "private": true,
   "version": "1.0.0",
-  "description": "Static site for Dra. H. Gavilán Research Group",
   "scripts": {
-    "update": "node update-all.mjs",
-    "update:fast": "node update-all.mjs --fast",
-    "extract:about": "node extract-docx.mjs --src ./content/ABOUT.docx --out ./content/about.json",
-    "team:docx": "node build-teams-from-docx.mjs --src ./content/TEAM.docx --out ./content/team.json",
-    "news:docx": "node build-news-from-docx.mjs --src ./content/NEWS.docx --out ./content/news.json",
-    "projects:link": "node projects-img-link.mjs --src ./media/projects --out ./content/projects.json",
-    "optimize:news": "node optimize-images.mjs --src ./media/news --out ./media --verbose",
-    "raw:team": "node raw-to-section.mjs --section team --verbose",
-    "hero:manifest": "node make-hero-manifest.mjs --dir ./media/hero --out ./content/hero-images.json",
-    "patch": "node patch-index.mjs --file ./index.html",
-    "unpatch": "node unpatch-index.mjs --file ./index.html",
-    "deploy:patch": "npm run patch && npm run update",
-    "deploy:unpatch": "npm run unpatch && npm run update",
-    "resample:all": "node tools/resample-all.js",
-    "resample": "node tools/resample.js"
-  },
-  "dependencies": {
-    "mammoth": "^1.6.0"
-  },
-  "engines": {
-    "node": ">=18"
+    "resample": "node tools/resample.js",
+    "resample:all": "node tools/resample-all.js"
   },
   "devDependencies": {
-    "glob": "^11.0.3",
-    "sharp": "^0.34.3"
+    "glob": "^10.3.10",
+    "sharp": "^0.33.3"
   }
 }
