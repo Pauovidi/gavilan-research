@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600">
+  <!-- Fondo neutro (ligero) -->
+  <rect width="100%" height="100%" fill="#e9eff1"></rect>
+  <!-- Silueta -->
+  <g fill="#c4d2d7">
+    <!-- Cabeza -->
+    <circle cx="240" cy="190" r="90"></circle>
+    <!-- Cuello -->
+    <rect x="205" y="260" width="70" height="40" rx="10"></rect>
+    <!-- Torso (hombros redondeados) -->
+    <path d="M80 430q30-90 160-90t160 90v90H80z"></path>
+  </g>
+</svg>

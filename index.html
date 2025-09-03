@@ -560,6 +560,153 @@ header.dark .navlinks a[aria-current="page"]{
   color: #fff !important;
 }
 
+/* =========================
+   TEAM — Card con foto a la izquierda, altura uniforme y botón alineado
+   ========================= */
+#team .card.person{
+  /* ← valores que puedes tocar */
+  --team-photo-w: 96px;      /* ancho de la franja de foto */
+  --team-h: 170px;           /* ALTURA común de todas las cards */
+  --team-pad-x: 14px;        /* padding horizontal del texto */
+  --team-pad-y: 5px;        /* padding vertical del texto */
+
+  display: grid;
+  grid-template-columns: var(--team-photo-w) 1fr;
+  height: var(--team-h);
+  min-height: var(--team-h);
+  padding: 0;                /* anula padding global de .card */
+  gap: 0;
+  overflow: hidden;          /* recorta dentro del radio */
+}
+
+/* Columna imagen sin halo ni padding */
+#team .card.person > figure,
+#team .card.person > .photo,
+#team .card.person > .avatar,
+#team .card.person > img{
+  grid-column: 1;
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+#team .card.person img{
+  display: block;            /* quita el baseline gap */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: none !important;
+}
+
+/* Columna de texto: botón anclado abajo, da igual si el cargo tiene 1 o 2 líneas */
+#team .card.person > *:not(figure):not(.photo):not(.avatar):not(img){
+  grid-column: 2;
+  padding: var(--team-pad-y,20px) var(--team-pad-x,24px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  min-height: 0;              /* evita desbordes raros */
+  gap: 2px;
+}
+
+#team .card.person h3{        /* igual que antes, compacto */
+  margin: 0;
+  line-height: 1.15;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+#team .card.person .role{     /* dos líneas como máximo */
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.9rem;
+  opacity: .85;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* El truco: el botón ocupa el espacio restante hacia abajo */
+#team .card.person .btn,
+#team .card.person .btn-bio{
+  margin-top: auto !important;   /* ← fuerza la alineación inferior */
+  align-self: flex-start;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  line-height: 1;
+  position: static;
+}
+
+/* Título compacto (máx 2 líneas) */
+#team .card.person h3{
+  margin: 0;
+  line-height: 1.15;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Cargo más pequeño (≈ -2 cuerpos) y compacto */
+#team .card.person .role{
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.9rem;
+  opacity: .85;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;     /* evita crecer y desalinear botones */
+  overflow: hidden;
+}
+
+/* Botón alineado en la misma posición para todas las cards */
+#team .card.person .btn,
+#team .card.person .btn-bio{
+  align-self: end;           /* ↓ anclado al fondo de la columna de texto */
+  justify-self: start;
+  margin-top: 6px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  line-height: 1;
+  position: static;
+}
+
+/* Card SIN imagen (placeholder o texto puro) → una sola columna */
+#team .card.person:not(:has(> img, > figure, > .photo, > .avatar)){
+  grid-template-columns: 1fr;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 560px){
+  #team .card.person{
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: unset;
+  }
+  #team .card.person > figure,
+  #team .card.person > .photo,
+  #team .card.person > .avatar,
+  #team .card.person > img{
+    height: 180px;           /* cabecera visual en móvil */
+  }
+  /* en móvil no forzamos el botón abajo */
+  #team .card.person > *:not(figure):not(.photo):not(.avatar):not(img){
+    grid-template-rows: auto auto auto;
+    align-items: start;
+  }
+}
+
+:root { --section-gap: 80px; }
+
+#hero, #projects, #team, #research, #publications, #news, #about {
+  margin-bottom: var(--section-gap);
+}
+footer { margin-top: var(--section-gap); }
+
+
 </style>
 
 </head>
