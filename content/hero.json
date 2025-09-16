@@ -7,7 +7,7 @@
   "gallery": [
     {"src": "./media/hero/07-07_20000X_0007.webp", "alt": "07-07_20000X_0007"},
     {"src": "./media/hero/1e-A1_0010.webp", "alt": "1e-A1_0010"},
-  {"src": "./media/hero/2a Heptaldeyde_0007.webp", "alt": "2a Heptaldeyde_0007"},
+    {"src": "./media/hero/2a Heptaldeyde_0007.webp", "alt": "2a Heptaldeyde_0007"},
     {"src": "./media/hero/2b-A3-60min_0006.webp", "alt": "2b-A3-60min_0006"},
     {"src": "./media/hero/3a-dodecylamine_0010.webp", "alt": "3a-dodecylamine_0010"},
     {"src": "./media/hero/3a-HGR141_0005.webp", "alt": "3a-HGR141_0005"},
@@ -26,8 +26,8 @@
     {"src": "./media/hero/9e-HGR99-C12-verdad_0003.webp", "alt": "9e-HGR99-C12-verdad_0003"},
     {"src": "./media/hero/CAPS-20nm-diluted_0008.webp", "alt": "CAPS-20nm-diluted_0008"},
     {"src": "./media/hero/CSIC_30000X_0008.webp", "alt": "CSIC_30000X_0008"},
-  {"src": "./media/hero/Fer NC3 Marco_5000X_0004.webp", "alt": "Fer NC3 Marco_5000X_0004"},
-  {"src": "./media/hero/Giacomo MNC3 NCs - 4d_0009.webp", "alt": "Giacomo MNC3 NCs - 4d_0009"},
+    {"src": "./media/hero/Fer NC3 Marco_5000X_0004.webp", "alt": "Fer NC3 Marco_5000X_0004"},
+    {"src": "./media/hero/Giacomo MNC3 NCs - 4d_0009.webp", "alt": "Giacomo MNC3 NCs - 4d_0009"},
     {"src": "./media/hero/hero.webp", "alt": "hero"},
     {"src": "./media/hero/HGR-1-NOMAG-MW2_0003.webp", "alt": "HGR-1-NOMAG-MW2_0003"},
     {"src": "./media/hero/HGR-12-ND_0013.webp", "alt": "HGR-12-ND_0013"},
@@ -35,7 +35,7 @@
     {"src": "./media/hero/HGR-73_0002.webp", "alt": "HGR-73_0002"},
     {"src": "./media/hero/HGR39-nobenz_0003.webp", "alt": "HGR39-nobenz_0003"},
     {"src": "./media/hero/NC3_15000X_0003.webp", "alt": "NC3_15000X_0003"},
-  {"src": "./media/hero/Reaccion inversion Fe y BZD 8 h_30000X_0012.webp", "alt": "Reaccion-inversion-Fe-y-BZD-8-h_30000X_0012"},
+    {"src": "./media/hero/Reaccion inversion Fe y BZD 8 h_30000X_0012.webp", "alt": "Reaccion-inversion-Fe-y-BZD-8-h_30000X_0012"},
     {"src": "./media/hero/Walls-3-HGR-48_MAG_0005.webp", "alt": "Walls-3-HGR-48_MAG_0005"},
     {"src": "./media/hero/Walls-3-HGR-48_MAG_0011.webp", "alt": "Walls-3-HGR-48_MAG_0011"}
   ]
