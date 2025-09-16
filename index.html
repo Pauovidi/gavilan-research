@@ -9,6 +9,7 @@
   <link rel="preload" as="image" href="./media/bg.webp">
   <link rel="preload" as="image" href="./media/Logo-grupo.webp">
   <link rel="preload" as="image" href="./media/home/QUIMICAS_COLOR_SOLO.webp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
   <style>
     :root{
       --brand:#2aa1b6; --brand-700:#1b6f80; --brand-100:#6fc5d6;
@@ -34,7 +35,7 @@
 
     /* ===== HEADER (blur) ===== */
     header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);transition:background var(--dur) var(--bez)}
-    header.site.scrolled{background:rgba(255,255,255,.84)}
+    header.site.scrolled{background:#fff}
     header .container{padding-block:.65rem;position:relative;min-height:72px}
     .nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.75rem}
     .brand{display:flex;align-items:center;padding-block:.25rem}
@@ -50,6 +51,19 @@
     /* Type & grid */
     .eyebrow{letter-spacing:.10em;text-transform:uppercase;font-weight:800;font-size:.78rem;color:var(--brand)}
     .h1{font-size:clamp(2rem,3vw,2.3rem) !important;line-height:1.0;margin:0 0 .6rem 0;font-weight:850}
+
+    /* Reduce the hero title by ~3pt more but DO NOT truncate; allow full text to wrap */
+    .hero-title{
+      /* apply a slightly larger reduction while preserving responsive clamp */
+  /* subtract an additional ~0.1667rem (~2pt) on top of previous change */
+  font-size: calc(clamp(2rem,3vw,2.3rem) - 0.6667rem) !important; /* ~6-7px total reduction */
+      line-height:1.04; /* comfortable wrapping */
+      /* Keep natural flow: do not force line-clamp or ellipsis so the full title can appear */
+      display: block;
+      overflow: visible;
+      text-overflow: clip;
+      margin-bottom: .45rem;
+    }
     .h2{font-size:clamp(1.6rem,2.8vw,2.2rem);line-height:1.2;margin:0 0 .6rem 0;font-weight:800}
     .h3{font-size:1.25rem;margin:.2rem 0 .3rem 0;font-weight:750}
     .muted{color:#41556F}
@@ -99,6 +113,18 @@
     /* ===== TEAM ===== */
     #team_list .person{display:flex;gap:1rem;align-items:center}
     #team_list .person img{width:88px;height:88px;border-radius:999px;border:1px solid var(--line);object-fit:cover}
+
+    /* Visiting members: scale the entire card to 60% (40% smaller) */
+    /* This visually shrinks the whole tile (frame + content). Cards will not align with the row above by design. */
+    #team_list .card.visiting{
+      transform: scale(0.8);
+      transform-origin: top left;
+      display: inline-block;
+      will-change: transform;
+      margin-bottom: calc(var(--space-3) * 0.8);
+    }
+    /* Shrink avatar proportionally to avoid oversized image inside the scaled card */
+    #team_list .card.visiting img{width:52.8px;height:52.8px;border-radius:999px;object-fit:cover}
 
     /* ===== NEWS ===== */
     #news_list time{font-size:.9rem;color:#41556F}
@@ -616,7 +642,7 @@ header.dark .navlinks a[aria-current="page"]{
 #team .card.person h3{        /* igual que antes, compacto */
   margin: 0;
   line-height: 1.15;
-  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
   overflow: hidden;
 }
 
@@ -625,7 +651,7 @@ header.dark .navlinks a[aria-current="page"]{
   line-height: 1.2;
   font-size: 0.9rem;
   opacity: .85;
-  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
   overflow: hidden;
 }
 
@@ -646,7 +672,7 @@ header.dark .navlinks a[aria-current="page"]{
   line-height: 1.15;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2; line-clamp: 2;
   overflow: hidden;
 }
 
@@ -658,7 +684,7 @@ header.dark .navlinks a[aria-current="page"]{
   opacity: .85;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;     /* evita crecer y desalinear botones */
+  -webkit-line-clamp: 2; line-clamp: 2;     /* evita crecer y desalinear botones */
   overflow: hidden;
 }
 
@@ -706,6 +732,119 @@ header.dark .navlinks a[aria-current="page"]{
 }
 footer { margin-top: var(--section-gap); }
 
+/* ===== Publications · slides “recortadas” (flechas dentro) ===== */
+#publications{
+  --arrow-size: 42px;
+  --arrow-gap: 8px;                           /* separación al borde interno */
+  --arrow-space: calc(var(--arrow-size) + var(--arrow-gap));
+  --slide-inset: 0px; /* NUEVO: margen extra por lado además del hueco de flechas */
+  --radius: 12px;
+}
+#publications .pubs-viewport{
+  position: relative;
+  overflow: hidden;
+  padding-inline: calc(var(--arrow-space) + var(--slide-inset)); /* ← NUEVO */
+  border-radius: var(--radius);
+  background: transparent !important;                           
+  box-shadow: none !important;
+}
+
+/* Ejemplos de cuánto recortar (elige uno) */
+@media (min-width: 1024px){
+  #publications{ --slide-inset: 30px; }   /* recorta por lado */
+  /* o: #publications{ --slide-inset: 6vw; }  recorte fluido */
+}
+
+/* === PUBLICATIONS · volver a SLIDE === */
+#publications { --slide-ms: 650ms; } /* ajusta la velocidad del slide */
+
+#publications .pubs-viewport{
+  position: relative;
+  overflow: hidden;
+}
+
+#publications .pubs-track{
+  position: relative;              /* no absolute */
+  display: flex !important;        /* carrusel horizontal */
+  transition: transform var(--slide-ms) ease !important;
+  /* NO pongas transform !important aquí; tu JS lo actualizará con translateX(...) */
+}
+
+/* cada slide ocupa 100% del viewport (1 por vista) */
+#publications .pubs-slide{
+  position: relative !important;   /* no superpuestos */
+  inset: auto !important;
+  min-width: 100%;
+  box-sizing: border-box;
+  opacity: 1 !important;           /* sin fades */
+  pointer-events: auto !important;
+}
+
+/* Controles, ahora ocupan el padding lateral (no tapan contenido) */
+#publications .pubs-prev,
+#publications .pubs-next{
+  position: absolute; top: 50%;
+  width: var(--arrow-size); height: var(--arrow-size);
+  border: 0; border-radius: 50%; background: rgba(0,0,0,.08);
+  display: grid; place-items: center; font-size: 20px; line-height: 1;
+  cursor: pointer; transform: translateY(-50%); user-select: none;
+}
+#publications .pubs-prev{ left:  var(--arrow-gap); }
+#publications .pubs-next{ right: var(--arrow-gap); }
+#publications .pubs-prev:hover,
+#publications .pubs-next:hover{ background: rgba(0,0,0,.16); }
+
+/* === PUBLICATIONS · Card en 2 columnas 50/50 (GRID) === */
+/* Alta especificidad y !important para pisar cualquier flex previo */
+section#publications .card.selpub{
+  display: grid !important;
+  grid-template-columns: 0.4fr 0.6fr !important;  /* 40% / 60% */
+  align-items: stretch;
+  gap: clamp(12px, 2vw, 20px);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 22px rgba(0,0,0,.08);
+  padding: 1rem;
+}
+
+/* Columna imagen (izquierda) */
+section#publications .card.selpub .cover{
+  grid-column: 1;
+  width: 90% !important;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;              /* cuadrada; quítalo si no la quieres fija */
+}
+
+/* Columna texto (derecha) */
+section#publications .card.selpub > :not(.cover){
+  grid-column: 2;
+  min-width: 0;                     /* clave para que el texto pueda encoger */
+}
+section#publications .card.selpub h3,
+section#publications .card.selpub p{
+  overflow-wrap: anywhere;          /* evita desbordes con títulos largos */
+  margin: 0 0 .25rem;
+}
+
+/* Responsive: apilar en una sola columna en móvil */
+@media (max-width: 720px){
+  section#publications .card.selpub{
+    grid-template-columns: 1fr !important;
+  }
+  section#publications .card.selpub .cover{
+    aspect-ratio: auto;             /* opcional: libera altura en móvil */
+  }
+}
+
+/* === Titulares más grandes en las cards === */
+#publications .selpub h3,
+#publications .selpub .h3{
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: clamp(1.25rem, 1.2vw + 1rem, 2rem);  /* sube/baja a tu gusto */
+  margin: 0 0 .25rem;
+}
 
 </style>
 
@@ -718,8 +857,9 @@ footer { margin-top: var(--section-gap); }
     <div class="container nav" aria-label="Primary navigation">
       <a href="#home" class="brand" aria-label="Home">
         <img class="brand-logo" id="brandLeft"
-             src="./media/Logo-grupo.webp" alt="Gavilan Research"
-             onerror="this.onerror=null; this.src='./media/Logo grupo.png';">
+             src="./media/hero/Logo-grupo-nuevo.webp"
+             alt="Gavilan Research"
+             onerror="this.onerror=null; this.src='./media/hero/Logo-grupo-nuevo.webp';">
       </a>
       <button class="menu-btn" aria-expanded="false" aria-controls="menuModal" id="menuBtn" type="button">☰ Menu</button>
       <nav class="navlinks" role="navigation" aria-label="Main">
@@ -773,7 +913,7 @@ footer { margin-top: var(--section-gap); }
 
     <!-- TEAM -->
     <section id="team" class="container section" aria-labelledby="team_title">
-      <header data-reveal><div class="eyebrow" id="team_kicker">People behind the science</div><h2 class="h2" id="team_title">Team</h2><p class="muted" id="team_intro">Researchers and collaborators.</p></header>
+  <header data-reveal><div class="eyebrow" id="team_kicker">NanoColloids & Magnetism Lab </div><h2 class="h2" id="team_title">Team</h2><p class="muted" id="team_intro">Researchers and collaborators.</p></header>
       <div class="grid grid-3" id="team_list"></div>
     </section>
 
@@ -784,13 +924,166 @@ footer { margin-top: var(--section-gap); }
     </section>
 
     <!-- PUBLICATIONS -->
-    <section id="publications" class="container section" aria-labelledby="pubs_title">
-  <header>
-    <div class="eyebrow" id="publications_kicker">Selected by impact</div>
-    <h2 class="h2" id="pubs_title">Selected Publications</h2>
-    <p class="muted" id="publications_intro">Representative selection with cover & abstract.</p>
-  </header>
-  <div id="publications_list" class="stack"></div>
+     <section id="publications" class="container section" aria-labelledby="research_title">
+      <header data-reveal><div class="eyebrow" id="research_kicker">Selected by impact</div><h2 class="h2" id="research_title">Publications</h2><p class="muted" id="research_intro">Representative selection. Full list available on ORCID.</p></header>
+      <div class="grid grid-4" id="research_list"></div>
+
+    <div class="pubs-slider" data-ns="static-pubs">
+      <div class="pubs-viewport">
+        <div class="pubs-track" id="pubs_track"></div>
+        <!-- Flechas DENTRO del viewport -->
+      <button class="pubs-prev" type="button" aria-label="Previous">‹</button>
+      <button class="pubs-next" type="button" aria-label="Next">›</button>
+    </div>
+  </div>
+
+  <!-- Datos embebidos: cambia este JSON por el tuyo -->
+  <script type="application/json" id="publications-data">
+  [
+    {
+      "year": "2025",
+      "title": "Magnetic nanosheets: from iron oxide nanocubes to polydopamine embedded 2D clusters and their multi-purpose properties",
+      "authors": "Mandriota, G.; Avugadda, S. K.; Sadeghi, E.; Silvestri, N.; Marotta, R.; Gavilán, H.; …; Pellegrino, T.",
+      "venue": "Nanoscale Horizons",
+      "doi": "https://doi.org/10.1039/D4NH00566J",
+      "cover": "./media/selected_publications/1.webp"
+    },
+    {
+      "year": "2023",
+      "title": "Scale up approach for the preparation of magnetic ferrite nanocubes…",
+      "authors": "Gavilán, H. et al.",
+      "venue": "Nature Protocols, 18, 783–809",
+      "doi": "https://doi.org/10.1038/s41596-022-00779-3",
+      "cover": "./media/selected_publications/2.webp"
+    },
+    {
+      "year": "2021",
+      "title": "How size, shape and assembly of magnetic nanoparticles give rise to different hyperthermia scenarios.",
+      "authors": "Gavilán, H.; Simeonidis, K.; et al.",
+      "venue": "Nanoscale, 13, 15631–15646",
+      "doi": "https://doi.org/10.1039/D1NR03484G",
+      "cover": "./media/selected_publications/3.webp"
+    },
+    {
+      "year": "2021",
+      "title": "Magnetic nanoparticles and clusters for magnetic hyperthermia…",
+      "authors": "Gavilán, H.; Avugadda, S. K.; Pellegrino, T.",
+      "venue": "Chemical Society Reviews, 50, 11614–11667",
+      "doi": "https://doi.org/10.1039/d1cs00427a",
+      "cover": "./media/selected_publications/4.webp"
+    },
+    {
+      "year": "2019",
+      "title": "Design strategies for shape-controlled magnetic iron oxide nanoparticles.",
+      "authors": "Roca, A. G.; Gutierrez, L.; Gavilán, H.; et al.",
+      "venue": "Advanced Drug Delivery Reviews, 138, 68–104",
+      "doi": "https://doi.org/10.1016/j.addr.2018.12.008",
+      "cover": "./media/selected_publications/5.webp"
+    },
+    {
+      "year": "2017",
+      "title": "Formation mechanism of maghemite nanoflowers…",
+      "authors": "Gavilán, H. et al.",
+      "venue": "ACS Omega, 2(10), 7172–7184",
+      "doi": "https://doi.org/10.1021/acsomega.7b00975",
+      "cover": "./media/selected_publications/6.webp"
+    },
+    {
+      "year": "2017",
+      "title": "Colloidal Flower‐Shaped Iron Oxide Nanoparticles: Synthesis Strategies and Coatings.",
+      "authors": "Gavilán, H.; Kowalski, A.; Heinke, D.; Sugunan, A.; Sommertune, J.; Varón, M.; …; Morales, M. P.",
+      "venue": "Particle & Particle Systems Characterization, 34(7), 1700094",
+      "doi": "https://doi.org/10.1002/ppsc.201700094",
+      "cover": "./media/selected_publications/7.webp"
+    },
+    {
+      "year": "2017",
+      "title": "How shape and internal structure affect the magnetic properties of anisometric magnetite nanoparticles.",
+      "authors": "Gavilán, H.; Posth, O.; Bogart, L. K.; Steinhoff, U.; Gutiérrez, L.; Morales, M. P.",
+      "venue": "Acta Materialia, 125, 416–424",
+      "doi": "https://doi.org/10.1016/j.actamat.2016.12.016",
+      "cover": "./media/selected_publications/8.webp"
+    }
+  ]
+  </script>
+
+  <script>
+  (function initStaticPublicationsSlider(){
+    // Asegura DOM listo incluso si el bloque se pega en <head> o similar
+    if (document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', initStaticPublicationsSlider, {once:true});
+      return;
+    }
+
+    const track = document.getElementById('pubs_track');
+    const slider = track && track.closest('.pubs-slider[data-ns="static-pubs"]');
+    if(!track || !slider) return;
+
+    // 1) Leer datos: preferimos window.PUBLICATIONS_JSON si existe; si no, el <script type="application/json">
+    let pubs = Array.isArray(window.PUBLICATIONS_JSON) ? window.PUBLICATIONS_JSON : null;
+    if(!pubs){
+      try {
+        const raw = document.getElementById('publications-data')?.textContent || '[]';
+        const parsed = JSON.parse(raw);
+        pubs = Array.isArray(parsed) ? parsed : (Array.isArray(parsed.items) ? parsed.items : []);
+      } catch(e){ pubs = []; }
+    }
+    if(!pubs.length){ console.warn('[pubs-slider] No hay publicaciones.'); return; }
+
+    // 2) Pintar slides con tu misma card .selpub
+    pubs.forEach(pub => {
+      const slide = document.createElement('div');
+      slide.className = 'pubs-slide';
+      const href = pub.doi || pub.link || '#';
+      const journal = pub.journal || pub.venue || '';
+      slide.innerHTML = `
+        <a class="card selpub" data-reveal href="${href}" target="_blank" rel="noopener">
+          <div class="cover">
+            <img src="${pub.cover || ''}" alt="${(pub.title||'').replace(/"/g,'&quot;')}">
+          </div>
+          <div class="meta">
+            <h3 class="h3" style="margin:0">${pub.title||''}</h3>
+            <p class="muted" style="margin:.25rem 0">
+              ${[pub.authors, pub.year, journal].filter(Boolean).join(' — ')}
+            </p>
+            ${ pub.abstract ? `<p class="muted" style="margin:.25rem 0">${pub.abstract}</p>` : '' }
+          </div>
+        </a>`;
+      track.appendChild(slide);
+    });
+
+    // 3) Motor vanilla (autoplay 5s, hover-pause, visibility)
+    const viewport = slider.querySelector('.pubs-viewport');
+    const btnPrev  = slider.querySelector('.pubs-prev');
+    const btnNext  = slider.querySelector('.pubs-next');
+    const slides   = Array.from(track.children);
+    let index = 0, timer=null;
+
+    function goTo(i){
+      index = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function next(){ goTo(index+1); }
+    function prev(){ goTo(index-1); }
+    function start(){ stop(); if (slides.length > 1) timer = setInterval(next, 5000); }
+    function stop(){ if (timer){ clearInterval(timer); timer=null; } }
+
+    btnNext?.addEventListener('click', next);
+    btnPrev?.addEventListener('click', prev);
+
+    viewport.addEventListener('mouseenter', stop);
+    viewport.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', () => document.hidden ? stop() : start(), {passive:true});
+
+    // Accesibilidad mínima con teclado
+    [btnPrev, btnNext].forEach(b=> b && b.addEventListener('keydown', (e)=>{
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); b.click(); }
+    }));
+
+    // Iniciar
+    goTo(0); start();
+  })();
+  </script>
 </section>
 
     <!-- ABOUT -->
@@ -987,42 +1280,49 @@ footer { margin-top: var(--section-gap); }
         setHTML("home_intro",  h.intro  ?? "");
       }
 
-      // HERO (content/hero.json)
-try{
-  const hero = await loadJSON("./content/hero.json");
-  if (hero) {
-    setText("hero_kicker", hero.kicker ?? "");
-    setText("hero_title",  hero.title  ?? "");
-    setText("hero_sub",    hero.subtitle ?? "");
-    setHTML("hero_intro",  hero.intro ?? "");
-    const cta = document.getElementById("hero_cta");
-    if (cta && hero?.cta?.label) { cta.textContent = hero.cta.label; cta.href = hero.cta.href || "#"; }
 
-    if (Array.isArray(hero.images)) {
-      const wrap = document.getElementById("hero_gallery");
-      if (wrap) {
-        wrap.innerHTML = hero.images.slice(0,4).map(h => `
-          <figure data-reveal>
-            <img ${imgAttrs(normalizePath(h.src), "(max-width: 1200px) 100vw, 900px")} alt="${h.alt||''}">
-          </figure>`).join("");
-      }
-      // View all dialog (fiable varias veces)
-      const dlg = document.getElementById("heroDialog");
-      const grid = document.getElementById("hero_dialog_gallery");
-      if (grid) {
-        grid.innerHTML = hero.images.map(h => `
-          <figure class="card">
-            <img ${imgAttrs(normalizePath(h.src), "(max-width: 1200px) 100vw, 900px")} alt="${h.alt||''}">
-          </figure>`).join("");
-      }
-      const openBtn  = document.getElementById("hero_viewall");
-      const closeBtn = document.getElementById("hero_dialog_close");
-      openBtn?.addEventListener('click', () => dlg.showModal());
-      closeBtn?.addEventListener('click', () => dlg.close());
-      dlg?.addEventListener('cancel', e => { e.preventDefault(); dlg.close(); });
-    }
-  }
-} catch(e){ console.warn('hero.json:', e); }
+      // HERO (content/hero.json)
+      try {
+        const hero = await loadJSON("./content/hero.json");
+        if (hero) {
+          setText("hero_kicker", hero.kicker ?? "");
+          setText("hero_title",  hero.title  ?? "");
+          setText("hero_sub",    hero.subtitle ?? "");
+          setHTML("hero_intro",  hero.intro ?? "");
+          const cta = document.getElementById("hero_cta");
+          if (cta && hero?.cta?.label) { cta.textContent = hero.cta.label; cta.href = hero.cta.href || "#"; }
+
+          // --- CONECTAR SLIDER CON LA GALERÍA ---
+          if (Array.isArray(hero.gallery)) {
+            buildHeroSlider(hero.gallery);
+          }
+
+          // Mantener soporte para hero.images si existe (legacy)
+          if (Array.isArray(hero.images)) {
+            const wrap = document.getElementById("hero_gallery");
+            if (wrap) {
+              wrap.innerHTML = hero.images.slice(0,4).map(h => `
+                <figure data-reveal>
+                  <img ${imgAttrs(normalizePath(h.src), "(max-width: 1200px) 100vw, 900px")} alt="${h.alt||''}">
+                </figure>`).join("");
+            }
+            // View all dialog (fiable varias veces)
+            const dlg = document.getElementById("heroDialog");
+            const grid = document.getElementById("hero_dialog_gallery");
+            if (grid) {
+              grid.innerHTML = hero.images.map(h => `
+                <figure class="card">
+                  <img ${imgAttrs(normalizePath(h.src), "(max-width: 1200px) 100vw, 900px")} alt="${h.alt||''}">
+                </figure>`).join("");
+            }
+            const openBtn  = document.getElementById("hero_viewall");
+            const closeBtn = document.getElementById("hero_dialog_close");
+            openBtn?.addEventListener('click', () => dlg.showModal());
+            closeBtn?.addEventListener('click', () => dlg.close());
+            dlg?.addEventListener('cancel', e => { e.preventDefault(); dlg.close(); });
+          }
+        }
+      } catch(e){ console.warn('hero.json:', e); }
 
       /* Projects */
       const p = await loadJSON("./content/projects.json");
@@ -1036,7 +1336,7 @@ try{
             const imgPath = pr.image || pr.cover || pr.photo || "";
             return `
             <article class="card" data-reveal>
-              ${imgPath ? `<img ${imgAttrs(imgPath, "(max-width: 980px) 100vw, 480px")} alt="${pr.alt||pr.title||''}" onerror="this.remove()">` : ""}
+              <!-- project image removed intentionally -->
               <div>
                 <h3 class="h3" style="margin:0">${pr.title||''}</h3>
                 ${pr.subtitle ? `<p class="muted" style="margin:.25rem 0">${pr.subtitle}</p>` : ""}
@@ -1051,7 +1351,7 @@ try{
       /* Team (si hay bioLink → link a About; si no, modal Bio si hay bio) */
       const t = await loadJSON("./content/team.json");
       if (t) {
-        setText("team_kicker", t.kicker ?? "People behind the science");
+  setText("team_kicker", t.kicker ?? "NanoColloids & Magnetism Lab ");
         setText("team_title", t.title ?? "Team");
         setHTML("team_intro", t.intro ?? "");
         const el = document.getElementById("team_list");
@@ -1486,7 +1786,7 @@ function buildHeroSlider(images){
         const imgPath = pr.image || pr.cover || pr.photo || "";
         return `
         <article class="card" data-reveal>
-          ${imgPath ? `<div class="media-32"><img ${imgTagAttrs(normalizePath(imgPath), "(max-width: 980px) 100vw, 480px") } alt="${pr.alt||pr.title||''}" onerror="this.closest('.media-32').remove()"></div>` : ""}
+          <!-- project image removed intentionally -->
           <div>
             <h3 class="h3" style="margin:0">${pr.title||''}</h3>
             ${pr.subtitle ? `<p class="muted" style="margin:.25rem 0">${pr.subtitle}</p>` : ""}
@@ -1501,23 +1801,23 @@ function buildHeroSlider(images){
   // Team
   const t = await loadJSONFirst(["./content/team.json","./team.json"]);
   if(t){
-    $('team_kicker') && ($('team_kicker').textContent = t.kicker || "People behind the science");
+  $('team_kicker') && ($('team_kicker').textContent = t.kicker || "NanoColloids & Magnetism Lab ");
     $('team_title')  && ($('team_title').textContent  = t.title  || "Team");
     $('team_intro')  && ($('team_intro').innerHTML    = t.intro  || "");
     const el = $('team_list');
     if(el && Array.isArray(t.items)){
-      el.innerHTML = t.items.map((m,idx)=>`
-        <article class="card person" data-reveal>
-          ${ m.photo ? `<img ${imgTagAttrs(normalizePath(m.photo), "(max-width: 680px) 100vw, 300px")} alt="${m.alt||m.name}" onerror="this.remove()">`
-                     : `<div aria-hidden="true" style="width:88px;height:88px;border-radius:999px;border:1px solid var(--line)"></div>`}
-          <div>
-            <h3 class="h3" style="margin:0">${m.name}</h3>
-            <p class="muted" style="margin:.25rem 0">${[m.role, m.affiliation].filter(Boolean).join(" — ")}</p>
-            ${m.bioLink ? `<p><a class="btn btn-primary" href="${m.bioLink}">Bio</a></p>` : (m.bio ? `<p><button class="btn btn-primary show-bio" data-id="${idx}">Bio</button></p>` : "")}
-            ${m.email ? `<p style="margin:0"><a class="btn btn-primary" href="mailto:${m.email}">Email</a></p>` : ""}
-          </div>
-        </article>
-      `).join('');
+      // Insert a "Visiting students" separator before the first visiting member.
+      let seenVisiting = false;
+      el.innerHTML = t.items.map((m,idx)=>{
+        const isVis = !!m.visiting;
+        const cls = isVis ? 'person visiting' : 'person';
+        const sep = (isVis && !seenVisiting) ? `<p class="muted" style="grid-column:1/-1;margin-top:.5rem">Visiting students</p>` : '';
+        if (isVis) seenVisiting = true;
+        const imgHtml = m.photo ? `<img ${imgTagAttrs(normalizePath(m.photo), "(max-width: 680px) 100vw, 300px")} alt="${m.alt||m.name}" onerror="this.remove()">` : `<div aria-hidden="true" style="width:88px;height:88px;border-radius:999px;border:1px solid var(--line)"></div>`;
+        const bioBtn = m.bioLink ? `<p><a class="btn btn-primary" href="${m.bioLink}">Bio</a></p>` : (m.bio ? `<p><button class="btn btn-primary show-bio" data-id="${idx}">Bio</button></p>` : "");
+        const mailBtn = m.email ? `<p style="margin:0"><a class="btn btn-primary" href="mailto:${m.email}">Email</a></p>` : "";
+        return sep + `\n        <article class="card ${cls}" data-reveal>\n          ${imgHtml}\n          <div>\n            <h3 class="h3" style="margin:0">${m.name}</h3>\n            <p class="muted" style="margin:.25rem 0">${[m.role, m.affiliation].filter(Boolean).join(" — ")}</p>\n            ${bioBtn}\n            ${mailBtn}\n          </div>\n        </article>`;
+      }).join('');
 
       if (t.items.some(m=>m.bio && !m.bioLink)){
         const dialog = document.createElement('dialog');
@@ -1637,6 +1937,7 @@ function buildHeroSlider(images){
 (function(){
   // Usa siempre barras normales en la ruta
   const WHITE_LOGO = "./media/home/QUIMICAS_COLOR_SOLO_BLANCO.webp";
+  const LEFT_WHITE_LOGO = "./media/hero/Logo-grupo-nuevo-blanco.webp";
 
   function setLogoVariant(dark){
     const img = document.getElementById('brandRight');
@@ -1662,12 +1963,30 @@ function buildHeroSlider(images){
     }
   }
 
+  // Also swap the left brand (main site logo) to a white variant when dark
+  function setLeftLogoVariant(dark){
+    const limg = document.getElementById('brandLeft');
+    if (!limg) return;
+    if (!limg.dataset.colorSrc) limg.dataset.colorSrc = limg.currentSrc || limg.src;
+    if (!limg.dataset.whiteSrc) limg.dataset.whiteSrc = LEFT_WHITE_LOGO;
+    const target = dark ? limg.dataset.whiteSrc : limg.dataset.colorSrc;
+    if (typeof window.buildImgAttrs === 'function'){
+      const a = window.buildImgAttrs(target, "(max-width: 680px) 100vw, 300px");
+      limg.src = a.src || target;
+      if (a.srcset) limg.setAttribute('srcset', a.srcset); else limg.removeAttribute('srcset');
+      if (a.sizes)  limg.setAttribute('sizes',  a.sizes);  else limg.removeAttribute('sizes');
+    } else {
+      limg.src = target; limg.removeAttribute('srcset'); limg.removeAttribute('sizes');
+    }
+  }
+
   // Aplica con scroll/observer sin depender de otros scripts
   const header = document.getElementById('siteHeader') || document.querySelector('header.site');
 
   function applyByState(){
     const isDark = header && header.classList.contains('dark');
-    setLogoVariant(!!isDark);
+  setLogoVariant(!!isDark);
+  setLeftLogoVariant(!!isDark);
   }
 
   // Espera a que el loader pinte #brandRight y luego engancha observadores
@@ -1675,7 +1994,7 @@ function buildHeroSlider(images){
     const t0 = Date.now();
     (function tick(){
       if (document.getElementById('brandRight')){
-        applyByState();
+  applyByState();
 
         // Observa cambios en la clase del header
         if (header){
@@ -1767,6 +2086,21 @@ function buildHeroSlider(images){
 
         // Aplica por scroll también (belt & braces)
         addEventListener("scroll", setLogoVariant, { passive:true });
+
+              // Also apply left logo swap
+              addEventListener("scroll", function(){
+                const header = document.getElementById("siteHeader") || document.querySelector("header.site");
+                const dark = header && header.classList.contains("dark");
+                // left brand
+                const left = document.getElementById("brandLeft");
+                if (left){
+                  const LEFT_WHITE = toPath("./media/hero/Logo-grupo-nuevo-blanco.webp");
+                  if (!left.dataset.colorSrc) left.dataset.colorSrc = left.currentSrc || left.getAttribute("src") || "";
+                  left.dataset.whiteSrc = left.dataset.whiteSrc || LEFT_WHITE;
+                  const tgt = dark ? left.dataset.whiteSrc : left.dataset.colorSrc;
+                  if (tgt && !(left.currentSrc || left.getAttribute("src") || "").endsWith(tgt)) applyImage(left, tgt);
+                }
+              }, { passive:true });
 
         // Primera aplicación
         setLogoVariant();
@@ -2332,6 +2666,40 @@ function buildHeroSlider(images){
 })();
 </script>
 <!-- trigger deploy -->
+
+<script>
+(function(){
+  const mount = document.getElementById('publications_list');
+  if (!mount) return;
+
+  // Espera breve a que el loader termine de pintar
+  const settle = (node, delay=300) => new Promise(r=>{
+    let t = setTimeout(r, delay);
+    new MutationObserver(()=>{ clearTimeout(t); t=setTimeout(r, delay); })
+      .observe(node, { childList:true });
+  });
+  settle(mount, 300).then(() => {
+    tns({
+      container: '#publications_list',
+      items: 1,
+      slideBy: 1,
+      gutter: 24,
+      controls: true,
+      prevButton: document.querySelector('#publications .pubs-prev'),
+      nextButton: document.querySelector('#publications .pubs-next'),
+      nav: false,                 // sin puntitos
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      loop: true,
+      speed: 500
+    });
+  });
+})();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
 
 </body>
 </html>
