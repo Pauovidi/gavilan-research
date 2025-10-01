@@ -1,18 +1,12 @@
 {
   "title": "Exploration of Field-Guided Assemblies of Magnetic Nanoparticles into Superstructures",
   "year": 2025,
-  "summary": "In this emerging line we focus on reconfigurable magnetic superstructures directed by dipolar interactions, tunable through particle size, morphology and surface chemistry.",
-  "descriptionHtml": "<p>We study the template-free fabrication of reconfigurable superstructures from magnetic nanoparticles. Field-guided self-organization and dipolar coupling govern mesoscale order, enabling reversible transitions between architectures. The goal is to program magnetic response and topology without lithographic constraints.</p><p>By tuning size, shape and surface of the building blocks we access regimes where long-range interactions dominate, producing lattices and chains whose mechanical and magnetic properties can be modulated on demand. Preliminary findings outline design rules for robust, rewritable assemblies.</p>",
+  "summary": "In this emerging line we aim at developing template-free strategies to engineer magnetic nanoparticle superstructures whose assembly is directed by tunable dipolar interactions. By controlling particle size, shape, and surface chemistry, we create dynamic architectures that reversibly reorganize under external magnetic fields. These field-directed superstructures hold promise for microrobotics, targeted biomedical transport, and remotely controlled soft devices.",
+"descriptionHtml": "<p>Magnetic nanoparticles are ideal building blocks for creating dynamic and stimuli-responsive superstructures, thanks to their ability to interact and self-organize under applied magnetic fields. By finely adjusting their dipolar interactions through particle size, morphology, and surface chemistry, it is possible to drive the formation of assemblies and other controlled architectures. We design template-free strategies for generating magnetic superstructures and exploit the reversible and controllable nature of dipolar coupling to assemble structures that can respond, rearrange, and adapt to external magnetic cues. Such field-directed superstructures pave the way for next-generation applications in microrobotics, biomedical transport systems, and remotely controlled soft devices, where their programmable and reversible assembly is crucial for functional operation.<br><br><b>Relevant publications:</b><br></strong>Pérez-Garrido, R.; Landi, C.; Cuenca-Juberías, J. M.; Tajuelo, J.; Valeriani, C.; Gavilán, H. and Martínez-Pedrero, F. (Preliminary findings – manuscript in preparation)</p>",
   "images": [
-    {
-      "src": "media/research/superstructures/1.webp"
-    },
-    {
-      "src": "media/research/superstructures/2.webp"
-    },
-    {
-      "src": "media/research/superstructures/3.webp"
-    }
+    "media/research/superstructures/1.webp",
+    "media/research/superstructures/2.webp",
+    "media/research/superstructures/3.webp"
   ],
   "papers": [],
   "related": [

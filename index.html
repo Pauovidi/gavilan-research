@@ -1211,56 +1211,113 @@ section#publications .card.selpub p{
     }
 
     /* ===== HERO ===== */
-    async function loadHeroImagesFallback(){
-      try{
-        const m=await fetch('./content/hero-images.json',{cache:'no-store'});
-        if(m.ok){const arr=await m.json();if(Array.isArray(arr)&&arr.length)return arr}
-      }catch(_){}
-      return [];
-    }
+    /* Carga las imágenes desde hero.json (gallery) */
+async function loadHeroImages(){
+  try{
+    const res = await fetch('./content/hero.json', { cache: 'no-store' });
+    if(!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data.gallery) ? data.gallery : [];
+  }catch(_){ return []; }
+}
 
-    function buildHeroSlider(images){
-      const track=$('heroTrack');const prev=$('heroPrev');const next=$('heroNext');
-      const list=dedupePreferWebpStrict(Array.isArray(images)?images:[]);
-      track.innerHTML=(list.length?list:[{src:"./media/hero/hero.webp",alt:"Hero"}]).map((it,i)=>`
-        <div class="slide">
-          <img src="${it.src}" alt="${it.alt||''}" loading="${i===0?'eager':'lazy'}" ${i===0?'fetchpriority="high"':''} decoding="async">
-        </div>`).join('');
-      const width = ()=>track.clientWidth; const slides=()=>Array.from(track.children);
-      const index = ()=>Math.round(track.scrollLeft/width()); const wrap=i=>{const N=slides().length;return(i%N+N)%N}; const goTo=i=>track.scrollTo({left:wrap(i)*width(),behavior:'smooth'}); const nextFn=()=>goTo(index()+1); const prevFn=()=>goTo(index()-1);
-      $('heroPrev').onclick=prevFn; $('heroNext').onclick=nextFn;
-      let timer=null,hovering=false; const start=()=>{stop(); if(slides().length>1) timer=setInterval(()=>{if(!hovering&&!document.hidden)nextFn()},3000)}; const stop=()=>{if(timer){clearInterval(timer);timer=null}}
-      track.addEventListener('mouseenter',()=>{hovering=true;stop()}); track.addEventListener('mouseleave',()=>{hovering=false;start()}); document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else start()}); window.addEventListener('resize',()=>{goTo(index())},{passive:true});
-      slides().forEach(sl=>{const im=sl.querySelector('img');im.addEventListener('load',()=>im.classList.add('is-loaded'),{once:true});im.addEventListener('error',()=>{sl.remove();if(slides().length<=1){$('heroPrev').style.display=$('heroNext').style.display='none';stop()}},{once:true});});
-      if(slides().length<=1){$('heroPrev').style.display=$('heroNext').style.display='none'}
-      start();
+/* Normaliza cada item del JSON a {src, srcsetStr?, sizes?, alt?} */
+function normalizeHeroItems(items){
+  const DEF_SIZES = '(max-width: 900px) 800px, 1200px';
 
-      // Modal “View all” (sin {once:true}, reabrible)
-      const openGalleryBtn=$('openGallery');
-      openGalleryBtn?.addEventListener('click',()=>{
-        let dlg=document.getElementById('galleryDialog');
-        if(!dlg){
-          dlg=document.createElement('dialog');
-          dlg.id='galleryDialog';
-          dlg.setAttribute('aria-label','Gallery');
-          dlg.innerHTML=`
-            <div style="position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-bottom:1px solid var(--line);background:#fff">
-              <strong>Gallery</strong>
-              <button class="btn btn-primary" id="closeGallery" type="button">Close</button>
-            </div>
-            <div id="galleryGrid" style="padding:1rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;max-height:75vh;overflow:auto"></div>`;
-          document.body.appendChild(dlg);
-          dlg.addEventListener('click',e=>{ if(e.target===dlg) dlg.close(); });
-          dlg.addEventListener('cancel',()=>dlg.close());
-          dlg.addEventListener('close',()=>openGalleryBtn.focus());
-          dlg.addEventListener('keydown',e=>{ if(e.key==='Escape') dlg.close(); });
-          dlg.querySelector('#closeGallery').addEventListener('click',()=>dlg.close());
-        }
-        const grid=dlg.querySelector('#galleryGrid');
-        grid.innerHTML=list.map(it=>`<div class="media-32"><img src="${it.src}" alt="${it.alt||''}"></div>`).join('');
-        dlg.showModal();
-      });
+  const strip = p => String(p||'').replace(/^https?:\/\/[^/]+/,'').replace(/^\//,'');
+
+  return items.map(it => {
+    // A) Declarativo: src + srcset (array o string) + sizes
+    if (it.srcset || it.sizes){
+      return {
+        src: strip(it.src),
+        srcsetStr: Array.isArray(it.srcset) ? it.srcset.map(strip).join(', ') : strip(it.srcset||''),
+        sizes: it.sizes || DEF_SIZES,
+        alt: it.alt || ''
+      };
     }
+    // B) Compacto: base/ext/sizes -> construye src y srcset
+    if (it.base && it.ext && Array.isArray(it.sizes)){
+      const base = String(it.base).replace(/^\/?media\/hero\//,'');
+      const ext  = String(it.ext).toLowerCase();
+      const sizes = it.sizes.slice().sort((a,b)=>a-b);
+      return {
+        src: `media/hero/${base}-${sizes[sizes.length-1]}.${ext}`,
+        srcsetStr: sizes.map(w => `media/hero/${base}-${w}.${ext} ${w}w`).join(', '),
+        sizes: DEF_SIZES,
+        alt: it.alt || ''
+      };
+    }
+    // C) Simple: solo src/alt
+    return { src: strip(it.src), alt: it.alt || '' };
+  }).filter(it => it.src);
+}
+
+/* Usa buildHeroSlider tal cual, solo añadiendo srcset/sizes si están */
+function buildHeroSlider(images){
+  const $ = id => document.getElementById(id);
+  const track = $('heroTrack'), prev = $('heroPrev'), next = $('heroNext');
+
+  // Usar lo que venga del JSON tal cual:
+  const list = Array.isArray(images) ? images : [];
+
+  // Fallback por si el JSON viene vacío
+  const data = list.length ? list : [{ src: 'media/hero/hero.webp', alt: 'Hero' }];
+
+  // Pintar EXACTO: src / srcset / sizes que dice el JSON (si existen)
+  track.innerHTML = data.map((it,i) => {
+    const srcset = Array.isArray(it.srcset) ? it.srcset.join(', ') : (it.srcset || '');
+    const sizes  = it.sizes || '';
+    return `
+      <div class="slide">
+        <img
+          src="${it.src}"
+          ${srcset ? `srcset="${srcset}"` : ''}
+          ${sizes  ? `sizes="${sizes}"`   : ''}
+          alt="${it.alt || ''}"
+          loading="${i===0?'eager':'lazy'}" ${i===0?'fetchpriority="high"':''}
+          decoding="async">
+      </div>`;
+  }).join('');
+
+  // Logs útiles (verás 404 si alguna ruta no existe)
+  track.querySelectorAll('img').forEach(img=>{
+    img.addEventListener('error', () => console.error('[hero] 404:', img.currentSrc || img.src));
+  });
+
+  // --- navegación por scroll (tu lógica original) ---
+  const width  = () => track.clientWidth;
+  const slides = () => Array.from(track.children);
+  const index  = () => Math.round(track.scrollLeft/width());
+  const wrap   = i => { const N = slides().length; return (i%N+N)%N; };
+  const goTo   = i => track.scrollTo({ left: wrap(i)*width(), behavior:'smooth' });
+  const nextFn = () => goTo(index()+1);
+  const prevFn = () => goTo(index()-1);
+
+  prev.onclick = prevFn; next.onclick = nextFn;
+
+  let timer=null, hovering=false;
+  const start = () => { stop(); if (slides().length>1) timer=setInterval(()=>{ if(!hovering && !document.hidden) nextFn(); }, 3000); };
+  const stop  = () => { if (timer){ clearInterval(timer); timer=null; } };
+
+  track.addEventListener('mouseenter', ()=>{ hovering=true; stop(); });
+  track.addEventListener('mouseleave', ()=>{ hovering=false; start(); });
+  document.addEventListener('visibilitychange', ()=>{ document.hidden ? stop() : start(); });
+  window.addEventListener('resize', ()=>{ goTo(index()); }, { passive:true });
+
+  slides().forEach(sl=>{
+    const im=sl.querySelector('img');
+    im.addEventListener('load',  ()=> im.classList.add('is-loaded'), {once:true});
+    im.addEventListener('error', ()=> { /* si falla, lo verás en consola con el log de arriba */ }, {once:true});
+  });
+
+  if (slides().length<=1){ prev.style.display=next.style.display='none'; }
+  start();
+}
+
+// Llamada
+loadHeroImages().then(buildHeroSlider);
 
     /* Scroll reveal + stagger */
     function setupReveal(){

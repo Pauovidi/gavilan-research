@@ -1,23 +1,14 @@
 {
   "title": "Emerging Lines: MXenes & Multifunctional Nanoparticles",
   "year": 2025,
-  "descriptionHtml": "<section><h3>Multifunctional nanoparticles</h3><p>We develop colloidal nanoparticles that combine distinct chemical domains and functionalities, enabling targeted interactions and responsive behaviour across biomedical and energy contexts. On the fundamental side we map new structure\u2013property relationships that arise from compositional patterning and interfacial control.</p></section><hr><section><h3>Magnetic superstructures</h3><p>Template-free routes are explored to create reconfigurable architectures that reorganize under applied fields. By coupling dipolar interactions with particle morphology and surface chemistry we generate ordered states that can be written/erased, opening pathways to adaptive magnetic materials.</p></section>",
+"descriptionHtml": "<section><h3>Development multifunctional nanoparticles</h3><p>Our research focuses on the design and engineering of hybrid nanomaterials that combine multiple components through conjugation or form single nano-objects with distinct chemical domains. By tailoring these complex architectures, we aim to unlock synergistic properties for advanced biomedical applications. On the fundamental side, we investigate new functional materials with unconventional compositions and crystal structures. We explore how composition, interfacial interactions, and assembly architecture govern the hybrid’s optical, thermal, and magnetic behaviors.<br><br><b>Relevant publications:</b><br> 1) Shen, Z. P.; Cabanelas, J. C.; (…) Gavilán, H.* and Serrano,* M. B. (Unpublished data – currently under review). \"Development of hybrid nanomaterials based MXene/magnetic nanoparticles for photo-magnetic hyperthermia applications\" (funded by RyC2021)\n2) Fiorito, S., Soni, N., Silvestri, N., Brescia, R., Gavilán, H., Conteh, J. S., ... & Pellegrino, T. (2022). Fe3O4@ Au@ Cu2−xS Heterostructures designed for tri‐modal therapy: photo‐magnetic hyperthermia and 64Cu radio‐insertion. Small, 18(18), 2200174. https://doi.org/10.1002/smll.202200174\n3) Silvestri, N., Gavilán, H., Guardia, P., Brescia, R., Fernandes, S., Samia, A. C. S., ... & Pellegrino, T. (2021). Di-and tri-component spinel ferrite nanocubes: synthesis and their comparative characterization for theranostic applications. Nanoscale, 13(32), 13665-13680. https://doi.org/10.1039/D1NR01044A\n</p></section>",
   "images": [
-    {
-      "src": "media/research/mxenes/1.webp"
-    },
-    {
-      "src": "media/research/mxenes/2.webp"
-    }
+    "media/research/mxenes/2.webp"
   ],
   "papers": [
     {
-      "label": "Emerging Lines MXenes \u2014 Paper",
-      "href": "media/research/mxenes/Paper-1.0-Figura-8-paper.pdf"
+      "label": "Emerging Lines MXenes",
+      "url": "media/research/mxenes/Paper-1.0-Figura-8-paper.pdf"
     }
-  ],
-  "related": [
-    "shape-tuning",
-    "superstructures"
-  ]
+   ]
 }

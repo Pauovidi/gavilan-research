@@ -1,56 +1,46 @@
 {
   "title": "Tuning Magnetic Properties Through Nanoparticle Shape Engineering and Assembly",
   "year": 2025,
-  "summary": "Shape Engineering and Assembly. SUMMARY: Our research explores how nanoparticle shape and programmed assembly routes enable emergent collective magnetic properties beyond individual particles.",
-  "descriptionHtml": "<p>Our research explores how nanoparticle shape and programmed assembly routes enable emergent collective magnetic properties beyond individual particles. We design shape-controlled syntheses and templating approaches to direct particles into ordered architectures where interparticle dipolar coupling dominates the response. This allows tailoring of coercivity, anisotropy and dissipative behaviour for applications such as magnetic hyperthermia and actuation.</p><p>We integrate in-situ field alignment, confinement, and multiscale characterization to correlate mesoscale order with magnetization dynamics. The approach spans from 2D nanosheets to confined structures in porous frameworks, linking synthetic pathways to functional magnetic performance. These insights guide the engineering of assemblies with predictable, tunable responses.</p><p>The program connects fundamental magnetization processes with practical use-cases including remote heating, field-responsive soft matter and reconfigurable metamaterials. By combining shape engineering with controlled assembly we target robust, scalable strategies to optimize energy dissipation and directional response in colloidal systems.</p>",
+  "summary": "Our research explores how magnetic nanoparticles self-assemble into complex architectures, exhibiting emergent collective magnetic properties beyond individual particles. By controlling size, shape, and interparticle interactions, we create engineered assemblies—from 2D nanosheets to confined structures—with tailored magnetic anisotropy and enhanced heating efficiency for applications such as nanomedicine.",
+"descriptionHtml": "<p>Our research explores how magnetic nanoparticles organize themselves into complex architectures and how this self-assembly unlocks emergent properties far beyond those of individual particles. By controlling size, shape, and interparticle interactions, we design assemblies with tailored magnetic anisotropy and collective relaxation dynamics, enabling precise modulation of heating efficiency and magnetic responsiveness. We focus on creating engineered architectures, from 2D magnetic nanosheets with enhanced multifunctionality to confined assemblies that retain their magnetic performance even in complex biological environments. This fundamental understanding of self-organization not only reveals how collective magnetic behavior arises but also provides a powerful design strategy for applications such as nanomedicine. Ultimately, our goal is to transform nanoparticle self-assembly into a predictive tool for building functional magnetic materials with tunable and programmable properties.</p>",
   "images": [
-    {
-      "src": "media/research/shape-tuning/1.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/2.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/3.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/4.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/5.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/6.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/7.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/8.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/9.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/10.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/11.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/12.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/13.webp"
-    },
-    {
-      "src": "media/research/shape-tuning/14.webp"
-    }
+    "media/research/shape-tuning/2.webp",
+    "media/research/shape-tuning/3.webp",
+    "media/research/shape-tuning/4.webp",
+    "media/research/shape-tuning/5.webp",
+    "media/research/shape-tuning/6.webp",
+    "media/research/shape-tuning/7.webp",
+    "media/research/shape-tuning/8.webp",  
+    "media/research/shape-tuning/9.webp",
+    "media/research/shape-tuning/10.webp",
+    "media/research/shape-tuning/11.webp",
+    "media/research/shape-tuning/12.webp",
+    "media/research/shape-tuning/13.webp", 
+    "media/research/shape-tuning/14.webp"
   ],
-  "papers": [],
-  "related": [
-    "scalable",
-    "superstructures",
-    "mxenes"
+  "papers": [
+    {
+      "authors": "Mandriota, G., Avugadda, S. K., Sadeghi, E., Silvestri, N., Marotta, R., Gavilán, H., ... & Pellegrino, T.",
+      "year": 2025,
+      "title": "Magnetic nanosheets: from iron oxide nanocubes to polydopamine embedded 2D clusters and their multi-purpose properties",
+      "journal": "Nanoscale Horizons",
+      "doi": "https://doi.org/10.1039/D4NH00566J"
+    },
+    {
+      "authors": "Gavilán, H., Avugadda, S. K., Fernández-Cabada, T., Soni, N., Cassani, M., Mai, B. T., ... & Pellegrino, T.",
+      "year": 2021,
+      "title": "Magnetic nanoparticles and clusters for magnetic hyperthermia: optimizing their heat performance and developing combinatorial therapies to tackle cancer",
+      "journal": "Chemical Society Reviews",
+      "volume": "50",
+      "issue": "20",
+      "pages": "11614-11667",
+      "doi": "https://doi.org/10.1039/d1cs00427a"
+    },
+    {
+      "authors": "Gavilán, H., Simeonidis, K., Myrovali, E., Mazarío, E., Chubykalo-Fesenko, O., Chantrell, R., ... & Serantes, D.",
+      "year": 2021,
+      "title": "How size, shape and assembly of magnetic nanoparticles determine their collective properties",
+      "journal": "Journal name or details missing"
+    }
   ]
 }

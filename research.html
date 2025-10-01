@@ -683,8 +683,8 @@ header.dark .navlinks a[aria-current="page"]{
     <div class="container nav" aria-label="Primary navigation">
       <a href="./" class="brand" aria-label="Home">
         <img class="brand-logo" id="brandLeft"
-             src="./media/Logo-grupo.webp" alt="Gavilan Research"
-             onerror="this.onerror=null; this.src='./media/Logo grupo.png';">
+             src="./media/hero/Logo-grupo-nuevo.webp" alt="Gavilan Research"
+             onerror="this.onerror=null; this.src='./media/hero/Logo-grupo-nuevo.webp';">
       </a>
       <button class="menu-btn" aria-expanded="false" aria-controls="menuModal" id="menuBtn" type="button">☰ Menu</button>
       <nav class="navlinks" role="navigation" aria-label="Main">
@@ -940,12 +940,22 @@ header.dark .navlinks a[aria-current="page"]{
 
   // swap a versión blanca cuando el header está en .dark
   const WHITE = "./media/home/QUIMICAS_COLOR_SOLO_BLANCO.webp";
+  const LEFT_WHITE = "./media/hero/Logo-grupo-nuevo-blanco.webp";
   function applySwap(){
-    if (!right) return;
-    if (!right.dataset.colorSrc) right.dataset.colorSrc = right.currentSrc || right.src || "";
-    right.dataset.whiteSrc = right.dataset.whiteSrc || WHITE;
+    if (right) {
+      if (!right.dataset.colorSrc) right.dataset.colorSrc = right.currentSrc || right.src || "";
+      right.dataset.whiteSrc = right.dataset.whiteSrc || WHITE;
+    }
     const dark = (document.getElementById("siteHeader")||document.querySelector("header.site"))?.classList.contains("dark");
-    right.src = dark ? right.dataset.whiteSrc : right.dataset.colorSrc;
+    if (right) right.src = dark ? right.dataset.whiteSrc : right.dataset.colorSrc;
+
+    // Swap left logo to white variant in dark mode
+    if (left) {
+      if (!left.dataset.colorSrc) left.dataset.colorSrc = left.currentSrc || left.src || "";
+      left.dataset.whiteSrc = left.dataset.whiteSrc || LEFT_WHITE;
+      left.src = dark ? left.dataset.whiteSrc : left.dataset.colorSrc;
+      left.removeAttribute('srcset'); left.removeAttribute('sizes');
+    }
   }
   new MutationObserver(applySwap).observe(document.getElementById("siteHeader")||document.querySelector("header.site"), {attributes:true, attributeFilter:["class"]});
   applySwap();
@@ -980,28 +990,36 @@ header.dark .navlinks a[aria-current="page"]{
     track.innerHTML = '';              // limpia por si había restos
     let shown = false;
 
-    // Pintamos 1..40.webp (las dos primeras con carga “eager”)
-    for (let i=1; i<=40; i++){
-      const fig = document.createElement('figure'); fig.className='slide';
-      const img = document.createElement('img');   img.alt=''; img.decoding='async';
-      if (i<=2){ img.loading='eager'; img.fetchPriority='high'; } else { img.loading='lazy'; }
-
-      const root = new URL(String(i), base).href.replace(/\/$/, ''); // …/1
+    // Usa solo las imágenes del array en el JSON
+    let images = window.currentResearchImages || [];
+    let count = 0;
+    for (let i = 0; i < images.length; i++) {
+      const imgPath = images[i];
+      const fig = document.createElement('figure'); fig.className = 'slide';
+      const img = document.createElement('img'); img.alt = ''; img.decoding = 'async';
+      if (i < 2) { img.loading = 'eager'; img.fetchPriority = 'high'; } else { img.loading = 'lazy'; }
       img.onerror = () => { fig.remove(); };
-      img.onload  = () => { if (!shown){ gallery.hidden=false; shown=true; } };
-
-      img.src    = `${root}.webp`;
-      img.srcset = widths.map(w => `${root}-${w}.webp ${w}w`).join(', ');
-      img.sizes  = '(max-width: 680px) 100vw, 1000px';
-
+      img.onload = () => { if (!shown) { gallery.hidden = false; shown = true; } };
+      img.src = imgPath;
+      // Si quieres srcset, puedes generarlo aquí si tienes variantes
       fig.appendChild(img);
       track.appendChild(fig);
+      count++;
     }
 
-    // Controles
-    const goto = d => track.scrollBy({ left: d * track.clientWidth, behavior:'smooth' });
-    gallery.querySelector('.prev')?.addEventListener('click', () => goto(-1));
-    gallery.querySelector('.next')?.addEventListener('click', () => goto(1));
+    // Oculta navegación si solo hay una imagen
+    const prevBtn = gallery.querySelector('.prev');
+    const nextBtn = gallery.querySelector('.next');
+    if (count <= 1) {
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+    } else {
+      if (prevBtn) prevBtn.style.display = '';
+      if (nextBtn) nextBtn.style.display = '';
+      const goto = d => track.scrollBy({ left: d * track.clientWidth, behavior: 'smooth' });
+      prevBtn?.addEventListener('click', () => goto(-1));
+      nextBtn?.addEventListener('click', () => goto(1));
+    }
   }
 
   // --- Detalle del research ---
@@ -1013,7 +1031,9 @@ header.dark .navlinks a[aria-current="page"]{
       return;
     }
 
-    const data = await getJSON([`./content/research/${slug}.json`,`./research/${slug}.json`]);
+  const data = await getJSON([`./content/research/${slug}.json`,`./research/${slug}.json`]);
+  // Pasa el array de imágenes al slider
+  window.currentResearchImages = Array.isArray(data?.images) ? data.images : [];
 
     if (!data){
       // Si no hay JSON, mostramos aviso pero IGUAL lanzamos la galería (porque las imágenes están en /media)

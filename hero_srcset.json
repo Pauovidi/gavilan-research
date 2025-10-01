@@ -1,0 +1,353 @@
+{
+  "07-07_20000X_0007": {
+    "src": "07-07_20000X_0007-800.webp",
+    "srcset": [
+      "07-07_20000X_0007-320.webp 320w",
+      "07-07_20000X_0007-480.webp 480w",
+      "07-07_20000X_0007-640.webp 640w",
+      "07-07_20000X_0007-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "1e-A1_0010": {
+    "src": "1e-A1_0010-800.webp",
+    "srcset": [
+      "1e-A1_0010-320.webp 320w",
+      "1e-A1_0010-480.webp 480w",
+      "1e-A1_0010-640.webp 640w",
+      "1e-A1_0010-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "2a Heptaldeyde_0007": {
+    "src": "2a Heptaldeyde_0007-800.webp",
+    "srcset": [
+      "2a Heptaldeyde_0007-320.webp 320w",
+      "2a Heptaldeyde_0007-480.webp 480w",
+      "2a Heptaldeyde_0007-640.webp 640w",
+      "2a Heptaldeyde_0007-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "2b-A3-60min_0006": {
+    "src": "2b-A3-60min_0006-800.webp",
+    "srcset": [
+      "2b-A3-60min_0006-320.webp 320w",
+      "2b-A3-60min_0006-480.webp 480w",
+      "2b-A3-60min_0006-640.webp 640w",
+      "2b-A3-60min_0006-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "3a-HGR141_0005": {
+    "src": "3a-HGR141_0005-800.webp",
+    "srcset": [
+      "3a-HGR141_0005-320.webp 320w",
+      "3a-HGR141_0005-480.webp 480w",
+      "3a-HGR141_0005-640.webp 640w",
+      "3a-HGR141_0005-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "3a-dodecylamine_0010": {
+    "src": "3a-dodecylamine_0010-800.webp",
+    "srcset": [
+      "3a-dodecylamine_0010-320.webp 320w",
+      "3a-dodecylamine_0010-480.webp 480w",
+      "3a-dodecylamine_0010-640.webp 640w",
+      "3a-dodecylamine_0010-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "3b-B0-230-time0_0014": {
+    "src": "3b-B0-230-time0_0014-800.webp",
+    "srcset": [
+      "3b-B0-230-time0_0014-320.webp 320w",
+      "3b-B0-230-time0_0014-480.webp 480w",
+      "3b-B0-230-time0_0014-640.webp 640w",
+      "3b-B0-230-time0_0014-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "3b-B0-230-time0_0015": {
+    "src": "3b-B0-230-time0_0015-800.webp",
+    "srcset": [
+      "3b-B0-230-time0_0015-320.webp 320w",
+      "3b-B0-230-time0_0015-480.webp 480w",
+      "3b-B0-230-time0_0015-640.webp 640w",
+      "3b-B0-230-time0_0015-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "4a-180degrees_0005": {
+    "src": "4a-180degrees_0005-800.webp",
+    "srcset": [
+      "4a-180degrees_0005-320.webp 320w",
+      "4a-180degrees_0005-480.webp 480w",
+      "4a-180degrees_0005-640.webp 640w",
+      "4a-180degrees_0005-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "5a-Au-FeO-overnightMAG_0006": {
+    "src": "5a-Au-FeO-overnightMAG_0006-800.webp",
+    "srcset": [
+      "5a-Au-FeO-overnightMAG_0006-320.webp 320w",
+      "5a-Au-FeO-overnightMAG_0006-480.webp 480w",
+      "5a-Au-FeO-overnightMAG_0006-640.webp 640w",
+      "5a-Au-FeO-overnightMAG_0006-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "7C-HGR6-MR8-6h_0004": {
+    "src": "7C-HGR6-MR8-6h_0004-800.webp",
+    "srcset": [
+      "7C-HGR6-MR8-6h_0004-320.webp 320w",
+      "7C-HGR6-MR8-6h_0004-480.webp 480w",
+      "7C-HGR6-MR8-6h_0004-640.webp 640w",
+      "7C-HGR6-MR8-6h_0004-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "7C-HGR6-MR8-6h_0005": {
+    "src": "7C-HGR6-MR8-6h_0005-800.webp",
+    "srcset": [
+      "7C-HGR6-MR8-6h_0005-320.webp 320w",
+      "7C-HGR6-MR8-6h_0005-480.webp 480w",
+      "7C-HGR6-MR8-6h_0005-640.webp 640w",
+      "7C-HGR6-MR8-6h_0005-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "9-srg-1-40k": {
+    "src": "9-srg-1-40k-800.webp",
+    "srcset": [
+      "9-srg-1-40k-320.webp 320w",
+      "9-srg-1-40k-480.webp 480w",
+      "9-srg-1-40k-640.webp 640w",
+      "9-srg-1-40k-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "9c-HGR97-OLA-verdad_0006": {
+    "src": "9c-HGR97-OLA-verdad_0006-800.webp",
+    "srcset": [
+      "9c-HGR97-OLA-verdad_0006-320.webp 320w",
+      "9c-HGR97-OLA-verdad_0006-480.webp 480w",
+      "9c-HGR97-OLA-verdad_0006-640.webp 640w",
+      "9c-HGR97-OLA-verdad_0006-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "9e-HGR-134-giacomo_0004": {
+    "src": "9e-HGR-134-giacomo_0004-800.webp",
+    "srcset": [
+      "9e-HGR-134-giacomo_0004-320.webp 320w",
+      "9e-HGR-134-giacomo_0004-480.webp 480w",
+      "9e-HGR-134-giacomo_0004-640.webp 640w",
+      "9e-HGR-134-giacomo_0004-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "9e-HGR-134-giacomo_0008": {
+    "src": "9e-HGR-134-giacomo_0008-800.webp",
+    "srcset": [
+      "9e-HGR-134-giacomo_0008-320.webp 320w",
+      "9e-HGR-134-giacomo_0008-480.webp 480w",
+      "9e-HGR-134-giacomo_0008-640.webp 640w",
+      "9e-HGR-134-giacomo_0008-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "9e-HGR-134-giacomo_0014": {
+    "src": "9e-HGR-134-giacomo_0014-800.webp",
+    "srcset": [
+      "9e-HGR-134-giacomo_0014-320.webp 320w",
+      "9e-HGR-134-giacomo_0014-480.webp 480w",
+      "9e-HGR-134-giacomo_0014-640.webp 640w",
+      "9e-HGR-134-giacomo_0014-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "9e-HGR-134-giacomo_0027": {
+    "src": "9e-HGR-134-giacomo_0027-800.webp",
+    "srcset": [
+      "9e-HGR-134-giacomo_0027-320.webp 320w",
+      "9e-HGR-134-giacomo_0027-480.webp 480w",
+      "9e-HGR-134-giacomo_0027-640.webp 640w",
+      "9e-HGR-134-giacomo_0027-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "9e-HGR99-C12-verdad_0003": {
+    "src": "9e-HGR99-C12-verdad_0003-800.webp",
+    "srcset": [
+      "9e-HGR99-C12-verdad_0003-320.webp 320w",
+      "9e-HGR99-C12-verdad_0003-480.webp 480w",
+      "9e-HGR99-C12-verdad_0003-640.webp 640w",
+      "9e-HGR99-C12-verdad_0003-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "CAPS-20nm-diluted_0008": {
+    "src": "CAPS-20nm-diluted_0008-800.webp",
+    "srcset": [
+      "CAPS-20nm-diluted_0008-320.webp 320w",
+      "CAPS-20nm-diluted_0008-480.webp 480w",
+      "CAPS-20nm-diluted_0008-640.webp 640w",
+      "CAPS-20nm-diluted_0008-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "CSIC_30000X_0008": {
+    "src": "CSIC_30000X_0008-800.webp",
+    "srcset": [
+      "CSIC_30000X_0008-320.webp 320w",
+      "CSIC_30000X_0008-480.webp 480w",
+      "CSIC_30000X_0008-640.webp 640w",
+      "CSIC_30000X_0008-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "Fer NC3 Marco_5000X_0004": {
+    "src": "Fer NC3 Marco_5000X_0004-800.webp",
+    "srcset": [
+      "Fer NC3 Marco_5000X_0004-320.webp 320w",
+      "Fer NC3 Marco_5000X_0004-480.webp 480w",
+      "Fer NC3 Marco_5000X_0004-640.webp 640w",
+      "Fer NC3 Marco_5000X_0004-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "Giacomo MNC3 NCs - 4d_0009": {
+    "src": "Giacomo MNC3 NCs - 4d_0009-800.webp",
+    "srcset": [
+      "Giacomo MNC3 NCs - 4d_0009-320.webp 320w",
+      "Giacomo MNC3 NCs - 4d_0009-480.webp 480w",
+      "Giacomo MNC3 NCs - 4d_0009-640.webp 640w",
+      "Giacomo MNC3 NCs - 4d_0009-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "HGR-1-NOMAG-MW2_0003": {
+    "src": "HGR-1-NOMAG-MW2_0003-800.webp",
+    "srcset": [
+      "HGR-1-NOMAG-MW2_0003-320.webp 320w",
+      "HGR-1-NOMAG-MW2_0003-480.webp 480w",
+      "HGR-1-NOMAG-MW2_0003-640.webp 640w",
+      "HGR-1-NOMAG-MW2_0003-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "HGR-12-ND_0013": {
+    "src": "HGR-12-ND_0013-800.webp",
+    "srcset": [
+      "HGR-12-ND_0013-320.webp 320w",
+      "HGR-12-ND_0013-480.webp 480w",
+      "HGR-12-ND_0013-640.webp 640w",
+      "HGR-12-ND_0013-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "HGR-48WA1-reproduci-autrocalvenuevo_0007": {
+    "src": "HGR-48WA1-reproduci-autrocalvenuevo_0007-800.webp",
+    "srcset": [
+      "HGR-48WA1-reproduci-autrocalvenuevo_0007-320.webp 320w",
+      "HGR-48WA1-reproduci-autrocalvenuevo_0007-480.webp 480w",
+      "HGR-48WA1-reproduci-autrocalvenuevo_0007-640.webp 640w",
+      "HGR-48WA1-reproduci-autrocalvenuevo_0007-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "HGR-73_0002": {
+    "src": "HGR-73_0002-800.webp",
+    "srcset": [
+      "HGR-73_0002-320.webp 320w",
+      "HGR-73_0002-480.webp 480w",
+      "HGR-73_0002-640.webp 640w",
+      "HGR-73_0002-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "HGR39-nobenz_0003": {
+    "src": "HGR39-nobenz_0003-800.webp",
+    "srcset": [
+      "HGR39-nobenz_0003-320.webp 320w",
+      "HGR39-nobenz_0003-480.webp 480w",
+      "HGR39-nobenz_0003-640.webp 640w",
+      "HGR39-nobenz_0003-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "Logo-grupo-nuevo-blanco": {
+    "src": "Logo-grupo-nuevo-blanco-800.webp",
+    "srcset": [
+      "Logo-grupo-nuevo-blanco-320.webp 320w",
+      "Logo-grupo-nuevo-blanco-480.webp 480w",
+      "Logo-grupo-nuevo-blanco-640.webp 640w",
+      "Logo-grupo-nuevo-blanco-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "Logo-grupo-nuevo": {
+    "src": "Logo-grupo-nuevo-800.webp",
+    "srcset": [
+      "Logo-grupo-nuevo-320.webp 320w",
+      "Logo-grupo-nuevo-480.webp 480w",
+      "Logo-grupo-nuevo-640.webp 640w",
+      "Logo-grupo-nuevo-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "NC3_15000X_0003": {
+    "src": "NC3_15000X_0003-800.webp",
+    "srcset": [
+      "NC3_15000X_0003-320.webp 320w",
+      "NC3_15000X_0003-480.webp 480w",
+      "NC3_15000X_0003-640.webp 640w",
+      "NC3_15000X_0003-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "Reaccion inversion Fe y BZD 8 h_30000X_0012": {
+    "src": "Reaccion inversion Fe y BZD 8 h_30000X_0012-800.webp",
+    "srcset": [
+      "Reaccion inversion Fe y BZD 8 h_30000X_0012-320.webp 320w",
+      "Reaccion inversion Fe y BZD 8 h_30000X_0012-480.webp 480w",
+      "Reaccion inversion Fe y BZD 8 h_30000X_0012-640.webp 640w",
+      "Reaccion inversion Fe y BZD 8 h_30000X_0012-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "Walls-3-HGR-48_MAG_0005": {
+    "src": "Walls-3-HGR-48_MAG_0005-800.webp",
+    "srcset": [
+      "Walls-3-HGR-48_MAG_0005-320.webp 320w",
+      "Walls-3-HGR-48_MAG_0005-480.webp 480w",
+      "Walls-3-HGR-48_MAG_0005-640.webp 640w",
+      "Walls-3-HGR-48_MAG_0005-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "Walls-3-HGR-48_MAG_0011": {
+    "src": "Walls-3-HGR-48_MAG_0011-800.webp",
+    "srcset": [
+      "Walls-3-HGR-48_MAG_0011-320.webp 320w",
+      "Walls-3-HGR-48_MAG_0011-480.webp 480w",
+      "Walls-3-HGR-48_MAG_0011-640.webp 640w",
+      "Walls-3-HGR-48_MAG_0011-800.webp 800w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  },
+  "hero": {
+    "src": "hero-1200.webp",
+    "srcset": [
+      "hero-320.webp 320w",
+      "hero-480.webp 480w",
+      "hero-640.webp 640w",
+      "hero-800.webp 800w",
+      "hero-1200.webp 1200w"
+    ],
+    "sizes": "(max-width: 900px) 100vw, 1200px"
+  }
+}
